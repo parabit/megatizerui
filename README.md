@@ -1,3 +1,5 @@
 ## megatizerui 🚀
 
-description is coming
+```bash
+yarn add parabit/megatizerui
+```
