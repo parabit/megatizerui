@@ -3,12 +3,14 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-	"main": "dist/megatizerui.js",
-	"types": "dist/lib/main.d.ts",
+	"main": "dist-lib/megatizerui.js",
+	"types": "dist-lib/lib/main.d.ts",
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc -b ./tsconfig.lib.json && vite build",
-		"build-test": "tsc -b ./tsconfig.lib.json && vite build && rm -rf dist",
+		"build-lib": "tsc -b ./tsconfig.lib.json && vite build --mode lib",
+		"build-lib-test": "npm run build-lib && rm -rf dist-lib",
+		"build-docs": "tsc -b && vite build --mode docs",
+		"build-docs-test": "npm run build-docs && rm -rf dist-docs",
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},
