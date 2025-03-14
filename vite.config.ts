@@ -1,14 +1,24 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { resolve } from "path";
+import dts from "vite-plugin-dts";
 
-// https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   if (mode === "lib") {
     return {
-      plugins: [react()],
+      plugins: [react(), dts({ tsconfigPath: "./tsconfig.lib.json" })],
       build: {
+        lib: {
+          entry: resolve(__dirname, "lib/index.ts"),
+          name: "megatizerui",
+          fileName: "megatizerui",
+          formats: ["es"],
+        },
         outDir: "dist-lib",
         copyPublicDir: false,
+        rollupOptions: {
+          external: ["react", "react/jsx-runtime"],
+        },
       },
     };
   }
