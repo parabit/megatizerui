@@ -5,15 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build:lib": "tsc -b && vite build --mode lib",
+    "build:docs": "tsc -b && vite build --mode docs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
