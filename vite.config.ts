@@ -7,15 +7,22 @@ export default defineConfig(({ mode }) => {
     return {
       plugins: [react()],
       build: {
-        outDir: "lib",
+        outDir: "dist-lib",
+        copyPublicDir: false,
       },
     };
   }
 
   return {
+    server: {
+      port: 3000,
+    },
+    preview: {
+      port: 3000,
+    },
     plugins: [react()],
     build: {
-      outDir: "docs",
+      outDir: "dist-docs",
     },
   };
 });
