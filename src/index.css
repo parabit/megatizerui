@@ -18,6 +18,8 @@
   --color-card-border-dark: var(--color-neutral-700);
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html.light {
   color: var(--color-text-light);
   background-color: var(--color-bg-light);
@@ -28,7 +30,6 @@ html.dark {
   background-color: var(--color-bg-dark);
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -42,6 +43,11 @@ html.dark {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-width: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -58,4 +64,8 @@ body {
 
 *:focus-visible {
   outline: none;
+}
+
+.dev {
+  border: 1px solid red;
 }

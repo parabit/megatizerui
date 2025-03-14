@@ -5,7 +5,6 @@ import { DocsRouter } from "@modules/Docs";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     Component: LayoutScreen,
     ErrorBoundary: ErrorScreen,
     children: [

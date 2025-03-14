@@ -1,5 +1,6 @@
 import { Link } from "@modules/Elements";
 import { cn, HStack, Stack, Span } from "@lib";
+import { GIT_REPO_URL } from "@constants";
 
 const DocsHomeScreen = () => (
   <Stack className="w-full overflow-x-hidden overflow-y-auto p-12 md:pb-24">
@@ -35,14 +36,14 @@ const Buttons = () => (
       Get started
     </Link>
     <Link
-      to="https://bitbucket.org/parabit/tizer-webapp/src/main/src/ui/"
+      to={GIT_REPO_URL}
       target="_blank"
       className={cn(
         "rounded-full px-5 pt-2.5 pb-3 font-semibold !text-white hover:!no-underline dark:!text-white",
         "!bg-muted hover:!bg-muted/80"
       )}
     >
-      View on Bitbucket
+      View on GitHub
     </Link>
   </HStack>
 );
