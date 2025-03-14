@@ -1,3 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #0094d8;
+  --color-primary-pink: #ec297b;
+  --color-primary: var(--color-primary-blue);
+
+  --color-text-light: var(--color-neutral-700);
+  --color-text-dark: var(--color-neutral-200);
+
+  --color-muted-light: var(--color-neutral-300);
+  --color-muted-dark: var(--color-neutral-500);
+
+  --color-bg-light: #fff;
+  --color-bg-dark: var(--color-neutral-900);
+
+  --color-card-border-light: var(--color-neutral-200);
+  --color-card-border-dark: var(--color-neutral-700);
+}
+
+html.light {
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+}
+
+html.dark {
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-dark);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,15 +44,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -30,39 +52,10 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+* {
+  @apply [&::-webkit-scrollbar]:my-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+*:focus-visible {
+  outline: none;
 }

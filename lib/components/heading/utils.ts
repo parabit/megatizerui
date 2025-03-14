@@ -1,17 +1,15 @@
-import { ButtonHTMLAttributes, ReactNode, RefObject } from "react";
+import { HTMLAttributes, ReactNode, RefObject } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
-export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-  ref?: RefObject<HTMLButtonElement | null>;
+export interface IHeading extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
+  ref?: RefObject<HTMLHeadingElement | null>;
+  text?: string | number;
   className?: string;
-  text?: string;
-  iconLeft?: ReactNode;
   children?: ReactNode;
+  level: "1" | "2" | "3" | "4" | "5" | "6";
 }
 
-export type TypeButtonVariants = "ghost" | "link" | "outline" | "solid";
-
-export const buttonVariants = cva(
+export const headingVariants = cva(
   "py-3 px-6 m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 focus:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
