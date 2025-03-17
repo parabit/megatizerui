@@ -1,71 +1,71 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-primary-blue: #0094d8;
-  --color-primary-pink: #ec297b;
-  --color-primary: var(--color-primary-blue);
+	--color-primary-blue: #0094d8;
+	--color-primary-pink: #ec297b;
+	--color-primary: var(--color-primary-blue);
 
-  --color-text-light: var(--color-neutral-700);
-  --color-text-dark: var(--color-neutral-200);
+	--color-text-light: var(--color-neutral-700);
+	--color-text-dark: var(--color-neutral-200);
 
-  --color-muted-light: var(--color-neutral-300);
-  --color-muted-dark: var(--color-neutral-500);
+	--color-muted-light: var(--color-neutral-300);
+	--color-muted-dark: var(--color-neutral-500);
 
-  --color-bg-light: #fff;
-  --color-bg-dark: var(--color-neutral-900);
+	--color-bg-light: #fff;
+	--color-bg-dark: var(--color-neutral-900);
 
-  --color-card-border-light: var(--color-neutral-200);
-  --color-card-border-dark: var(--color-neutral-700);
+	--color-card-border-light: var(--color-neutral-200);
+	--color-card-border-dark: var(--color-neutral-700);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 html.light {
-  color: var(--color-text-light);
-  background-color: var(--color-bg-light);
+	color: var(--color-text-light);
+	background-color: var(--color-bg-light);
 }
 
 html.dark {
-  color: var(--color-text-dark);
-  background-color: var(--color-bg-dark);
+	color: var(--color-text-dark);
+	background-color: var(--color-bg-dark);
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #root {
-  min-width: 100%;
-  min-height: 100vh;
+	min-width: 100%;
+	min-height: 100vh;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 * {
-  @apply [&::-webkit-scrollbar]:my-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700;
+	@apply [&::-webkit-scrollbar]:my-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700;
 }
 
 *:focus-visible {
-  outline: none;
+	outline: none;
 }
 
 .dev {
-  border: 1px solid red;
+	border: 1px solid red;
 }

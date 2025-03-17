@@ -1,1 +1,1 @@
-export * from "./DocsRouter";
+export * from './DocsRouter';
