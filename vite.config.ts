@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => {
 			port: 3000,
 		},
 		plugins: [react(), tailwindcss(), tsconfigPaths()],
+		base: './',
 		build: {
 			outDir: 'dist-docs',
 		},
