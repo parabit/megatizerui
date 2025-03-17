@@ -3,7 +3,7 @@ import { cn, HStack, Span, Stack } from '@lib';
 import { Link } from '@modules/Elements';
 
 const DocsHomeScreen = () => (
-	<Stack className="w-full overflow-x-hidden overflow-y-auto p-12 md:pb-24">
+	<Stack className="w-full overflow-x-hidden overflow-y-auto gap-y-20 p-12 pt-32 md:pb-24">
 		<Brand />
 		<Buttons />
 	</Stack>
@@ -14,9 +14,16 @@ export default DocsHomeScreen;
 const Brand = () => (
 	<Stack>
 		<Span className="!text-primary text-6xl font-bold">megatizerui 🚀</Span>
-		<Span className="!text-muted-light dark:!text-muted-dark mt-4 text-xl font-medium">
+		<Span className="!text-dark dark:!text-white text-4xl font-bold mt-6 max-w-2xl">
+			a ui components library for React, based on TypeScript + Tailwind CSS
+		</Span>
+		<Span className="!text-muted-light dark:!text-muted-dark text-xl font-medium mt-2">
 			library of components of the{' '}
-			<Link to="https://megatizer.ru/" target="_blank" className="!text-primary hover:underline">
+			<Link
+				to="https://megatizer.ru/"
+				target="_blank"
+				className="!text-primary-pink hover:underline"
+			>
 				megatizer.ru
 			</Link>
 		</Span>
@@ -24,13 +31,13 @@ const Brand = () => (
 );
 
 const Buttons = () => (
-	<HStack className="mt-8 gap-x-3">
+	<HStack className="gap-x-3">
 		<Link
 			to="/"
 			//   to={getFirstComponentUrl()}
 			className={cn(
 				'rounded-full px-5 pt-2.5 pb-3 font-semibold !text-white hover:!no-underline dark:!text-white',
-				'!bg-primary hover:!bg-blue-500',
+				'!bg-primary hover:!bg-primary/80',
 			)}
 		>
 			Get started
@@ -40,7 +47,7 @@ const Buttons = () => (
 			target="_blank"
 			className={cn(
 				'rounded-full px-5 pt-2.5 pb-3 font-semibold !text-white hover:!no-underline dark:!text-white',
-				'!bg-muted hover:!bg-muted/80',
+				'bg-slate-500 hover:bg-slate-500/80',
 			)}
 		>
 			View on GitHub

@@ -1,19 +1,17 @@
-import { Divider, Stack } from '@lib';
+import { Div, Stack } from '@lib';
 import { Link, ThemeWidgetSwitch } from '@modules/Elements';
 
 const DocsASide = () => (
-	<Stack className="relitive flex-2 overflow-y-auto border-r border-r-neutral-300 dark:border-r-neutral-700 justify-between">
-		<Stack className="card-bg-light dark:card-bg-dark sticky top-0 mt-6 min-h-12 justify-between px-8">
-			<Link to="/test" className="text-primary font-bold">
+	<Stack className="bg-card-bg-light dark:bg-card-bg-dark relitive flex-2 overflow-y-auto border-r border-r-border-light dark:border-r-border-dark justify-between px-8 max-w-[240px]">
+		<Div className="flex sticky top-0 min-h-16 items-center justify-start border-b border-b-border-light dark:border-b-border-dark">
+			<Link to="/test" className="text-primary font-bold text-xl">
 				megatizerui 🚀
 			</Link>
-			<Divider />
-		</Stack>
+		</Div>
 
-		<Stack className="card-bg-light dark:card-bg-dark min-h-12 min-w-max justify-start px-8">
-			<Divider className="pb-3" />
+		<Div className="flex min-h-16 min-w-max items-center justify-start border-t border-t-border-light dark:border-t-border-dark">
 			<ThemeWidgetSwitch />
-		</Stack>
+		</Div>
 	</Stack>
 );
 

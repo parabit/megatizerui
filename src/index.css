@@ -8,14 +8,17 @@
 	--color-text-light: var(--color-neutral-700);
 	--color-text-dark: var(--color-neutral-200);
 
-	--color-muted-light: var(--color-neutral-300);
+	--color-muted-light: var(--color-neutral-400);
 	--color-muted-dark: var(--color-neutral-500);
 
-	--color-bg-light: #fff;
-	--color-bg-dark: var(--color-neutral-900);
+	--color-bg-light: #f6f6f7;
+	--color-bg-dark: #181818;
 
-	--color-card-border-light: var(--color-neutral-200);
-	--color-card-border-dark: var(--color-neutral-700);
+	--color-card-bg-light: #fff;
+	--color-card-bg-dark: #1d1d1c;
+
+	--color-border-light: var(--color-neutral-200);
+	--color-border-dark: var(--color-neutral-700);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -36,8 +39,6 @@ html.dark {
 	font-weight: 400;
 
 	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
