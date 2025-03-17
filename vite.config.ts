@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => {
 			port: 3000,
 		},
 		plugins: [react(), tailwindcss(), tsconfigPaths()],
-		base: './',
+		base: '/megatizerui',
 		build: {
 			outDir: 'dist-docs',
 		},
