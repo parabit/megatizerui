@@ -9,5 +9,5 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>, Varian
 }
 export type TypeButtonVariants = 'ghost' | 'link' | 'outline' | 'solid';
 export declare const buttonVariants: (props?: ({
-    variant?: "ghost" | "link" | "outline" | "solid" | null | undefined;
+    variant?: "link" | "ghost" | "outline" | "solid" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
