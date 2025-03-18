@@ -8,6 +8,7 @@ export * from './hstack';
 export * from './image';
 export * from './input';
 export * from './loader';
+export * from './pressable';
 export * from './span';
 export * from './spinner';
 export * from './stack';

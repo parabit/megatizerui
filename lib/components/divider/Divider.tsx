@@ -1,5 +1,5 @@
-import { cn } from "../../utils";
+import { cn } from '../../utils';
 
 export const Divider = ({ className }: { className?: string }) => (
-  <hr className={cn("border-border-light dark:border-border-dark", className)} />
+	<hr className={cn('text-border-light dark:text-border-dark h-[1px] w-full', className)} />
 );
