@@ -12,8 +12,7 @@ export default defineConfig(({ mode }) => {
 			build: {
 				lib: {
 					entry: resolve(__dirname, 'lib/index.ts'),
-					name: 'megatizerui',
-					fileName: 'megatizerui',
+					fileName: 'index',
 					formats: ['es'],
 				},
 				outDir: 'dist-lib',

@@ -14,10 +14,13 @@ export default DocsHomeScreen;
 const Brand = () => (
 	<Stack>
 		<Span className="!text-primary text-6xl font-bold">megatizerui 🚀</Span>
-		<Span className="!text-dark dark:!text-white text-4xl font-bold mt-6 max-w-2xl">
-			a ui components library for React, based on TypeScript + Tailwind CSS
+		<Span className="!text-dark dark:!text-white text-4xl font-bold mt-6">
+			UI Component Library for React
 		</Span>
-		<Span className="!text-muted-light dark:!text-muted-dark text-xl font-medium mt-2">
+		<Span className="!text-dark dark:!text-white text-4xl font-bold mt-1">
+			Based on TypeScript + Tailwind CSS
+		</Span>
+		<Span className="!text-muted-light dark:!text-muted-dark text-xl font-medium mt-6">
 			library of components of the{' '}
 			<Link
 				to="https://megatizer.ru/"

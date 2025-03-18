@@ -1,7 +1,31 @@
 {
-	"name": "megatizerui",
-	"private": true,
-	"version": "0.0.0",
+	"name": "@parabit/megatizerui",
+	"description": "UI Component Library for React Based on TypeScript + Tailwind CSS",
+	"license": "MIT",
+	"version": "0.0.1",
+	"keywords": [
+		"react",
+		"components",
+		"react components",
+		"ui",
+		"tailwind",
+		"tailwind components"
+	],
+	"author": "Parabit Internet Agency (https://github.com/parabit)",
+	"bugs": {
+		"url": "https://github.com/parabit/megatizerui/issues"
+	},
+	"homepage": "https://parabit.github.io/megatizerui",
+	"repository": {
+		"url": "git+https://github.com/parabit/megatizerui.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"dist-lib"
+	],
+	"main": "dist-lib/index.js",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
