@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
 					fileName: 'index',
 					formats: ['es'],
 				},
-				outDir: 'dist-lib',
+				outDir: 'dist',
 				copyPublicDir: false,
 				rollupOptions: {
 					external: ['react', 'react/jsx-runtime'],

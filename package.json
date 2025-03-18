@@ -23,19 +23,18 @@
 		"access": "public"
 	},
 	"files": [
-		"dist-lib"
+		"dist"
 	],
-	"main": "dist-lib/index.js",
+	"main": "dist/index.js",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build:lib": "tsc -b ./tsconfig.lib.json && vite build --mode lib",
-		"build:lib:test": "yarn build:lib && rm -rf dist-lib",
 		"build:docs": "tsc -b && vite build --mode docs",
 		"build:docs:test": "yarn build:docs && rm -rf dist-docs",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"deploy": "yarn build:docs && gh-pages -d dist-docs"
+		"deploy": "yarn build:docs && gh-pages -d dist-docs && rm -rf dist-docs"
 	},
 	"dependencies": {
 		"class-variance-authority": "^0.7.1",
