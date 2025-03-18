@@ -7,7 +7,7 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>, Varian
     iconLeft?: ReactNode;
     children?: ReactNode;
 }
-export type TypeButtonVariants = "ghost" | "link" | "outline" | "solid";
+export type TypeButtonVariants = 'ghost' | 'link' | 'outline' | 'solid';
 export declare const buttonVariants: (props?: ({
     variant?: "ghost" | "link" | "outline" | "solid" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;

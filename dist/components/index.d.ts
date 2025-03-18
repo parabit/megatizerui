@@ -5,6 +5,8 @@ export * from './divider';
 export * from './heading';
 export * from './hstack';
 export * from './input';
+export * from './loader';
 export * from './span';
+export * from './spinner';
 export * from './stack';
 export * from './switch';

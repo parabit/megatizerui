@@ -5,8 +5,8 @@ export interface IHeading extends HTMLAttributes<HTMLHeadingElement>, VariantPro
     text?: string | number;
     className?: string;
     children?: ReactNode;
-    level: "1" | "2" | "3" | "4" | "5" | "6";
+    level: '1' | '2' | '3' | '4' | '5' | '6';
 }
 export declare const headingVariants: (props?: ({
-    variant?: "ghost" | "link" | "outline" | "solid" | null | undefined;
+    variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;

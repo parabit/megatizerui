@@ -1,5 +1,5 @@
 import { IHeading } from './utils';
-export declare const Heading: ({ level, className, variant, text, children, ...props }: IHeading) => import('react').DetailedReactHTMLElement<{
+export declare const Heading: ({ level, className, text, children, ...props }: IHeading) => import('react').DetailedReactHTMLElement<{
     ref?: import('react').RefObject<HTMLHeadingElement | null>;
     defaultChecked?: boolean | undefined;
     defaultValue?: string | number | readonly string[] | undefined;
@@ -277,5 +277,6 @@ export declare const Heading: ({ level, className, variant, text, children, ...p
     onTransitionRunCapture?: import('react').TransitionEventHandler<HTMLHeadingElement> | undefined;
     onTransitionStart?: import('react').TransitionEventHandler<HTMLHeadingElement> | undefined;
     onTransitionStartCapture?: import('react').TransitionEventHandler<HTMLHeadingElement> | undefined;
+    variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | null | undefined;
     className: string;
 }, HTMLHeadingElement>;
