@@ -22,6 +22,6 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true
 	},
-	"include": ["lib", "./lib/**/*.ts", "./lib/**/*.tsx"],
+	"include": ["lib", "./lib/**/*.ts", "./lib/**/*.tsx", "./lib/**/*.d.ts"],
 	"exclude": ["src"]
 }
