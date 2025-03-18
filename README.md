@@ -42,6 +42,9 @@ Create and import `index.css`
 	--color-card-bg-dark: var(--color-neutral-800);
 	--color-card-border-light: var(--color-neutral-200);
 	--color-card-border-dark: var(--color-neutral-700);
+
+	--color-error: var(--color-red-600);
+	--color-success: var(--color-green-600);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

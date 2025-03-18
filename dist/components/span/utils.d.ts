@@ -7,5 +7,5 @@ export interface ISpan extends HTMLAttributes<HTMLHeadingElement>, VariantProps<
     children?: ReactNode;
 }
 export declare const spanVariants: (props?: ({
-    variant?: "muted" | "primary" | null | undefined;
+    variant?: "error" | "muted" | "primary" | "success" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
