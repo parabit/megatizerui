@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes, ReactNode, RefObject } from 'react';
+import { ButtonHTMLAttributes, ReactNode, Ref } from 'react';
 import { VariantProps } from 'class-variance-authority';
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-    ref?: RefObject<HTMLButtonElement | null>;
+    ref?: Ref<HTMLButtonElement | null>;
     className?: string;
     text?: string;
     iconLeft?: ReactNode;

@@ -1,6 +1,6 @@
-import { ImgHTMLAttributes, RefObject, SyntheticEvent } from 'react';
+import { ImgHTMLAttributes, Ref, SyntheticEvent } from 'react';
 export interface IImage extends ImgHTMLAttributes<HTMLImageElement> {
-    ref?: RefObject<HTMLImageElement>;
+    ref?: Ref<HTMLImageElement>;
     src?: string;
     alt?: string;
     className?: string;

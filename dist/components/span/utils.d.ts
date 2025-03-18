@@ -1,7 +1,7 @@
-import { HTMLAttributes, ReactNode, RefObject } from 'react';
+import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { VariantProps } from 'class-variance-authority';
 export interface ISpan extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof spanVariants> {
-    ref?: RefObject<HTMLHeadingElement>;
+    ref?: Ref<HTMLHeadingElement>;
     text?: string | number;
     className?: string;
     children?: ReactNode;

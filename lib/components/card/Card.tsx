@@ -6,7 +6,7 @@ export const Card = ({ className, children, ...props }: IDiv) => (
 		className={cn(
 			'rounded-xl p-4 flex flex-col',
 			'bg-card-bg-light dark:bg-card-bg-dark',
-			'border !border-card-border-light dark:!border-card-border-dark',
+			'border border-card-border-light dark:border-card-border-dark',
 			className,
 		)}
 		{...props}

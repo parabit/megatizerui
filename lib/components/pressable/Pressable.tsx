@@ -1,9 +1,9 @@
-import { ButtonHTMLAttributes, ReactNode, RefObject } from 'react';
+import { ButtonHTMLAttributes, ReactNode, Ref } from 'react';
 
 import { cn } from '../../utils';
 
 interface IPressable extends ButtonHTMLAttributes<HTMLButtonElement> {
-	ref?: RefObject<HTMLButtonElement>;
+	ref?: Ref<HTMLButtonElement>;
 	className?: string;
 	children?: ReactNode;
 }

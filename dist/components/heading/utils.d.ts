@@ -1,7 +1,7 @@
-import { HTMLAttributes, ReactNode, RefObject } from 'react';
+import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { VariantProps } from 'class-variance-authority';
 export interface IHeading extends HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
-    ref?: RefObject<HTMLHeadingElement | null>;
+    ref?: Ref<HTMLHeadingElement | null>;
     text?: string | number;
     className?: string;
     children?: ReactNode;

@@ -1,4 +1,4 @@
-import { ReactNode, RefObject } from 'react';
+import { ReactNode, Ref } from 'react';
 
 export type TypeDropdownOption = {
 	value: string;
@@ -13,7 +13,7 @@ export type TypeDropdownOption = {
 export type TypeDropdownOptions = Array<TypeDropdownOption>;
 
 export interface IDropdown {
-	ref?: RefObject<HTMLDivElement>;
+	ref?: Ref<HTMLDivElement | null>;
 	isOpen: boolean;
 	onClose: () => void;
 	options?: TypeDropdownOptions;

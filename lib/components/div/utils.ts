@@ -1,7 +1,7 @@
-import { HTMLAttributes, ReactNode, RefObject } from "react";
+import { HTMLAttributes, ReactNode, Ref } from 'react';
 
 export interface IDiv extends HTMLAttributes<HTMLDivElement> {
-  ref?: RefObject<HTMLDivElement | null>;
-  className?: string;
-  children?: ReactNode;
+	ref?: Ref<HTMLDivElement | null>;
+	className?: string;
+	children?: ReactNode;
 }

@@ -1,6 +1,6 @@
 import { IHeading } from './utils';
 export declare const Heading: ({ level, className, text, children, ...props }: IHeading) => import('react').DetailedReactHTMLElement<{
-    ref?: import('react').RefObject<HTMLHeadingElement | null>;
+    ref?: import('react').Ref<HTMLHeadingElement | null>;
     defaultChecked?: boolean | undefined;
     defaultValue?: string | number | readonly string[] | undefined;
     suppressContentEditableWarning?: boolean | undefined;
