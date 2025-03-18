@@ -4,6 +4,7 @@ export * from './card';
 export * from './div';
 export * from './divider';
 export * from './dropdown';
+export * from './form';
 export * from './heading';
 export * from './hstack';
 export * from './image';
