@@ -58,4 +58,14 @@ html.dark {
 	color: var(--color-text-dark);
 	background-color: var(--color-bg-dark);
 }
+
+hr {
+	height: 0;
+	border-top-width: 1px;
+	border-color: var(--color-border-light);
+
+	@variant dark {
+		border-color: var(--color-border-dark);
+	}
+}
 ```

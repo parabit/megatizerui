@@ -74,7 +74,7 @@ function Z() {
   for (var e, n, t = 0, o = "", i = arguments.length; t < i; t++) (e = arguments[t]) && (n = z(e)) && (o && (o += " "), o += n);
   return o;
 }
-const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, k = (e, n) => (t) => {
+const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, v = (e, n) => (t) => {
   var o;
   if ((n == null ? void 0 : n.variants) == null) return L(e, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
   const { variants: i, defaultVariants: r } = n, s = Object.keys(i).map((c) => {
@@ -86,8 +86,8 @@ const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, k = 
     let [f, x] = h;
     return x === void 0 || (c[f] = x), c;
   }, {}), u = n == null || (o = n.compoundVariants) === null || o === void 0 ? void 0 : o.reduce((c, h) => {
-    let { class: f, className: x, ...v } = h;
-    return Object.entries(v).every((T) => {
+    let { class: f, className: x, ...k } = h;
+    return Object.entries(k).every((T) => {
       let [O, p] = T;
       return Array.isArray(p) ? p.includes({
         ...r,
@@ -103,7 +103,7 @@ const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, k = 
     ] : c;
   }, []);
   return L(e, s, u, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-}, q = k(
+}, q = v(
   "py-3 px-6 m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 focus:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
@@ -141,7 +141,7 @@ const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, k = 
     ...t,
     children: n
   }
-), de = ({ className: e }) => /* @__PURE__ */ a("hr", { className: l("!text-border-light dark:!text-border-dark !min-h-[1px] w-full", e) }), A = (e) => {
+), de = ({ className: e }) => /* @__PURE__ */ a("hr", { className: e }), A = (e) => {
   const [n, t] = b(!!e || !1);
   return {
     isOpen: n,
@@ -169,7 +169,7 @@ const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, k = 
   w(() => (window.addEventListener("resize", t), () => window.removeEventListener("resize", t)), []);
   const t = () => n(I());
   return e;
-}, G = k("text-text-light dark:text-text-dark m-0 p-0", {
+}, G = v("text-text-light dark:text-text-dark m-0 p-0", {
   variants: {
     variant: {
       muted: "text-muted-light dark:text-muted-dark",
@@ -231,14 +231,14 @@ const S = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, L = Z, k = 
         Q[s],
         r
       ),
-      children: i ? i.map((x, v) => /* @__PURE__ */ a(C, { ...x, onClose: f }, v)) : d || null
+      children: i ? i.map((x, k) => /* @__PURE__ */ a(C, { ...x, onClose: f }, k)) : d || null
     }
   );
 };
 N.Wrap = J;
 N.Item = C;
 N.Option = C;
-const me = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("form", { className: l("flex flex-col", e), ...t, children: n }), X = k("text-text-light dark:text-text-dark p-0 m-0", {
+const me = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("form", { className: l("flex flex-col", e), ...t, children: n }), X = v("text-text-light dark:text-text-dark p-0 m-0", {
   variants: {
     variant: {
       h1: "text-4xl",
@@ -348,7 +348,7 @@ const me = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("form", { 
       }
     )
   }
-), oe = k("w-10 animate-spin", {
+), oe = v("w-10 animate-spin", {
   variants: {
     variant: {
       muted: "fill-gray-500",
@@ -367,7 +367,7 @@ const me = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("form", { 
     ...t,
     children: /* @__PURE__ */ a("path", { d: "M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 10.4142 3.16421 10.75 2.75 10.75C2.33579 10.75 2 10.4142 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C9.58579 18 9.25 17.6642 9.25 17.25C9.25 16.8358 9.58579 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5Z" })
   }
-), ke = ({ className: e }) => /* @__PURE__ */ a(
+), ve = ({ className: e }) => /* @__PURE__ */ a(
   m,
   {
     className: l(
@@ -376,7 +376,7 @@ const me = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("form", { 
     ),
     children: /* @__PURE__ */ a(ae, {})
   }
-), ve = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("button", { className: l("inline-flex cursor-pointer", e), ...t, children: n }), pe = ({ className: e, ...n }) => /* @__PURE__ */ a(m, { className: l("flex flex-col", e), ...n }), ye = (e) => /* @__PURE__ */ g(
+), ke = ({ className: e, children: n, ...t }) => /* @__PURE__ */ a("button", { className: l("inline-flex cursor-pointer", e), ...t, children: n }), pe = ({ className: e, ...n }) => /* @__PURE__ */ a(m, { className: l("flex flex-col", e), ...n }), ye = (e) => /* @__PURE__ */ g(
   m,
   {
     className: l(
@@ -422,8 +422,8 @@ export {
   $ as Image,
   M as Input,
   ge as InputPassword,
-  ke as Loader,
-  ve as Pressable,
+  ve as Loader,
+  ke as Pressable,
   E as Span,
   ae as Spinner,
   pe as Stack,
