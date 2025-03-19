@@ -1,8 +1,9 @@
 # megatizerui 🚀
 
-UI Component Library for React Based on TypeScript + Tailwind CSS from the [`Parabit`](https://github.com/parabit) company
+**UI Component Library for React**\
+Based on TypeScript + Tailwind CSS
 
-### Install
+## Install
 
 ```bash
 npm i @parabit/megatizerui
@@ -12,13 +13,13 @@ npm i @parabit/megatizerui
 yarn add @parabit/megatizerui
 ```
 
-### Peer dependencies
+## Peer dependencies
 
 - [react: "^19.0.0"](https://react.dev/)
 - [react-dom: "^19.0.0"](https://react.dev/)
 - [tailwindcss: "^"4.0.14"](https://tailwindcss.com/)
 
-# Usage
+## Usage
 
 Add import `@parabit/megatizerui/dist/index.css` to your root `.css` file.
 
@@ -27,3 +28,7 @@ Add import `@parabit/megatizerui/dist/index.css` to your root `.css` file.
 
 @import '@parabit/megatizerui/dist/index.css';
 ```
+
+## P.S.
+
+With love on Frontend from the [`Parabit`](https://github.com/parabit) company
