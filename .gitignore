@@ -23,4 +23,5 @@ dist-ssr
 *.sw?
 
 # projects ignore
+/dist
 /dist-docs
