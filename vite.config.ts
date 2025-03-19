@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
 				outDir: 'dist',
 				copyPublicDir: false,
 				rollupOptions: {
-					external: ['react', 'react/jsx-runtime'],
+					external: ['react', 'react/jsx-runtime', 'tailwindcss'],
 				},
 			},
 		};
