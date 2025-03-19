@@ -31,3 +31,9 @@ body {
 .dev {
 	border: 1px solid red;
 }
+
+.gradient-text-logo {
+	background-image: linear-gradient(60deg, #0094d8, #ec297b);
+	background-clip: text;
+	color: transparent;
+}

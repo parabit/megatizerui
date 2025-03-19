@@ -1,20 +1,20 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router';
 
-import { Div, HStack } from '@lib';
+import { Div, Stack } from '@lib';
 
-import DocsASide from './components/DocsASide';
+import DocsHeader from './components/DocsHeader';
 
 const DocsLayout = () => (
-	<HStack className="h-full w-full">
-		<DocsASide />
+	<Stack className="h-full w-full">
+		<DocsHeader />
 
-		<Div className="flex flex-10 overflow-hidden">
+		<Div className="max-w-[1152px] w-full self-center h-full">
 			<Suspense>
 				<Outlet />
 			</Suspense>
 		</Div>
-	</HStack>
+	</Stack>
 );
 
 export default DocsLayout;
