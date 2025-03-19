@@ -1,6 +1,6 @@
 # megatizerui 🚀
 
-UI Component Library for React Based on TypeScript + Tailwind CSS
+UI Component Library for React Based on TypeScript + Tailwind CSS from the [`Parabit`](https://github.com/parabit) company
 
 ### Install
 
