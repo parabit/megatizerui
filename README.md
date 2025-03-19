@@ -20,7 +20,7 @@ yarn add @parabit/megatizerui
 
 # Usage
 
-Add import [`@parabit/megatizerui/index.css`](https://github.com/parabit/megatizerui/blob/main/lib/styles/index.css) to your root `.css` file.
+Add import `@parabit/megatizerui/dist/index.css` to your root `.css` file.
 
 ```css
 @import 'tailwindcss';
