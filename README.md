@@ -25,5 +25,5 @@ Add import [`@parabit/megatizerui/index.css`](https://github.com/parabit/megatiz
 ```css
 @import 'tailwindcss';
 
-@import '@parabit/megatizerui/index.css';
+@import '@parabit/megatizerui/dist/index.css';
 ```
