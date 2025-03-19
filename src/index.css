@@ -1,37 +1,6 @@
 @import 'tailwindcss';
 
-@theme {
-	--color-primary-blue: #0094d8;
-	--color-primary-pink: #ec297b;
-	--color-primary: var(--color-primary-blue);
-
-	--color-text-light: var(--color-neutral-700);
-	--color-text-dark: var(--color-neutral-200);
-
-	--color-muted-light: var(--color-neutral-400);
-	--color-muted-dark: var(--color-neutral-500);
-
-	--color-bg-light: #f6f6f7;
-	--color-bg-dark: #181818;
-
-	--color-card-bg-light: #fff;
-	--color-card-bg-dark: #1d1d1c;
-
-	--color-border-light: var(--color-neutral-200);
-	--color-border-dark: var(--color-neutral-700);
-}
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-html.light {
-	color: var(--color-text-light);
-	background-color: var(--color-bg-light);
-}
-
-html.dark {
-	color: var(--color-text-dark);
-	background-color: var(--color-bg-dark);
-}
+@import '../lib/styles/index.css';
 
 :root {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -57,14 +26,6 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
-}
-
-* {
-	@apply [&::-webkit-scrollbar]:my-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700;
-}
-
-*:focus-visible {
-	outline: none;
 }
 
 .dev {

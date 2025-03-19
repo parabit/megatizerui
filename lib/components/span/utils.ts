@@ -13,10 +13,10 @@ export interface ISpan
 export const spanVariants = cva('text-text-light dark:text-text-dark m-0 p-0', {
 	variants: {
 		variant: {
-			muted: 'text-muted-light dark:text-muted-dark',
-			primary: 'text-primary',
-			error: 'text-error',
-			success: 'text-success',
+			muted: '!text-muted-light dark:!text-muted-dark',
+			primary: '!text-primary',
+			error: '!text-error',
+			success: '!text-success',
 		},
 	},
 });

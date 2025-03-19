@@ -8,7 +8,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig(({ mode }) => {
 	if (mode === 'lib') {
 		return {
-			plugins: [react(), dts({ tsconfigPath: './tsconfig.lib.json' })],
+			plugins: [react(), dts({ tsconfigPath: './tsconfig.lib.json' }), tailwindcss()],
 			build: {
 				lib: {
 					entry: resolve(__dirname, 'lib/index.ts'),
