@@ -2,14 +2,18 @@ import { Route, Routes } from 'react-router';
 
 import { NotFoundScreen } from '@modules/Errors';
 
+import { router } from '.';
 import DocsLayout from './DocsLayout';
-import DocsHomeScreen from './screens/DocsHomeScreen';
 
 export const DocsRouter = () => (
 	<Routes>
 		<Route Component={DocsLayout}>
-			<Route index Component={DocsHomeScreen} />
-			<Route path="*" element={<NotFoundScreen to="/test" />} />
+			{router.map((cat, i) =>
+				cat.pages.map((page, j) => (
+					<Route key={`${i}-${j}`} path={page.url} Component={page.Component} />
+				)),
+			)}
+			<Route path="*" Component={NotFoundScreen} />
 		</Route>
 	</Routes>
 );

@@ -3,13 +3,15 @@ import { Outlet } from 'react-router';
 
 import noise from '@assets/noise.png';
 import { useTheme } from '@hooks';
-import { Div } from '@lib';
+import { Div, Stack } from '@lib';
 
-export const LayoutScreen = () => {
+import LayoutHeader from './components/LayoutHeader';
+
+export const Layout = () => {
 	useTheme();
 
 	return (
-		<Div className="bg-bg-light dark:bg-bg-dark w-full h-screen">
+		<Stack className="bg-bg-light dark:bg-bg-dark w-full h-screen">
 			<Div
 				style={{
 					backgroundImage: `url(${noise})`,
@@ -23,11 +25,13 @@ export const LayoutScreen = () => {
 				}}
 			/>
 
-			<Div className="relative w-full h-screen">
+			<LayoutHeader />
+
+			<Div className="relative w-full h-screen justify-center flex">
 				<Suspense>
 					<Outlet />
 				</Suspense>
 			</Div>
-		</Div>
+		</Stack>
 	);
 };

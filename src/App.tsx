@@ -2,15 +2,18 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import { DocsRouter } from '@modules/Docs';
 import { ErrorScreen, NotFoundScreen } from '@modules/Errors';
-import { LayoutScreen } from '@modules/Layout';
+import { Layout, LayoutHomeScreen } from '@modules/Layout';
 
 const router = createBrowserRouter([
 	{
-		Component: LayoutScreen,
+		Component: Layout,
 		ErrorBoundary: ErrorScreen,
 		children: [
 			{
-				index: true,
+				path: '/megatizerui',
+				Component: LayoutHomeScreen,
+			},
+			{
 				path: '/megatizerui/*',
 				Component: DocsRouter,
 			},

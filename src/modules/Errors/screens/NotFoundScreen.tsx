@@ -14,10 +14,10 @@ export const NotFoundScreen = ({ to }: { to?: To }) => {
 			<Heading level="1" className="block text-9xl font-bold text-white">
 				404
 			</Heading>
-			<Span className="mt-3 text-neutral-400">Страница не найдена</Span>
+			<Span className="mt-3 text-neutral-400">Page not found</Span>
 			<Button className="mt-5" onClick={handleGoBack}>
 				<ChevronLeftIcon className="w-5" />
-				<Span>Вернуться назад</Span>
+				<Span>Go Back</Span>
 			</Button>
 		</Stack>
 	);
