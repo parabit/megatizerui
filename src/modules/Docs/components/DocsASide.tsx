@@ -17,7 +17,7 @@ const DocsASide = () => {
 				<Divider className="mt-4 border-neutral-300 dark:border-neutral-700/50" />
 			</Stack>
 
-			<Stack className="">
+			<Stack>
 				{router.map((cat, i) => (
 					<Stack key={i} className="pt-2.5">
 						<Span className="py-1 text-sm font-bold">{cat.title}</Span>

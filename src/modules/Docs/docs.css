@@ -33,13 +33,14 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	transform: translate(-100%);
-	padding: 32px 32px 96px;
 	transition:
 		opacity 0.5s,
 		transform 0.25s;
 	overscroll-behavior: contain;
 	padding-top: 0px;
-	/* padding-right: 0px; */
+	padding-left: 32px;
+	padding-bottom: 96px;
+	padding-right: 32px;
 }
 
 @media (min-width: 960px) {

@@ -1,13 +1,10 @@
-import { TypeRouter } from '@types';
-
 import { pagesComponents } from './pages/components';
 import { pagesHooks } from './pages/hooks';
 import { pagesUtils } from './pages/utils';
-import { DocsInstallation } from './screens/DocsInstallation';
 
 export * from './DocsRouter';
 
-export const router: TypeRouter = [
+export const router: TypeRoute[] = [
 	{
 		title: 'Getting started',
 		pages: [
@@ -15,7 +12,6 @@ export const router: TypeRouter = [
 				url: 'installation',
 				title: 'Installation',
 				description: 'How to install and set up megatizerui in your project',
-				Component: DocsInstallation,
 			},
 		],
 	},
@@ -30,5 +26,16 @@ export const router: TypeRouter = [
 	{
 		title: 'Utils',
 		pages: pagesUtils,
+	},
+	{
+		title: 'More',
+		pages: [
+			{
+				url: 'prettier-config',
+				title: 'prettier config',
+				description:
+					'This library represents the corporate design of the code of the Parabit company',
+			},
+		],
 	},
 ];

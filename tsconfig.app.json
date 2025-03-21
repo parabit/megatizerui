@@ -31,8 +31,7 @@
 			"@hooks": ["src/hooks"],
 			"@lib": ["lib"],
 			"@modules/*": ["src/modules/*"],
-			"@services": ["src/services"],
-			"@types": ["src/types"]
+			"@services": ["src/services"]
 		}
 	},
 	"include": ["src"],
