@@ -7,14 +7,11 @@ import { GitHubIcon, Link, NPMIcon, ThemeWidgetSwitch } from '@modules/Elements'
 const LayoutHeader = () => {
 	const location = useLocation();
 
-	console.log('LayoutHeader');
-	console.log(location);
-
 	return (
 		<nav
 			className={cn(
 				'flex flex-row fixed z-50 w-full h-16 px-2 md:px-12 2xl:px-72 items-center justify-end',
-				location.pathname === '/megatizerui'
+				location.pathname === '/'
 					? ''
 					: 'border-b border-neutral-300/80 dark:border-neutral-800',
 			)}
