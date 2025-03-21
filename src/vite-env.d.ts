@@ -27,8 +27,8 @@ type TypeDocsComponent = {
 	description: string;
 	demos?: TypeDocsArrayDemo;
 	props?: TypeDocsArrayProps;
-	gitSource: string;
-	gitDemo: string;
+	gitSource?: string;
+	gitDemo?: string;
 };
 
 type TypeDocsComponent = {
