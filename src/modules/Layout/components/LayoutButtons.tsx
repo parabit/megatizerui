@@ -1,6 +1,6 @@
 import { GIT_REPO_URL } from '@constants';
 import { cn, Div, Span } from '@lib';
-import { router } from '@modules/Docs';
+import { router } from '@modules/Docs/utils/router';
 import { Link } from '@modules/Elements';
 
 const LayoutButtons = () => (

@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router';
 
 import { cn, Divider, Span, Stack } from '@lib';
 
-import { router } from '..';
+import { router } from '../utils/router';
 
 const DocsASide = () => {
 	const location = useLocation();

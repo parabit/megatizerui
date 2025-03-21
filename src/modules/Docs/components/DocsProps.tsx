@@ -1,6 +1,6 @@
 import Markdown from 'react-markdown';
 
-import { cn, Heading, Stack } from '@lib';
+import { cn, Div, Heading, Stack } from '@lib';
 
 const styleBorder = 'border border-neutral-300 dark:border-neutral-700';
 
@@ -15,15 +15,17 @@ const DocsProps = (props: { props: TypeDocsArrayProps }) => {
 				Props
 			</Heading>
 
-			<table className={cn('border-collapse', styleBorder)}>
-				<PropsHead />
+			<Div className="overflow-x-auto w-full">
+				<table className={cn('border-collapse w-full', styleBorder)}>
+					<PropsHead />
 
-				<tbody>
-					{items.map((tr, i) => (
-						<PropsRow key={i} {...tr} />
-					))}
-				</tbody>
-			</table>
+					<tbody>
+						{items.map((tr, i) => (
+							<PropsRow key={i} {...tr} />
+						))}
+					</tbody>
+				</table>
+			</Div>
 		</Stack>
 	);
 };

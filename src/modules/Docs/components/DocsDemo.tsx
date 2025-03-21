@@ -29,7 +29,7 @@ const DocsDemo = (props: TypeDocsDemo) => {
 			<Header {...props} />
 
 			<Tabs className="mt-6">
-				<Tabs.TabList index={index} onChange={handleChangeIndex}>
+				<Tabs.TabList index={index} onChange={handleChangeIndex} className="w-full md:w-fit">
 					<Tabs.Tab>Preview</Tabs.Tab>
 					<Tabs.Tab>Code</Tabs.Tab>
 				</Tabs.TabList>
@@ -63,7 +63,7 @@ export default DocsDemo;
 
 const Header = (props: { title: string; description: string }) => (
 	<Stack className="space-y-3">
-		<Heading level="4" className="font-bold">
+		<Heading level="4" className="font-semibold">
 			{props.title}
 		</Heading>
 		<Div className="text-muted">

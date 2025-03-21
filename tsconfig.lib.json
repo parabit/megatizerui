@@ -20,8 +20,10 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"noUncheckedSideEffectImports": true
+		"noUncheckedSideEffectImports": true,
+
+		"allowUmdGlobalAccess": true
 	},
-	"include": ["lib", "./lib/**/*.ts", "./lib/**/*.tsx", "./lib/**/*.d.ts"],
-	"exclude": ["src"]
+	"include": ["lib", "./lib/**/*.ts", "./lib/**/*.tsx", "./lib/**/*.d.ts", "./src/vite-env.d.ts"],
+	"exclude": ["src", "./lib/**/*.docs.ts", "./lib/**/*.demo.tsx"]
 }

@@ -30,6 +30,7 @@
 			"@helpers": ["src/helpers"],
 			"@hooks": ["src/hooks"],
 			"@lib": ["lib"],
+			"@lib/*": ["lib/*"],
 			"@modules/*": ["src/modules/*"],
 			"@services": ["src/services"]
 		}

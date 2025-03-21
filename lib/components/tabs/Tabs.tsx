@@ -18,17 +18,16 @@ const Tab = (props: ITab) => {
 			variant="ghost"
 			onClick={handleChange}
 			className={cn(
-				'!py-2', //padding
+				'!py-1 w-full',
 
-				props.active ? '!bg-neutral-100' : '!bg-neutral-200', //bg light
+				props.active ? '!bg-card-bg-light' : '!bg-neutral-200', //bg light
 				props.active ? '!text-neutral-600' : '!text-neutral-400', //text light
 
-				props.active ? 'dark:!bg-neutral-600' : 'dark:!bg-card-bg-dark', //bg dark
+				props.active ? 'dark:!bg-neutral-600' : 'dark:!bg-neutral-800', //bg dark
 				props.active ? 'dark:!text-neutral-200' : 'dark:!text-neutral-500', //text dark
 
-				'hover:!border',
-				props.active ? 'hover:!border-neutral-300' : 'hover:!border-neutral-300', //hover light
-				props.active ? 'dark:hover:!border-neutral-500' : 'dark:hover:!border-neutral-700', //hover dark
+				props.active ? 'hover:!text-neutral-900' : 'hover:!text-neutral-500', // hover text
+				props.active ? 'dark:hover:!text-neutral-400' : 'dark:hover:!text-neutral-400', // hover text dark
 			)}
 		>
 			{props.children}
@@ -37,7 +36,12 @@ const Tab = (props: ITab) => {
 };
 
 const TabList = (props: ITabList) => (
-	<HStack className="dark:bg-card-bg-dark gap-x-1 self-start rounded-xl bg-neutral-200 p-1">
+	<HStack
+		className={cn(
+			'dark:bg-neutral-800 gap-x-1 rounded-xl bg-neutral-200 p-0.5 w-fit',
+			props.className,
+		)}
+	>
 		{Array.isArray(props.children) &&
 			Children.map(props.children, (child, index) =>
 				cloneElement(child, {
@@ -64,7 +68,7 @@ const PanelList = (props: IPanelList) => (
 );
 
 const Tabs = (props: ITabs) => (
-	<Stack className={cn('gap-y-3', props.className)}>{props.children}</Stack>
+	<Stack className={cn('gap-y-3 w-auto', props.className)}>{props.children}</Stack>
 );
 
 Tabs.TabList = TabList;

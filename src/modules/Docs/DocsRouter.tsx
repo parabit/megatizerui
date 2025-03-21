@@ -2,9 +2,9 @@ import { Route, Routes } from 'react-router';
 
 import { NotFoundScreen } from '@modules/Errors';
 
-import { router } from '.';
 import DocsLayout from './DocsLayout';
 import DocsScreen from './screens/DocsScreen';
+import { router } from './utils/router';
 
 export const DocsRouter = () => (
 	<Routes>

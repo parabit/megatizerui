@@ -1,6 +1,6 @@
-import { DemoVariant } from './Buttons.Demo';
+import { DemoVariant } from './Button.demo';
 
-const props: TypeDocsArrayProps = [
+const props = [
 	{
 		name: 'ref',
 		type: 'Ref<HTMLButtonElement>',
@@ -34,19 +34,21 @@ const html = `import { Button } from 'megatizerui';\n
 <Button variant="link" onClick={() => alert('click!')}>link</Button>
 <Button variant="outline" onClick={() => alert('click!')}>link</Button>`;
 
-export const ButtonPage: TypeDocsComponent = {
+export const ButtonPage = {
 	url: 'button',
 	title: 'Button',
 	description: 'Компонент, создаваемый на основе тега `<button />`',
-	git: 'https://github.com/parabit/megatizerui/blob/main/lib/components/button/Button.tsx',
 	props,
 	demos: [
 		{
 			title: 'Variants',
 			description:
-				'Используйте свойство `variant` для изменения оформления кнопки: `default`, `ghost`, `link`',
+				'Используйте свойство `variant` для изменения оформления кнопки: `default`, `ghost`, `link`, `outline`',
 			jsx: DemoVariant,
 			html,
 		},
 	],
+	gitSource: 'https://github.com/parabit/megatizerui/blob/main/lib/components/button/Button.tsx',
+	gitDemo:
+		'https://github.com/parabit/megatizerui/blob/main/lib/components/button/Button.demo.tsx',
 };

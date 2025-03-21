@@ -25,9 +25,10 @@ type TypeDocsComponent = {
 	url: string;
 	title: string;
 	description: string;
-	git?: string;
 	demos?: TypeDocsArrayDemo;
 	props?: TypeDocsArrayProps;
+	gitSource: string;
+	gitDemo: string;
 };
 
 type TypeDocsComponent = {

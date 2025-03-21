@@ -13,6 +13,7 @@ export interface ITabList {
 	index: number;
 	onChange: (index: number) => void;
 	children: ReactNode;
+	className?: string;
 }
 
 ////////////////////////////////////

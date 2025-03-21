@@ -1,4 +1,4 @@
-import { ButtonPage } from './button/button.page';
+import { ButtonPage } from '@lib/components/button/button.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	{
