@@ -7,6 +7,9 @@ import { GitHubIcon, Link, NPMIcon, ThemeWidgetSwitch } from '@modules/Elements'
 const LayoutHeader = () => {
 	const location = useLocation();
 
+	console.log('LayoutHeader');
+	console.log(location);
+
 	return (
 		<nav
 			className={cn(

@@ -1,9 +1,9 @@
 import { TypeRouter } from '@types';
 
-import { pagesComponents } from './components';
-import { pagesHooks } from './hooks';
+import { pagesComponents } from './pages/components';
+import { pagesHooks } from './pages/hooks';
+import { pagesUtils } from './pages/utils';
 import { DocsInstallation } from './screens/DocsInstallation';
-import { pagesUtils } from './utils';
 
 export * from './DocsRouter';
 
