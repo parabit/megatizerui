@@ -81,3 +81,11 @@ html.dark code {
 .code-highlighter > pre > code {
 	padding: 0;
 }
+
+body {
+	overflow-y: scroll;
+}
+
+html {
+	scrollbar-gutter: stable;
+}

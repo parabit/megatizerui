@@ -7,7 +7,7 @@ import DocsHeader from '../components/DocsHeader';
 import DocsProps from '../components/DocsProps';
 
 const DocsScreen = (props: TypeDocsComponent) => (
-	<Stack className="w-full overflow-x-hidden overflow-y-auto p-4 pb-24 md:pr-24">
+	<Stack className="w-full overflow-hidden p-4 xs:pl-8 pb-24 md:pr-24">
 		<DocsHeader {...props} />
 		{props.demos ? <DocsDemos items={props.demos} /> : null}
 		{props.props ? <DocsProps props={props.props} /> : null}
