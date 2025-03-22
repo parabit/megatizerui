@@ -18,7 +18,7 @@ const LayoutHeader = () => {
 			)}
 		>
 			<Div className="relative h-full w-full flex flex-row items-center justify-end">
-				<HStack className="items-center gap-x-4 px-2 md:px-12 2xl:px-72">
+				<HStack className="items-center gap-x-4 px-2 md:px-12 2xl:px-72 z-[51]">
 					<ThemeWidgetSwitch />
 
 					<HStack className="items-center gap-x-1 border-l border-neutral-300/80 dark:border-neutral-700 !pl-3">

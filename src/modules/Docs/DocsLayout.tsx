@@ -3,7 +3,8 @@ import { Outlet } from 'react-router';
 
 import { Div } from '@lib';
 
-import './utils/docs.css';
+import './utils/docsLayout.css';
+import './utils/docsCode.css';
 
 import DocsASide from './components/DocsASide';
 

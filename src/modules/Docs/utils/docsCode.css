@@ -1,0 +1,34 @@
+code {
+	padding: 0.2rem 0.6rem 0.25rem 0.6rem;
+	border-radius: var(--radius-lg);
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+}
+
+html.light code {
+	color: var(--color-text-light);
+	background-color: var(--color-neutral-300);
+}
+
+html.dark code {
+	color: var(--color-text-dark);
+	background-color: var(--color-neutral-700);
+}
+
+.code-primary code {
+	color: var(--color-white) !important;
+	background-color: var(--color-primary-blue) !important;
+}
+
+.code-highlighter code {
+	background: transparent !important;
+}
+
+.code-highlighter span {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.code-highlighter > pre > code {
+	padding: 0;
+}

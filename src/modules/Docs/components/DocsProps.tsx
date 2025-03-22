@@ -10,12 +10,12 @@ const DocsProps = (props: { props: TypeDocsArrayProps }) => {
 	const items = props.props.sort((a, b) => a.name.localeCompare(b.name));
 
 	return (
-		<Stack className="mt-6 gap-y-3">
-			<Heading level="4" className="mb-4 font-bold">
+		<Stack className="mt-6">
+			<Heading level="4" className="font-bold">
 				Props
 			</Heading>
 
-			<Div className="overflow-x-auto w-full">
+			<Div className="overflow-x-auto w-full mt-4">
 				<table className={cn('border-collapse w-full', styleBorder)}>
 					<PropsHead />
 
@@ -53,6 +53,7 @@ const PropsTD = ({ value, className, type }: TypePropsTD) => {
 		</td>
 	);
 };
+
 const PropsRow = (props: TypeDocsProps) => (
 	<tr className="odd:bg-neutral-200 dark:odd:bg-neutral-800">
 		{PropsComponentKeys.map((el: string, i) => {

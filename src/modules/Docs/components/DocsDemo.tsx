@@ -62,11 +62,12 @@ const DocsDemo = (props: TypeDocsDemo) => {
 export default DocsDemo;
 
 const Header = (props: { title: string; description: string }) => (
-	<Stack className="space-y-3">
-		<Heading level="4" className="font-semibold">
+	<Stack>
+		<Heading level="4" className="font-semibold mb-2">
 			{props.title}
 		</Heading>
-		<Div className="text-muted">
+
+		<Div className="leading-8">
 			<Markdown>{props.description}</Markdown>
 		</Div>
 	</Stack>
