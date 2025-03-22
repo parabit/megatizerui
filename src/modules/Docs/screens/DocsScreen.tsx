@@ -2,15 +2,28 @@ import { Stack } from '@lib';
 
 import DocsDemos from '../components/DocsDemos';
 import DocsHeader from '../components/DocsHeader';
+import DocsPagination from '../components/DocsPagination';
 import DocsProps from '../components/DocsProps';
 import DocsSource from '../components/DocsSource';
 
-const DocsScreen = (props: TypeDocsComponent) => (
+interface IDocsScreen extends TypeDocsComponent {
+	prevPage?: {
+		url: string;
+		title: string;
+	};
+	nextPage?: {
+		url: string;
+		title: string;
+	};
+}
+
+const DocsScreen = (props: IDocsScreen) => (
 	<Stack className="w-full overflow-hidden p-4 sm:pl-12 sm:pt-8 pb-24 md:pr-24">
 		<DocsHeader {...props} />
 		{props.demos ? <DocsDemos items={props.demos} /> : null}
 		{props.props ? <DocsProps props={props.props} /> : null}
 		{props.gitSource || props.gitDemo ? <DocsSource {...props} /> : null}
+		{props.prevPage || props.nextPage ? <DocsPagination {...props} /> : null}
 	</Stack>
 );
 
