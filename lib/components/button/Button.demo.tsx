@@ -5,22 +5,17 @@ import { VariantProps } from 'class-variance-authority';
 
 import { Div } from '../div';
 import { Button } from './Button';
-import { buttonVariants } from './utils';
+import { buttonVariants, EnumButtonVariants } from './utils';
 
-const renderDemo = (variant: VariantProps<typeof buttonVariants>['variant']) => (
-	<Button
-		text={variant?.toString()}
-		variant={variant}
-		onClick={() => alert('click!')}
-		className="w-full"
-	/>
-);
-
-export const DemoVariant = () => (
+export const DemoVariants = () => (
 	<Div className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
-		{renderDemo('solid')}
-		{renderDemo('ghost')}
-		{renderDemo('link')}
-		{renderDemo('outline')}
+		{Object.keys(EnumButtonVariants).map((variant, index) => (
+			<Button
+				key={index}
+				text={variant}
+				onClick={() => alert(variant)}
+				variant={variant as VariantProps<typeof buttonVariants>['variant']}
+			/>
+		))}
 	</Div>
 );

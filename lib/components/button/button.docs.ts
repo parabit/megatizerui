@@ -1,4 +1,5 @@
-import { DemoVariant } from './Button.demo';
+import { DemoVariants } from './Button.demo';
+import { EnumButtonVariants } from './utils';
 
 const props = [
 	{
@@ -22,17 +23,24 @@ const props = [
 	},
 	{
 		name: 'variant',
-		type: ['solid', 'ghost', 'link'],
-		description: 'type is `string`',
+		type: Object.keys(EnumButtonVariants),
+		description: '`string`',
 		default: 'solid',
 	},
 ];
 
-const html = `import { Button } from 'megatizerui';\n
-<Button text="solid" variant="solid" onClick={() => alert('click!')} />
-<Button text="ghost" variant="ghost" onClick={() => alert('click!')} />
-<Button variant="link" onClick={() => alert('click!')}>link</Button>
-<Button variant="outline" onClick={() => alert('click!')}>link</Button>`;
+const html = `const DemoVariants = () => (
+	<Div className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
+		{buttonVariants.map((variant, index) => (
+			<Button
+				key={index}
+				text={variant}
+				variant={variant}
+				onClick={() => alert(variant)}
+			/>
+		))}
+	</Div>
+);`;
 
 export const ButtonPage = {
 	url: 'button',
@@ -43,8 +51,11 @@ export const ButtonPage = {
 		{
 			title: 'Variants',
 			description:
-				'Используйте свойство `variant` для изменения оформления кнопки: `default`, `ghost`, `link`, `outline`',
-			jsx: DemoVariant,
+				'Используйте свойство `variant` для изменения оформления кнопки: ' +
+				Object.keys(EnumButtonVariants)
+					.map((el) => '`' + el + '`')
+					.join(', '),
+			jsx: DemoVariants,
 			html,
 		},
 	],
