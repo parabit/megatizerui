@@ -3,6 +3,7 @@ import { ButtonPage } from '@lib/components/button/button.docs';
 import { CardPage } from '@lib/components/card/card.docs';
 import { DivPage } from '@lib/components/div/div.docs';
 import { DividerPage } from '@lib/components/divider/divider.docs';
+import { DropdownPage } from '@lib/components/dropdown/dropdown.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
@@ -10,11 +11,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	DivPage,
 	CardPage,
 	DividerPage,
-	{
-		url: 'dropdown',
-		title: 'Dropdown',
-		description: '',
-	},
+	DropdownPage,
 	{
 		url: 'form',
 		title: 'Form',

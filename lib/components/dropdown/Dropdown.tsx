@@ -43,7 +43,7 @@ export const Dropdown = (props: IDropdown) => {
 				'opacity-0 data-active:opacity-100',
 				'top-full mt-2 min-h-10 overflow-hidden',
 				'min-w-full rounded-xl shadow-xl dark:shadow-neutral-900',
-				options ? '!p-1' : '!p-0',
+				options ? '!p-1' : '!p-1',
 				stylePlacement[placement],
 				className,
 			)}

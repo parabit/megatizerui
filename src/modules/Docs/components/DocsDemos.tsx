@@ -1,14 +1,11 @@
-import { Divider, Stack } from '@lib';
+import { Stack } from '@lib';
 
 import DocsDemo from './DocsDemo';
 
 const DocsDemos = ({ items }: { items: TypeDocsDemo[] }) => (
 	<Stack>
 		{items.map((demo: TypeDocsDemo, index: number) => (
-			<Stack key={index}>
-				<DocsDemo {...demo} />
-				{items.length - 1 > index ? <Divider /> : null}
-			</Stack>
+			<DocsDemo key={index} {...demo} />
 		))}
 	</Stack>
 );

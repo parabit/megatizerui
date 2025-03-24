@@ -6,7 +6,7 @@ const url = title.toLocaleLowerCase();
 export const propsDiv = [
 	{
 		name: 'ref',
-		type: 'Ref<HTMLButtonElement>',
+		type: 'Ref<HTMLDivElement>',
 		description:
 			'Изменяемый объект, ссылку на который React сохраняет между повторными рендерингами',
 	},
