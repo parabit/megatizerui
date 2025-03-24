@@ -41,7 +41,8 @@ const html = `const Demo = () => {
 export const FormPage = {
 	url,
 	title,
-	description: 'Базовый компонент, создаваемый на основе тега `<div />`',
+	description:
+		'Компонент для группировки компонентов формы, создаваемый на основе тега `<form />`',
 	props: propsDiv,
 	demos: [
 		{

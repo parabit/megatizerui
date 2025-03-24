@@ -6,7 +6,7 @@ import { headingVariants, IHeading } from './utils';
 export const Heading = ({ level, className, text, children, ...props }: IHeading) => {
 	return createElement(
 		`h${level}`,
-		{ className: cn(headingVariants({ variant: `h${level}` }), className), ...props },
+		{ className: cn(headingVariants({ level }), className), ...props },
 		text || children,
 	);
 };

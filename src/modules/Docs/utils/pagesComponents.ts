@@ -5,6 +5,7 @@ import { DivPage } from '@lib/components/div/div.docs';
 import { DividerPage } from '@lib/components/divider/divider.docs';
 import { DropdownPage } from '@lib/components/dropdown/dropdown.docs';
 import { FormPage } from '@lib/components/form/form.docs';
+import { HeadingPage } from '@lib/components/heading/heading.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
@@ -14,11 +15,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	DividerPage,
 	DropdownPage,
 	FormPage,
-	{
-		url: 'heading',
-		title: 'Heading',
-		description: '',
-	},
+	HeadingPage,
 	{
 		url: 'hstack',
 		title: 'HStack',
