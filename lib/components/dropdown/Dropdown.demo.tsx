@@ -6,21 +6,21 @@ import { useOutsideClick } from '../../hooks';
 import { Button } from '../button';
 import { Dropdown } from './Dropdown';
 
+const options = [
+	{
+		value: 'Первый пункт',
+		active: true,
+	},
+	{
+		value: 'Второй пункт',
+	},
+	{
+		value: 'Третий пункт',
+	},
+];
+
 export const DemoFirst = () => {
 	const { ref, isOpen, onClose, onToggle } = useOutsideClick();
-
-	const options = [
-		{
-			value: 'Первый пункт',
-			active: true,
-		},
-		{
-			value: 'Второй пункт',
-		},
-		{
-			value: 'Третий пункт',
-		},
-	];
 
 	return (
 		<Dropdown.Wrap ref={ref}>
@@ -33,19 +33,6 @@ export const DemoFirst = () => {
 
 export const DemoSecond = () => {
 	const { ref, isOpen, onClose, onToggle } = useOutsideClick();
-
-	const options = [
-		{
-			value: 'Первый пункт',
-			active: true,
-		},
-		{
-			value: 'Второй пункт',
-		},
-		{
-			value: 'Третий пункт',
-		},
-	];
 
 	return (
 		<Dropdown.Wrap ref={ref}>

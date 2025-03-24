@@ -1,7 +1,21 @@
-# megatizerui 🚀
+<p align="center">
+  <a href="https://parabit.github.io/megatizerui" target="_blank">
+    <picture>
+      <img alt="megatizerui logo" src="https://raw.githubusercontent.com/parabit/megatizerui/HEAD/.github/logo-light.svg" width="600" height="130" style="max-width: 100%;">
+    </picture>
+  </a>
+</p>
 
-**UI Component Library for React**\
-Based on TypeScript + Tailwind CSS
+<p align="center">
+  UI Component Library for React<br>
+  Based on TypeScript + Tailwind CSS
+</p>
+
+---
+
+## Documentation
+
+For full documentation, visit [https://parabit.github.io/megatizerui](https://parabit.github.io/megatizerui)
 
 ## Install
 
