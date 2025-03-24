@@ -1,16 +1,13 @@
 import { AvatarPage } from '@lib/components/avatar/avatar.docs';
 import { ButtonPage } from '@lib/components/button/button.docs';
+import { CardPage } from '@lib/components/card/card.docs';
 import { DivPage } from '@lib/components/div/div.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
 	ButtonPage,
 	DivPage,
-	{
-		url: 'div',
-		title: 'Div',
-		description: '',
-	},
+	CardPage,
 	{
 		url: 'divider',
 		title: 'Divider',

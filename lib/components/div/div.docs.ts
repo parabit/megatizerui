@@ -1,6 +1,6 @@
 import { Demo } from './Div.demo';
 
-const props = [
+export const propsDiv = [
 	{
 		name: 'ref',
 		type: 'Ref<HTMLButtonElement>',
@@ -29,7 +29,7 @@ export const DivPage = {
 	url: 'div',
 	title: 'Div',
 	description: 'Базовый компонент, создаваемый на основе тега `<div />`',
-	props,
+	props: propsDiv,
 	demos: [
 		{
 			title: 'Example',
