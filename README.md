@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://parabit.github.io/megatizerui" target="_blank">
     <picture>
-      <img alt="megatizerui logo" src="https://raw.githubusercontent.com/parabit/megatizerui/HEAD/.github/logo-light.svg" width="600" height="130" style="max-width: 100%;">
+      <img alt="megatizerui logo" src="https://raw.githubusercontent.com/parabit/megatizerui/HEAD/.github/logo.svg" width="600" height="130" style="max-width: 100%;">
     </picture>
   </a>
 </p>
