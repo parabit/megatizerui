@@ -1,6 +1,8 @@
 <p align="center">
   <a href="https://parabit.github.io/megatizerui" target="_blank">
     <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/parabit/megatizerui/HEAD/.github/logo.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/parabit/megatizerui/HEAD/.github/logo.svg">
       <img alt="megatizerui logo" src="https://raw.githubusercontent.com/parabit/megatizerui/HEAD/.github/logo.svg" width="600" height="130" style="max-width: 100%;">
     </picture>
   </a>
