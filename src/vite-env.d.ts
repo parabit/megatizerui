@@ -12,7 +12,7 @@ type TypeDocsArrayProps = Array<TypeDocsProps>;
 
 type TypeDocsDemo = {
 	title: string;
-	description: string;
+	description?: string;
 	jsx?: () => JSX.Element;
 	node?: ReactNode;
 	html: string;

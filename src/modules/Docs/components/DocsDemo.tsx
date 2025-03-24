@@ -1,5 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 import Markdown from 'react-markdown';
+import { useLocation } from 'react-router';
 import { Prism, SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { vs, vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -14,7 +15,11 @@ const DocsDemo = (props: TypeDocsDemo) => {
 	const { theme } = useTheme();
 	const [index, setIndex] = useState(0);
 
-	useLayoutEffect(() => setIndex(0), []);
+	const { pathname } = useLocation();
+
+	useLayoutEffect(() => {
+		setIndex(0);
+	}, [pathname]);
 
 	const handleChangeIndex = (value: number) => setIndex(value);
 
