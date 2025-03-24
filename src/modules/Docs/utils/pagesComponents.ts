@@ -1,11 +1,8 @@
+import { AvatarPage } from '@lib/components/avatar/avatar.docs';
 import { ButtonPage } from '@lib/components/button/button.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
-	{
-		url: 'avatar',
-		title: 'Avatar',
-		description: '',
-	},
+	AvatarPage,
 	ButtonPage,
 	{
 		url: 'card',

@@ -5,6 +5,8 @@ const props = [
 	{
 		name: 'ref',
 		type: 'Ref<HTMLButtonElement>',
+		description:
+			'Изменяемый объект, ссылку на который React сохраняет между повторными рендерингами',
 	},
 	{
 		name: 'children',
@@ -30,8 +32,8 @@ const props = [
 ];
 
 const html = `const DemoVariants = () => (
-	<Div className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
-		{buttonVariants.map((variant, index) => (
+	<Div>
+		{variants.map((variant, index) => (
 			<Button
 				key={index}
 				text={variant}
