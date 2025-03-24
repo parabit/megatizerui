@@ -4,6 +4,7 @@ import { CardPage } from '@lib/components/card/card.docs';
 import { DivPage } from '@lib/components/div/div.docs';
 import { DividerPage } from '@lib/components/divider/divider.docs';
 import { DropdownPage } from '@lib/components/dropdown/dropdown.docs';
+import { FormPage } from '@lib/components/form/form.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
@@ -12,11 +13,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	CardPage,
 	DividerPage,
 	DropdownPage,
-	{
-		url: 'form',
-		title: 'Form',
-		description: '',
-	},
+	FormPage,
 	{
 		url: 'heading',
 		title: 'Heading',

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { FormEvent, ReactNode } from 'react';
 
 import { cn } from '../../utils';
 
@@ -8,8 +8,15 @@ interface IForm {
 	children: ReactNode;
 }
 
-export const Form = ({ className, children, ...props }: IForm) => (
-	<form className={cn('flex flex-col', className)} {...props}>
-		{children}
-	</form>
-);
+export const Form = ({ className, children, onSubmit, ...props }: IForm) => {
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		if (onSubmit) onSubmit();
+	};
+
+	return (
+		<form onSubmit={handleSubmit} className={cn('flex flex-col', className)} {...props}>
+			{children}
+		</form>
+	);
+};
