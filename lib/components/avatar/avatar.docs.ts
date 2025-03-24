@@ -1,6 +1,9 @@
 import { DemoSizes } from './Avatar.demo';
 import { EnumAvatarSizes } from './utils';
 
+const title = 'Avatar';
+const url = title.toLocaleLowerCase();
+
 const props = [
 	{
 		name: 'className',
@@ -28,8 +31,8 @@ const html = `const DemoSizes = () => (
 );`;
 
 export const AvatarPage = {
-	url: 'avatar',
-	title: 'Avatar',
+	url,
+	title,
 	description: 'Компонент, создаваемый на основе тега `<img />`',
 	props,
 	demos: [
@@ -44,7 +47,6 @@ export const AvatarPage = {
 			html,
 		},
 	],
-	gitSource: 'https://github.com/parabit/megatizerui/blob/main/lib/components/avatar/Avatar.tsx',
-	gitDemo:
-		'https://github.com/parabit/megatizerui/blob/main/lib/components/avatar/Avatar.demo.tsx',
+	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
+	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
 };

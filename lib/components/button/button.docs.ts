@@ -1,6 +1,9 @@
 import { DemoVariants } from './Button.demo';
 import { EnumButtonVariants } from './utils';
 
+const title = 'Button';
+const url = title.toLocaleLowerCase();
+
 const props = [
 	{
 		name: 'ref',
@@ -45,8 +48,8 @@ const html = `const DemoVariants = () => (
 );`;
 
 export const ButtonPage = {
-	url: 'button',
-	title: 'Button',
+	url,
+	title,
 	description: 'Компонент, создаваемый на основе тега `<button />`',
 	props,
 	demos: [
@@ -61,7 +64,6 @@ export const ButtonPage = {
 			html,
 		},
 	],
-	gitSource: 'https://github.com/parabit/megatizerui/blob/main/lib/components/button/Button.tsx',
-	gitDemo:
-		'https://github.com/parabit/megatizerui/blob/main/lib/components/button/Button.demo.tsx',
+	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
+	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
 };

@@ -1,6 +1,9 @@
 import { propsDiv } from '../div/div.docs';
 import { Demo } from './Card.demo';
 
+const title = 'Card';
+const url = title.toLocaleLowerCase();
+
 const html = `const Demo = () => (
     <Card className="p-4 gap-y-3 items-start">
         <Heading level="2">Заголовок</Heading>
@@ -10,8 +13,8 @@ const html = `const Demo = () => (
 );`;
 
 export const CardPage = {
-	url: 'card',
-	title: 'Card',
+	url,
+	title,
 	description: 'Компонент, создаваемый на основе компонента `<Div />`',
 	props: propsDiv,
 	demos: [
@@ -21,6 +24,6 @@ export const CardPage = {
 			html,
 		},
 	],
-	gitSource: 'https://github.com/parabit/megatizerui/blob/main/lib/components/card/Card.tsx',
-	gitDemo: 'https://github.com/parabit/megatizerui/blob/main/lib/components/card/Card.demo.tsx',
+	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
+	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
 };

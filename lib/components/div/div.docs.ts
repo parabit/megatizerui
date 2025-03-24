@@ -1,5 +1,8 @@
 import { Demo } from './Div.demo';
 
+const title = 'Div';
+const url = title.toLocaleLowerCase();
+
 export const propsDiv = [
 	{
 		name: 'ref',
@@ -26,8 +29,8 @@ const html = `const Demo = () => (
 );`;
 
 export const DivPage = {
-	url: 'div',
-	title: 'Div',
+	url,
+	title,
 	description: 'Базовый компонент, создаваемый на основе тега `<div />`',
 	props: propsDiv,
 	demos: [
@@ -37,6 +40,6 @@ export const DivPage = {
 			html,
 		},
 	],
-	gitSource: 'https://github.com/parabit/megatizerui/blob/main/lib/components/div/Div.tsx',
-	gitDemo: 'https://github.com/parabit/megatizerui/blob/main/lib/components/div/Div.demo.tsx',
+	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
+	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
 };
