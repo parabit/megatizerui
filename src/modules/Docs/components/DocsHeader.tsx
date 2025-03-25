@@ -1,15 +1,17 @@
 import Markdown from 'react-markdown';
 
-import { Divider, Heading, HStack, Stack } from '@lib';
+import { Div, Divider, Heading, HStack, Stack } from '@lib';
 
-const DocsHeader = ({ title, description }: TypeDocsComponent) => (
+const DocsHeader = ({ title, description }: { title: string; description: string }) => (
 	<Stack>
 		<HStack className="items-end justify-between mb-2">
 			<Heading level="2" className="font-bold">
 				{title}
 			</Heading>
 		</HStack>
-		<Markdown>{description}</Markdown>
+		<Div className="text-muted">
+			<Markdown>{description}</Markdown>
+		</Div>
 		<Divider className="mt-3 border-neutral-300" />
 	</Stack>
 );

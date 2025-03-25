@@ -3,12 +3,14 @@ import { Route, Routes } from 'react-router';
 import { NotFoundScreen } from '@modules/Errors';
 
 import DocsLayout from './DocsLayout';
+import { DocsInstallation } from './screens/DocsInstallation';
 import DocsScreen from './screens/DocsScreen';
 import { router } from './utils/router';
 
 export const DocsRouter = () => (
 	<Routes>
 		<Route Component={DocsLayout}>
+			<Route path="installation" element={<DocsInstallation nextPage={getNextPage(0, 0)} />} />
 			{router.map((cat, i) =>
 				cat.pages.map((page, j) => (
 					<Route

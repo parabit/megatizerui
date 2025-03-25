@@ -1,18 +1,13 @@
 import { useLayoutEffect, useState } from 'react';
 import Markdown from 'react-markdown';
 import { useLocation } from 'react-router';
-import { Prism, SyntaxHighlighterProps } from 'react-syntax-highlighter';
-import { vs, vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { useTheme } from '@hooks';
 import { Card, Div, Heading, Span, Stack, Tabs } from '@lib';
+import { CodeBlock } from '@modules/Elements';
 
 import DocsProps from './DocsProps';
 
-const SyntaxHighlighter = Prism as unknown as React.FC<SyntaxHighlighterProps>;
-
 const DocsDemo = (props: TypeDocsDemo) => {
-	const { theme } = useTheme();
 	const [index, setIndex] = useState(0);
 
 	const { pathname } = useLocation();
@@ -47,7 +42,7 @@ const DocsDemo = (props: TypeDocsDemo) => {
 					</Tabs.Panel>
 					<Tabs.Panel>
 						<Card className="code-highlighter relative w-full items-start justify-start !p-0 overflow-hidden">
-							<CodeBlock theme={theme} html={props.html} />
+							<CodeBlock value={props.html} />
 
 							<Span
 								variant="muted"
@@ -73,18 +68,9 @@ const Header = (props: { title: string; description?: string }) => (
 		</Heading>
 
 		{props.description ? (
-			<Div className="leading-8">
+			<Div className="leading-8 text-muted">
 				<Markdown>{props.description}</Markdown>
 			</Div>
 		) : null}
 	</Stack>
-);
-
-const CodeBlock = ({ theme, html }: { theme: string; html: string }) => (
-	<SyntaxHighlighter
-		children={html}
-		language="typescript"
-		style={theme === 'light' ? vs : vscDarkPlus}
-		customStyle={{ width: '100%', margin: 0, border: 'none' }}
-	/>
 );

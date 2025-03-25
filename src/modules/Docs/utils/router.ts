@@ -11,7 +11,7 @@ export const router: TypeRoute[] = [
 			{
 				url: 'installation',
 				title: 'Installation',
-				description: 'How to install and set up megatizerui in your project',
+				description: '',
 			},
 		],
 	},

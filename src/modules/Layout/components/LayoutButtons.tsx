@@ -1,12 +1,11 @@
 import { GIT_REPO_URL } from '@constants';
 import { cn, Div, Span } from '@lib';
-import { router } from '@modules/Docs/utils/router';
 import { Link } from '@modules/Elements';
 
 const LayoutButtons = () => (
 	<Div className="gap-3 flex flex-row flex-wrap justify-center sm:justify-start">
 		<Link
-			to={router[0].pages[0].url}
+			to="/installation"
 			className={cn(
 				'rounded-full px-5 pt-2.5 pb-3 font-semibold !text-white hover:!no-underline dark:!text-white flex flex-row items-center gap-x-2 min-w-40 justify-center',
 				'!bg-primary hover:!bg-primary/80',
