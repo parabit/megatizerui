@@ -12,6 +12,7 @@ import { InputsPage } from '@lib/components/input/inputs.docs';
 import { LoaderPage } from '@lib/components/loader/loader.docs';
 import { PressablePage } from '@lib/components/pressable/pressable.docs';
 import { SpanPage } from '@lib/components/span/span.docs';
+import { SpinnerPage } from '@lib/components/spinner/spinner.docs';
 import { StackPage } from '@lib/components/stack/stack.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
@@ -29,11 +30,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	LoaderPage,
 	PressablePage,
 	SpanPage,
-	{
-		url: 'spinner',
-		title: 'Spinner',
-		description: '',
-	},
+	SpinnerPage,
 	StackPage,
 	{
 		url: 'switch',
