@@ -35,6 +35,13 @@ export default defineConfig(({ mode }) => {
 		base: '/megatizerui',
 		build: {
 			outDir: 'dist-docs',
+			rollupOptions: {
+				output: {
+					manualChunks: {
+						'code-block': ['react-syntax-highlighter'],
+					},
+				},
+			},
 		},
 	};
 });
