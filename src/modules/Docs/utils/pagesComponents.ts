@@ -7,6 +7,7 @@ import { DropdownPage } from '@lib/components/dropdown/dropdown.docs';
 import { FormPage } from '@lib/components/form/form.docs';
 import { HeadingPage } from '@lib/components/heading/heading.docs';
 import { HStackPage } from '@lib/components/hstack/hstack.docs';
+import { ImagePage } from '@lib/components/image/image.docs';
 import { StackPage } from '@lib/components/stack/stack.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
@@ -19,11 +20,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	FormPage,
 	HeadingPage,
 	HStackPage,
-	{
-		url: 'image',
-		title: 'Image',
-		description: '',
-	},
+	ImagePage,
 	{
 		url: 'inputs',
 		title: 'Inputs',
