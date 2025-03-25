@@ -29,8 +29,8 @@ export const propsDiv = [
 
 const html = `const Demo = () => (
     <Div className="flex flex-row flex-wrap gap-x-3 gap-y-6 w-full">
-		<Image className="w-64 h-32" alt="Пример битой ссылки" />
-		<Image className="w-64 h-32" src={imageExample} />
+		<Image className="min-w-32 h-32 rounded-lg" alt="Пример битой ссылки" />
+		<Image className="min-w-32 h-32 rounded-lg" src={imageExample} />
 	</Div>
 );`;
 
