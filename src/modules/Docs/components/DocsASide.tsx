@@ -28,7 +28,6 @@ const DocsASide = () => {
 									variant="muted"
 									className={cn(
 										'text-sm font-medium group-hover:!text-primary-blue',
-										page.props || page.url === 'installation' ? '' : 'opacity-30',
 										location.pathname === `/${page.url}`
 											? '!text-primary-blue dark:!text-primary-blue'
 											: '',

@@ -8,6 +8,7 @@ import { FormPage } from '@lib/components/form/form.docs';
 import { HeadingPage } from '@lib/components/heading/heading.docs';
 import { HStackPage } from '@lib/components/hstack/hstack.docs';
 import { ImagePage } from '@lib/components/image/image.docs';
+import { InputsPage } from '@lib/components/input/inputs.docs';
 import { StackPage } from '@lib/components/stack/stack.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
@@ -21,11 +22,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	HeadingPage,
 	HStackPage,
 	ImagePage,
-	{
-		url: 'inputs',
-		title: 'Inputs',
-		description: '',
-	},
+	InputsPage,
 	{
 		url: 'loader',
 		title: 'Loader',

@@ -22,4 +22,5 @@ export interface IFileInput extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: RefObject<HTMLInputElement | null>;
 	text?: string;
 	children?: ReactNode;
+	accept?: string;
 }
