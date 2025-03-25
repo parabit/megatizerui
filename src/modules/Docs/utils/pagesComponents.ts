@@ -9,6 +9,7 @@ import { HeadingPage } from '@lib/components/heading/heading.docs';
 import { HStackPage } from '@lib/components/hstack/hstack.docs';
 import { ImagePage } from '@lib/components/image/image.docs';
 import { InputsPage } from '@lib/components/input/inputs.docs';
+import { LoaderPage } from '@lib/components/loader/loader.docs';
 import { StackPage } from '@lib/components/stack/stack.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
@@ -23,11 +24,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	HStackPage,
 	ImagePage,
 	InputsPage,
-	{
-		url: 'loader',
-		title: 'Loader',
-		description: '',
-	},
+	LoaderPage,
 	{
 		url: 'pressable',
 		title: 'Pressable',
