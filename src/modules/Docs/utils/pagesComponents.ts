@@ -10,6 +10,7 @@ import { HStackPage } from '@lib/components/hstack/hstack.docs';
 import { ImagePage } from '@lib/components/image/image.docs';
 import { InputsPage } from '@lib/components/input/inputs.docs';
 import { LoaderPage } from '@lib/components/loader/loader.docs';
+import { PressablePage } from '@lib/components/pressable/pressable.docs';
 import { StackPage } from '@lib/components/stack/stack.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
@@ -25,11 +26,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	ImagePage,
 	InputsPage,
 	LoaderPage,
-	{
-		url: 'pressable',
-		title: 'Pressable',
-		description: '',
-	},
+	PressablePage,
 	{
 		url: 'span',
 		title: 'Span',

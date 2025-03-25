@@ -32,6 +32,11 @@ const props = [
 		description: '`string`',
 		default: 'solid',
 	},
+	{
+		name: 'onClick',
+		type: 'MouseEvent<HTMLButtonElement>',
+		description: 'Событие, возникающе после нажатия на компонент',
+	},
 ];
 
 const html = `const DemoVariants = () => (
