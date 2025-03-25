@@ -3,7 +3,7 @@ import { Demo } from './Image.demo';
 const title = 'Image';
 const url = title.toLocaleLowerCase();
 
-export const propsDiv = [
+const props = [
 	{
 		name: 'ref',
 		type: 'Ref<HTMLImageElement>',
@@ -27,23 +27,17 @@ export const propsDiv = [
 	},
 ];
 
-const html = `const Demo = () => (
-    <Div className="flex flex-row flex-wrap gap-x-3 gap-y-6 w-full">
-		<Image className="min-w-32 h-32 rounded-lg" alt="Пример битой ссылки" />
-		<Image className="min-w-32 h-32 rounded-lg" src={imageExample} />
-	</Div>
-);`;
-
 export const ImagePage = {
 	url,
 	title,
 	description: 'Компонент, создаваемый на основе тега `<img />` для отображения изображений',
-	props: propsDiv,
+	props,
 	demos: [
 		{
 			title: 'Example',
+			description: 'Пример использования компонента',
 			jsx: Demo,
-			html,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

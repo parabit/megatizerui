@@ -4,7 +4,7 @@ import { headingLevels } from './utils';
 const title = 'Heading';
 const url = title.toLocaleLowerCase();
 
-export const propsDiv = [
+const props = [
 	{
 		name: 'ref',
 		type: 'Ref<HTMLHeadingElement>',
@@ -34,27 +34,17 @@ export const propsDiv = [
 	},
 ];
 
-const html = `const Demo = () => (
-    <Stack className="gap-y-1">
-        {levels.map((level, index) => (
-            <Heading key={index} level={level}>
-                Это заголовок {level} уровня
-            </Heading>
-        ))}
-    </Stack>
-)`;
-
 export const HeadingPage = {
 	url,
 	title,
 	description: 'Компонент-заголовок, создаваемый на основе тега `<h* />`',
-	props: propsDiv,
+	props,
 	demos: [
 		{
 			title: 'Example',
 			description: 'Пример использования заголовка с компонентом `<Heading />`',
 			jsx: Demo,
-			html,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

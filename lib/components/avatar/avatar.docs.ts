@@ -1,4 +1,4 @@
-import { DemoSizes } from './Avatar.demo';
+import { Demo } from './Avatar.demo';
 import { EnumAvatarSizes } from './utils';
 
 const title = 'Avatar';
@@ -24,12 +24,6 @@ const props = [
 	},
 ];
 
-const html = `const DemoSizes = () => (
-	<Div>
-		{sizes.map((size, index) => <Avatar key={index} size={size} online={true} />)}
-	</Div>
-);`;
-
 export const AvatarPage = {
 	url,
 	title,
@@ -43,8 +37,8 @@ export const AvatarPage = {
 				Object.keys(EnumAvatarSizes)
 					.map((el) => '`' + el + '`')
 					.join(', '),
-			jsx: DemoSizes,
-			html,
+			jsx: Demo,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

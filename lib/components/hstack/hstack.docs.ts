@@ -3,7 +3,7 @@ import { Demo } from './HStack.demo';
 const title = 'HStack';
 const url = title.toLocaleLowerCase();
 
-export const props = [
+const props = [
 	{
 		name: 'ref',
 		type: 'Ref<HTMLDivElement>',
@@ -22,13 +22,6 @@ export const props = [
 	},
 ];
 
-const html = `const Demo = () => (
-    <HStack className="min-h-8 w-full p-4 bg-primary-blue gap-x-3">
-		<Div className="w-36 h-12 bg-primary-pink p-4 flex items-center">Div</Div>
-		<Div className="w-36 h-12 bg-primary-pink p-4 flex items-center">Div</Div>
-	</HStack>
-);`;
-
 export const HStackPage = {
 	url,
 	title,
@@ -37,8 +30,9 @@ export const HStackPage = {
 	demos: [
 		{
 			title: 'Example',
+			description: 'Пример использования компонента',
 			jsx: Demo,
-			html,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

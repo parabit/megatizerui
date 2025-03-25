@@ -22,12 +22,6 @@ export const propsDiv = [
 	},
 ];
 
-const html = `const Demo = () => (
-    <Div className="h-8 w-full bg-primary-blue">
-		This is the Div
-	</Div>
-);`;
-
 export const DivPage = {
 	url,
 	title,
@@ -36,8 +30,9 @@ export const DivPage = {
 	demos: [
 		{
 			title: 'Example',
+			description: 'Пример использования компонента',
 			jsx: Demo,
-			html,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

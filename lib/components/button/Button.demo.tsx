@@ -7,7 +7,7 @@ import { Div } from '../div';
 import { Button } from './Button';
 import { buttonVariants, EnumButtonVariants } from './utils';
 
-export const DemoVariants = () => (
+const Demo = () => (
 	<Div className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
 		{Object.keys(EnumButtonVariants).map((variant, index) => (
 			<Button
@@ -19,3 +19,18 @@ export const DemoVariants = () => (
 		))}
 	</Div>
 );
+
+Demo.html = `const Demo = () => (
+	<Div className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
+		{Object.keys(EnumButtonVariants).map((variant, index) => (
+			<Button
+				key={index}
+				text={variant}
+				onClick={() => alert(variant)}
+				variant={variant as VariantProps<typeof buttonVariants>['variant']}
+			/>
+		))}
+	</Div>
+);`;
+
+export { Demo };

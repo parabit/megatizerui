@@ -11,17 +11,6 @@ const props = [
 	},
 ];
 
-const html = `const Demo = () => (
-    <Stack className="gap-y-3">
-        <Span>Это текст над раздилителем</Span>
-        <Divider />
-        <Divider className="border-2" />
-        <Divider className="border-4" />
-        <Divider className="border-8" />
-        <Span>Это текст под раздилителем</Span>
-    </Stack>
-);`;
-
 export const DividerPage = {
 	url,
 	title,
@@ -30,8 +19,9 @@ export const DividerPage = {
 	demos: [
 		{
 			title: 'Example',
+			description: 'Пример использования компонента',
 			jsx: Demo,
-			html,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

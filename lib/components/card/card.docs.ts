@@ -4,14 +4,6 @@ import { Demo } from './Card.demo';
 const title = 'Card';
 const url = title.toLocaleLowerCase();
 
-const html = `const Demo = () => (
-    <Card className="p-4 gap-y-3 items-start">
-        <Heading level="2">Заголовок</Heading>
-        <Span>Базовая карточка, содержащая заголовок, содержание и кнопку.</Span>
-        <Button text="Кнопка" onClick={() => alert('click!')} />
-    </Card>
-);`;
-
 export const CardPage = {
 	url,
 	title,
@@ -20,8 +12,9 @@ export const CardPage = {
 	demos: [
 		{
 			title: 'Example',
+			description: 'Пример использования компонента',
 			jsx: Demo,
-			html,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

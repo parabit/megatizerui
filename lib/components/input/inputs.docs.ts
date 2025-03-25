@@ -56,18 +56,21 @@ export const InputsPage = {
 	demos: [
 		{
 			title: 'Input',
+			description: 'Пример использования компонента `Input`',
 			jsx: DemoInput,
 			html: DemoInput.html,
 			props: propsInput,
 		},
 		{
 			title: 'InputPassword',
+			description: 'Пример использования компонента `InputPassword`',
 			jsx: DemoInputPassword,
 			html: DemoInputPassword.html,
 			props: propsInputPassword,
 		},
 		{
 			title: 'FIleInput',
+			description: 'Пример использования компонента `FIleInput`',
 			jsx: DemoFIleInput,
 			html: DemoFIleInput.html,
 			props: propsFIleInput,

@@ -1,4 +1,4 @@
-import { DemoVariants } from './Button.demo';
+import { Demo } from './Button.demo';
 import { EnumButtonVariants } from './utils';
 
 const title = 'Button';
@@ -39,19 +39,6 @@ const props = [
 	},
 ];
 
-const html = `const DemoVariants = () => (
-	<Div>
-		{variants.map((variant, index) => (
-			<Button
-				key={index}
-				text={variant}
-				variant={variant}
-				onClick={() => alert(variant)}
-			/>
-		))}
-	</Div>
-);`;
-
 export const ButtonPage = {
 	url,
 	title,
@@ -65,8 +52,8 @@ export const ButtonPage = {
 				Object.keys(EnumButtonVariants)
 					.map((el) => '`' + el + '`')
 					.join(', '),
-			jsx: DemoVariants,
-			html,
+			jsx: Demo,
+			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,

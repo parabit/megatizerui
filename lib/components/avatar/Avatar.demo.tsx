@@ -9,7 +9,7 @@ import { Avatar } from './Avatar';
 import avatarExample from './avatar_example.jpg';
 import { avatarVariants, EnumAvatarSizes } from './utils';
 
-export const DemoSizes = () => (
+const Demo = () => (
 	<Div className="flex flex-row flex-wrap gap-x-3 gap-y-6 w-full">
 		{Object.keys(EnumAvatarSizes).map((size, index) => (
 			<Avatar
@@ -21,3 +21,18 @@ export const DemoSizes = () => (
 		))}
 	</Div>
 );
+
+Demo.html = `const Demo = () => (
+	<Div className="flex flex-row flex-wrap gap-x-3 gap-y-6 w-full">
+		{Object.keys(EnumAvatarSizes).map((size, index) => (
+			<Avatar
+				key={index}
+				src={avatarExample}
+				online={true}
+				size={size as VariantProps<typeof avatarVariants>['size']}
+			/>
+		))}
+	</Div>
+);`;
+
+export { Demo };
