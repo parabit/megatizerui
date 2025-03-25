@@ -76,6 +76,6 @@ export const InputsPage = {
 			props: propsFIleInput,
 		},
 	],
-	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
-	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
+	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/input/Input.tsx`,
+	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/input/Inputs.demo.tsx`,
 };
