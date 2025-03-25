@@ -6,6 +6,8 @@ import { DividerPage } from '@lib/components/divider/divider.docs';
 import { DropdownPage } from '@lib/components/dropdown/dropdown.docs';
 import { FormPage } from '@lib/components/form/form.docs';
 import { HeadingPage } from '@lib/components/heading/heading.docs';
+import { HStackPage } from '@lib/components/hstack/hstack.docs';
+import { StackPage } from '@lib/components/stack/stack.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
@@ -16,11 +18,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 	DropdownPage,
 	FormPage,
 	HeadingPage,
-	{
-		url: 'hstack',
-		title: 'HStack',
-		description: '',
-	},
+	HStackPage,
 	{
 		url: 'image',
 		title: 'Image',
@@ -51,11 +49,7 @@ export const pagesComponents: TypeDocsComponent[] = [
 		title: 'Spinner',
 		description: '',
 	},
-	{
-		url: 'stack',
-		title: 'Stack',
-		description: '',
-	},
+	StackPage,
 	{
 		url: 'switch',
 		title: 'Switch',
