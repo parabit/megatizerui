@@ -1,3 +1,3 @@
-export * from "./useDisclose";
-export * from "./useOutsideClick";
-export * from "./useWindowDimensions";
+export * from './usedisclose/useDisclose';
+export * from './useoutsideclick/useOutsideClick';
+export * from './usewindowdimensions/useWindowDimensions';
