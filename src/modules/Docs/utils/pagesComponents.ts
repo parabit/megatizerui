@@ -15,6 +15,7 @@ import { SpanPage } from '@lib/components/span/span.docs';
 import { SpinnerPage } from '@lib/components/spinner/spinner.docs';
 import { StackPage } from '@lib/components/stack/stack.docs';
 import { SwitchPage } from '@lib/components/switch/switch.docs';
+import { TabsPage } from '@lib/components/tabs/tabs.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
@@ -34,9 +35,5 @@ export const pagesComponents: TypeDocsComponent[] = [
 	SpinnerPage,
 	StackPage,
 	SwitchPage,
-	{
-		url: 'tabs',
-		title: 'Tabs',
-		description: '',
-	},
+	TabsPage,
 ];

@@ -18,7 +18,7 @@ const Tab = (props: ITab) => {
 			variant="ghost"
 			onClick={handleChange}
 			className={cn(
-				'!py-1 w-full',
+				'!py-1 w-full text-nowrap',
 
 				props.active ? '!bg-card-bg-light' : '!bg-neutral-200', //bg light
 				props.active ? '!text-neutral-600' : '!text-neutral-400', //text light
