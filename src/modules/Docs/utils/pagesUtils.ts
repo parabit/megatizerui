@@ -1,7 +1,3 @@
-export const pagesUtils = [
-	{
-		url: 'cn',
-		title: 'cn',
-		description: '',
-	},
-];
+import { cnPage } from '@lib/utils/cn/cn.docs';
+
+export const pagesUtils = [cnPage];

@@ -1,3 +1,1 @@
-import classNames from "classnames";
-
-export { classNames as cn };
+export * from './cn/cn';

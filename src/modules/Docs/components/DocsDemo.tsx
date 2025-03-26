@@ -28,31 +28,33 @@ const DocsDemo = (props: TypeDocsDemo) => {
 		<Stack className="mt-6">
 			<Header {...props} />
 
-			<Tabs className="mt-4">
-				<Tabs.TabList index={index} onChange={handleChangeIndex} className="w-full md:w-fit">
-					<Tabs.Tab>Preview</Tabs.Tab>
-					<Tabs.Tab>Code</Tabs.Tab>
-				</Tabs.TabList>
+			{(props.node || props.jsx) && props.html ? (
+				<Tabs className="mt-4">
+					<Tabs.TabList index={index} onChange={handleChangeIndex} className="w-full md:w-fit">
+						<Tabs.Tab>Preview</Tabs.Tab>
+						<Tabs.Tab>Code</Tabs.Tab>
+					</Tabs.TabList>
 
-				<Tabs.PanelList index={index}>
-					<Tabs.Panel>
-						<Card className="w-full items-start justify-start !p-6">
-							<Preview />
-						</Card>
-					</Tabs.Panel>
-					<Tabs.Panel>
-						<Card className="code-highlighter relative w-full items-start justify-start !p-0 overflow-hidden">
-							<CodeBlock value={props.html} />
+					<Tabs.PanelList index={index}>
+						<Tabs.Panel>
+							<Card className="w-full items-start justify-start !p-6">
+								<Preview />
+							</Card>
+						</Tabs.Panel>
+						<Tabs.Panel>
+							<Card className="code-highlighter relative w-full items-start justify-start !p-0 overflow-hidden">
+								<CodeBlock value={props.html} />
 
-							<Span
-								variant="muted"
-								text="typescript"
-								className="text-sm absolute top-2 right-3"
-							/>
-						</Card>
-					</Tabs.Panel>
-				</Tabs.PanelList>
-			</Tabs>
+								<Span
+									variant="muted"
+									text="typescript"
+									className="text-sm absolute top-2 right-3"
+								/>
+							</Card>
+						</Tabs.Panel>
+					</Tabs.PanelList>
+				</Tabs>
+			) : null}
 
 			{props.props ? <DocsProps props={props.props} /> : null}
 		</Stack>
