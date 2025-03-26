@@ -41,14 +41,26 @@ type TypePropsTD = {
 const PropsTD = ({ value, className, type }: TypePropsTD) => {
 	if (Array.isArray(value)) {
 		return (
-			<td className={cn('code-primary px-4 py-2 text-sm font-normal', styleBorder, className)}>
-				<Markdown>{value.map((el) => '`' + el + '`').join(' | ')}</Markdown>
+			<td
+				className={cn(
+					'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap leading-8',
+					styleBorder,
+					className,
+				)}
+			>
+				<Markdown>{value.map((el) => '`' + el + '`').join(' ')}</Markdown>
 			</td>
 		);
 	}
 
 	return (
-		<td className={cn('code-primary px-4 py-2 text-sm font-normal', styleBorder, className)}>
+		<td
+			className={cn(
+				'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap',
+				styleBorder,
+				className,
+			)}
+		>
 			<Markdown>{type === 'type' ? '`' + value + '`' : value}</Markdown>
 		</td>
 	);

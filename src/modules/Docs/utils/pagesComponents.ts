@@ -1,4 +1,5 @@
 import { AvatarPage } from '@lib/components/avatar/avatar.docs';
+import { BadgePage } from '@lib/components/badge/badge.docs';
 import { ButtonPage } from '@lib/components/button/button.docs';
 import { CardPage } from '@lib/components/card/card.docs';
 import { DivPage } from '@lib/components/div/div.docs';
@@ -19,6 +20,7 @@ import { TabsPage } from '@lib/components/tabs/tabs.docs';
 
 export const pagesComponents: TypeDocsComponent[] = [
 	AvatarPage,
+	BadgePage,
 	ButtonPage,
 	DivPage,
 	CardPage,

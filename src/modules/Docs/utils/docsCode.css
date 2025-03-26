@@ -18,6 +18,7 @@ html.dark code {
 .code-primary code {
 	color: var(--color-white) !important;
 	background-color: var(--color-primary-blue) !important;
+	text-wrap: nowrap;
 }
 
 .code-highlighter code {
