@@ -43,6 +43,15 @@
 	padding-right: 32px;
 }
 
+.docs-aside.open {
+	width: var(--sidebar-width);
+	max-width: 100%;
+	opacity: 1;
+	visibility: visible;
+	box-shadow: none;
+	transform: translate(0px);
+}
+
 @media (min-width: 960px) {
 	.docs-aside {
 		width: var(--sidebar-width);
