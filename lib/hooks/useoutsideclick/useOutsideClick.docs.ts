@@ -1,20 +1,20 @@
-import { Demo } from './useDisclose.demo';
+import { Demo } from './useOutsideClick.demo';
 
-const title = 'useDisclose';
+const title = 'useOutsideClick';
 const url = title.toLocaleLowerCase();
 
 const props = [
 	{
-		name: 'initState',
-		type: 'boolean',
-		description: 'Изначальное состояние',
+		name: 'ref',
+		type: 'Ref',
+		description: 'Ref-ссылка на `<div />` элемент-область для обработки нажатия',
 	},
 ];
 
-export const useDisclosePage = {
+export const useOutsideClickPage = {
 	url,
 	title,
-	description: 'Хук, позволяющий переключать состяние',
+	description: 'Хук, позволяющий обрабатывать нажатия вне указанной области',
 	props,
 	demos: [
 		{

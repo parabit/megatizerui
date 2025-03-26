@@ -1,12 +1,9 @@
-import { useDisclosePage } from '@lib/hooks/usedisclose/usedisclose.docs';
+import { useDisclosePage } from '@lib/hooks/usedisclose/useDisclose.docs';
+import { useOutsideClickPage } from '@lib/hooks/useoutsideclick/useOutsideClick.docs';
 
 export const pagesHooks = [
 	useDisclosePage,
-	{
-		url: 'useoutsideclick',
-		title: 'useOutsideClick',
-		description: '',
-	},
+	useOutsideClickPage,
 	{
 		url: 'usewindowdimensions',
 		title: 'useWindowDimensions',
