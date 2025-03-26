@@ -15,7 +15,7 @@ export enum EnumBadgeVariants {
 	error = 'bg-red-600/30 text-red-600 dark:bg-red-600/60 dark:text-red-300',
 }
 
-export const badgeVariants = cva('pb-1 pt-0.5 px-3 rounded-lg', {
+export const badgeVariants = cva('pb-1 pt-0.5 px-3 rounded-lg flex items-center justify-center', {
 	variants: {
 		variant: EnumBadgeVariants,
 	},

@@ -43,7 +43,7 @@ const PropsTD = ({ value, className, type }: TypePropsTD) => {
 		return (
 			<td
 				className={cn(
-					'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap leading-8',
+					'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap leading-6',
 					styleBorder,
 					className,
 				)}
@@ -56,7 +56,7 @@ const PropsTD = ({ value, className, type }: TypePropsTD) => {
 	return (
 		<td
 			className={cn(
-				'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap',
+				'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap leading-6',
 				styleBorder,
 				className,
 			)}
