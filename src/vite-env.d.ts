@@ -15,7 +15,7 @@ type TypeDocsDemo = {
 	description?: string;
 	jsx?: () => JSX.Element;
 	node?: ReactNode;
-	html: string;
+	html?: string;
 	props?: TypeDocsArrayProps;
 };
 
