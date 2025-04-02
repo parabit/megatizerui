@@ -8,14 +8,14 @@ import { CodeBlock } from '@modules/Elements';
 import DocsHeader from '../components/DocsHeader';
 import DocsPagination from '../components/DocsPagination';
 
-interface IDocsInstallation {
+interface IDocsInstallationScreen {
 	nextPage?: {
 		url: string;
 		title: string;
 	};
 }
 
-export const DocsInstallation = (props: IDocsInstallation) => {
+const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 	const [index, setIndex] = useState(0);
 
 	const npm = 'npm i @parabit/megatizerui';
@@ -154,7 +154,9 @@ export const DocsInstallation = (props: IDocsInstallation) => {
 				</Div>
 			</Stack>
 
-			<DocsPagination nextPage={props.nextPage} />
+			<DocsPagination {...props} />
 		</Stack>
 	);
 };
+
+export default DocsInstallationScreen;

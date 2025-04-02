@@ -17,7 +17,7 @@ html.dark code {
 
 .code-primary code {
 	color: var(--color-white) !important;
-	background-color: var(--color-primary-blue) !important;
+	background-color: var(--color-brand-blue) !important;
 	text-wrap: nowrap;
 }
 

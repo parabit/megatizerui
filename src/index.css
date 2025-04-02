@@ -1,13 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-@import '../lib/index.css';
+@import 'tailwindcss';
+
+@import '../lib/megatizerui.css';
+
+@theme static {
+	--color-brand-dark: var(--color-neutral-600);
+	--color-brand-blue: var(--color-action-500);
+	--color-brand-pink: var(--color-reaction-500);
+
+	--color-bg-light: #f6f6f7;
+	--color-bg-dark: #181818;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html.light {
+	color: var(--color-text-light);
+	background-color: var(--color-bg-light);
+}
+
+html.dark {
+	color: var(--color-text-dark);
+	background-color: var(--color-bg-dark);
+}
 
 :root {
-	font-family:
-		'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-		'Segoe UI Symbol', 'Noto Color Emoji';
-	line-height: 1.5;
-	font-weight: 400;
+	font-family: 'IBM Plex Sans';
+	font-optical-sizing: auto;
+	font-variation-settings: 'wdth' 100;
 
 	color-scheme: light dark;
 
@@ -20,7 +41,7 @@
 	--sidebar-width: 272px;
 	--z-index-sidebar: 60;
 	--header-height: 64px;
-	--sidebar-logo-shadow: drop-shadow(0 0 2rem var(--color-primary-blue));
+	--sidebar-logo-shadow: drop-shadow(0 0 2rem var(--color-brand-blue));
 }
 
 #root {
@@ -41,7 +62,7 @@ body {
 }
 
 .gradient-text-logo {
-	background-image: linear-gradient(60deg, var(--color-primary-blue), var(--color-primary-pink));
+	background-image: linear-gradient(60deg, var(--color-brand-blue), var(--color-brand-pink));
 	background-clip: text;
 	color: transparent;
 }
@@ -58,10 +79,17 @@ html {
 	scrollbar-gutter: stable;
 }
 
-.text-muted {
-	color: var(--color-neutral-600);
+*:focus-visible {
+	outline: none;
+}
 
-	@variant dark {
-		color: var(--color-neutral-400);
-	}
+* {
+	@apply [&::-webkit-scrollbar]:my-4 [&::-webkit-scrollbar]:w-2;
+	@apply [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:rounded-full;
+
+	@apply [&::-webkit-scrollbar-track]:bg-[#f3f4f6];
+	@apply [&::-webkit-scrollbar-thumb]:bg-[#d1d5db];
+
+	@apply dark:[&::-webkit-scrollbar-thumb]:bg-[#737373];
+	@apply dark:[&::-webkit-scrollbar-track]:bg-[#404040];
 }
