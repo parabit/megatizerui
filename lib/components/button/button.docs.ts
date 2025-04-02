@@ -52,12 +52,8 @@ export const ButtonPage = {
 	props,
 	demos: [
 		{
-			title: 'Variants',
-			description:
-				'Используйте свойство `variant` для изменения оформления кнопки: ' +
-				Object.keys(EnumButtonVariants)
-					.map((el) => '`' + el + '`')
-					.join(', '),
+			title: 'Example',
+			description: 'Используйте свойство `variant` и `color` для изменения оформления кнопки',
 			jsx: Demo,
 			html: Demo.html,
 		},
