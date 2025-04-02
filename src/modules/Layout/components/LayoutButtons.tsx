@@ -8,7 +8,7 @@ const LayoutButtons = () => (
 			to="/installation"
 			className={cn(
 				'rounded-full px-5 pt-2.5 pb-3 font-semibold !text-white hover:!no-underline dark:!text-white flex flex-row items-center gap-x-2 min-w-40 justify-center',
-				'!bg-primary hover:!bg-primary/80',
+				'!bg-brand-blue hover:!bg-brand-blue/80',
 			)}
 		>
 			<Span className="text-white">Get started</Span>

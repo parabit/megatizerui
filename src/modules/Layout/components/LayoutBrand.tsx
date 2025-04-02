@@ -18,7 +18,7 @@ const LayoutBrand = () => (
 			<Link
 				to="https://megatizer.ru/"
 				target="_blank"
-				className="!text-primary-pink hover:underline"
+				className="!text-brand-pink hover:underline"
 			>
 				megatizer.ru
 			</Link>

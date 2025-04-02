@@ -15,7 +15,7 @@ interface IDocsPagination {
 
 const DocsPagination = ({ prevPage, nextPage }: IDocsPagination) => (
 	<Stack className="mt-6">
-		<Divider className="border-neutral-300" />
+		<Divider />
 
 		<Div
 			className={cn(
@@ -30,12 +30,12 @@ const DocsPagination = ({ prevPage, nextPage }: IDocsPagination) => (
 			{prevPage ? (
 				<Link
 					to={`/${prevPage.url}`}
-					className="flex flex-col border border-neutral-300 dark:border-border-dark px-4 py-1.5 rounded-lg min-w-[49%] hover:border-primary"
+					className="flex flex-col border border-neutral-300 dark:border-border-dark px-4 py-1.5 rounded-lg min-w-[49%] hover:border-brand-blue"
 				>
 					<Span variant="muted" className="font-semibold text-sm">
 						Previous page
 					</Span>
-					<Span variant="primary" className="text-lg font-semibold">
+					<Span variant="secondary" className="text-lg font-semibold">
 						{prevPage.title}
 					</Span>
 				</Link>
@@ -44,12 +44,12 @@ const DocsPagination = ({ prevPage, nextPage }: IDocsPagination) => (
 			{nextPage ? (
 				<Link
 					to={`/${nextPage.url}`}
-					className="flex flex-col items-end border border-neutral-300 dark:border-border-dark px-4 py-1.5 rounded-lg min-w-[49%] hover:border-primary"
+					className="flex flex-col items-end border border-neutral-300 dark:border-border-dark px-4 py-1.5 rounded-lg min-w-[49%] hover:border-brand-blue"
 				>
 					<Span variant="muted" className="font-semibold text-sm">
 						Next page
 					</Span>
-					<Span variant="primary" className="text-lg font-semibold">
+					<Span variant="secondary" className="text-lg font-semibold">
 						{nextPage.title}
 					</Span>
 				</Link>

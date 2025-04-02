@@ -17,6 +17,7 @@ export const FIleInput = ({ ref, text, children, ...props }: IFileInput) => {
 				<Button
 					type="button"
 					variant="outline"
+					color="muted"
 					onClick={handleSelectFile}
 					iconLeft={<ArrowUpTrayIcon />}
 					text={text || 'Загрузить изображение'}

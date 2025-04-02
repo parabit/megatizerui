@@ -1,5 +1,5 @@
 import { Demo } from './Button.demo';
-import { EnumButtonVariants } from './utils';
+import { EnumButtonColors, EnumButtonVariants } from './utils';
 
 const title = 'Button';
 const url = title.toLocaleLowerCase();
@@ -33,6 +33,12 @@ const props = [
 		default: 'solid',
 	},
 	{
+		name: 'color',
+		type: Object.keys(EnumButtonColors),
+		description: '`string`',
+		default: 'primary',
+	},
+	{
 		name: 'onClick',
 		type: 'MouseEvent<HTMLButtonElement>',
 		description: 'Событие, возникающе после нажатия на компонент',
@@ -46,12 +52,8 @@ export const ButtonPage = {
 	props,
 	demos: [
 		{
-			title: 'Variants',
-			description:
-				'Используйте свойство `variant` для изменения оформления кнопки: ' +
-				Object.keys(EnumButtonVariants)
-					.map((el) => '`' + el + '`')
-					.join(', '),
+			title: 'Example',
+			description: 'Используйте свойство `variant` и `color` для изменения оформления кнопки',
 			jsx: Demo,
 			html: Demo.html,
 		},

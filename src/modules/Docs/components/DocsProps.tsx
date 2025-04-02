@@ -39,28 +39,18 @@ type TypePropsTD = {
 };
 
 const PropsTD = ({ value, className, type }: TypePropsTD) => {
+	const style = 'code-primary px-3 py-1.5 text-sm font-normal max-w-xs !text-wrap leading-7';
+
 	if (Array.isArray(value)) {
 		return (
-			<td
-				className={cn(
-					'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap leading-6',
-					styleBorder,
-					className,
-				)}
-			>
+			<td className={cn(style, styleBorder, className)}>
 				<Markdown>{value.map((el) => '`' + el + '`').join(' ')}</Markdown>
 			</td>
 		);
 	}
 
 	return (
-		<td
-			className={cn(
-				'code-primary px-4 py-2 text-sm font-normal max-w-xs !text-wrap leading-6',
-				styleBorder,
-				className,
-			)}
-		>
+		<td className={cn(style, styleBorder, className)}>
 			<Markdown>{type === 'type' ? '`' + value + '`' : value}</Markdown>
 		</td>
 	);
@@ -97,7 +87,7 @@ const PropsHead = () => (
 						styleBorder,
 					)}
 				>
-					{el}
+					{el === 'required' ? 'req' : el}
 				</th>
 			))}
 		</tr>

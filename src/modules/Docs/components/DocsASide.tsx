@@ -1,13 +1,12 @@
 import { useLayoutEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 
-import { cn, Divider, Span, Stack, useOutsideClick } from '@lib';
+import { cn, Div, Divider, Span, Stack, useOutsideClick } from '@lib';
 
-import { router } from '../utils/router';
+import { router } from '../utils';
 
 const DocsASide = () => {
-	const location = useLocation();
-
+	const { pathname } = useLocation();
 	const { ref, isOpen, onToggle } = useOutsideClick();
 
 	useLayoutEffect(() => {
@@ -40,7 +39,7 @@ const DocsASide = () => {
 	};
 
 	return (
-		<div ref={ref} className="docs-aside bg-neutral-100 dark:bg-card-bg-dark ">
+		<Div ref={ref} className="docs-aside bg-neutral-100 dark:bg-card-bg-dark ">
 			<Stack className="sticky top-0 h-16 justify-between w-full bg-neutral-100 dark:bg-card-bg-dark pt-4">
 				<Link to="/" className="flex flex-row gap-x-1 sidebar-logo-shadow ">
 					<Span className="text-2xl font-bold gradient-text-logo ">megatizerui</Span>
@@ -59,9 +58,9 @@ const DocsASide = () => {
 								<Span
 									variant="muted"
 									className={cn(
-										'text-sm font-medium group-hover:!text-primary-blue',
-										location.pathname === `/${page.url}`
-											? '!text-primary-blue dark:!text-primary-blue'
+										'text-sm font-medium group-hover:!text-brand-blue',
+										pathname === `/${page.url}`
+											? '!text-brand-blue dark:!text-brand-blue'
 											: '',
 									)}
 								>
@@ -76,7 +75,7 @@ const DocsASide = () => {
 					</Stack>
 				))}
 			</Stack>
-		</div>
+		</Div>
 	);
 };
 

@@ -12,7 +12,7 @@ const DocsHeader = ({ title, description }: { title: string; description: string
 		<Div className="text-muted">
 			<Markdown>{description}</Markdown>
 		</Div>
-		<Divider className="mt-3 border-neutral-300" />
+		<Divider className="mt-3" />
 	</Stack>
 );
 

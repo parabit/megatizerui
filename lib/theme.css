@@ -1,0 +1,146 @@
+@theme static {
+	/* Color: neutral */
+	/* --color-neutral-600: #0d1117;
+	--color-neutral-500: #59616e;
+	--color-neutral-400: #778191;
+	--color-neutral-300: #9ca3af;
+	--color-neutral-100: #c1c5cd;
+	--color-neutral-50: #9ca3af29;
+	--color-neutral-25: #9ca3af1a; */
+
+	/* Color: reaction */
+	--color-reaction-600: #cc0066;
+	--color-reaction-500: #ff007f;
+	--color-reaction-400: #ff3399;
+	--color-reaction-300: #ff66b2;
+	--color-reaction-100: #ff007f4d;
+	--color-reaction-50: #ff33991f;
+	--color-reaction-25: #ff33990d;
+
+	/* Color: action */
+	--color-action-600: #0076ad;
+	--color-action-500: #0094d8;
+	--color-action-400: #04b0ff;
+	--color-action-300: #2fbeff;
+	--color-action-100: #04b0ff4d;
+	--color-action-50: #04b0ff1f;
+	--color-action-25: #04b0ff0d;
+
+	/* Color: success */
+	--color-success-600: #147638;
+	--color-success-500: #1b9e4b;
+	--color-success-400: #22c55e;
+	--color-success-300: #34d865;
+	--color-success-100: #38dd754d;
+	--color-success-50: #38dd751f;
+	--color-success-25: #38dd750d;
+
+	/* Color: warning */
+	--color-warning-600: #9f8003;
+	--color-warning-500: #d4ab05;
+	--color-warning-400: #facc15;
+	--color-warning-300: #fbd84a;
+	--color-warning-100: #facc154d;
+	--color-warning-50: #facc151f;
+	--color-warning-25: #facc150d;
+
+	/* Color: negative */
+	--color-negative-600: #aa0f0f;
+	--color-negative-500: #e21313;
+	--color-negative-400: #ef4444;
+	--color-negative-300: #f47d7d;
+	--color-negative-100: #ef44444d;
+	--color-negative-50: #ef44441f;
+	--color-negative-25: #ef44440d;
+
+	/* Color: info */
+	--color-info-600: #0847af;
+	--color-info-500: #0b5fe9;
+	--color-info-400: #3b82f6;
+	--color-info-300: #75a7f9;
+	--color-info-100: #3b82f64d;
+	--color-info-50: #3b82f61f;
+	--color-info-25: #3b82f60d;
+
+	/* Color: category */
+	--color-category-600: #6609be;
+	--color-category-500: #8816f4;
+	--color-category-400: #a855f7;
+	--color-category-300: #c894fa;
+	--color-category-100: #a855f74d;
+	--color-category-50: #a855f71f;
+	--color-category-25: #a855f70d;
+
+	/* Colors */
+	--color-text-light: var(--color-neutral-700);
+	--color-text-dark: var(--color-neutral-200);
+
+	--color-muted-light: var(--color-neutral-400);
+	--color-muted-dark: var(--color-neutral-500);
+
+	--color-error: var(--color-negative-600);
+	--color-success: var(--color-success-600);
+
+	/* Components */
+
+	--color-card-bg-light: #fff;
+	--color-card-bg-dark: #1d1d1c;
+
+	--color-border-light: var(--color-neutral-300);
+	--color-border-dark: var(--color-neutral-700);
+
+	--color-switch-checked: var(--color-action-500);
+}
+
+@layer components {
+	.card {
+		@apply flex flex-col rounded-xl p-4;
+		@apply bg-card-bg-light dark:bg-card-bg-dark;
+		@apply border-border-light dark:border-border-dark border;
+	}
+
+	.divider {
+		@apply border-border-light dark:border-border-dark border-t;
+	}
+
+	.switch {
+		@apply relative z-100 flex h-6 w-12 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-200;
+		@apply bg-neutral-300 dark:bg-neutral-600;
+	}
+
+	.switch-toggler {
+		@apply z-1 flex h-6 w-6 rounded-full transition-all duration-200;
+		@apply shadow-lg shadow-black/50;
+		@apply border border-neutral-300 dark:border-neutral-600;
+		@apply bg-white dark:bg-white;
+	}
+
+	.button {
+		@apply m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-6 py-3 text-sm font-medium focus:outline-none disabled:pointer-events-none disabled:opacity-50;
+	}
+
+	.button.primary {
+		@apply bg-reaction-500 hover:bg-reaction-600 hover:border-reaction-600;
+	}
+
+	.button.secondary {
+		@apply bg-action-500 hover:bg-action-600 hover:border-action-600;
+	}
+
+	.button.muted {
+		@apply bg-neutral-300 hover:border-neutral-400 hover:bg-neutral-400;
+		@apply dark:bg-neutral-500 dark:hover:border-neutral-900 dark:hover:bg-neutral-800;
+	}
+
+	.button.solid {
+		@apply !border-transparent text-white;
+	}
+
+	.button.ghost {
+		@apply !border-transparent bg-transparent hover:text-white;
+	}
+
+	.button.outline {
+		@apply border-neutral-300 !bg-transparent outline-none dark:border-neutral-700;
+	}
+}

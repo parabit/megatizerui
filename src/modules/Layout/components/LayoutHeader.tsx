@@ -37,7 +37,7 @@ const LayoutHeader = () => {
 				<HStack className="items-center gap-x-4 px-2 md:px-12 2xl:px-72 z-[51]">
 					<ThemeWidgetSwitch />
 
-					<HStack className="items-center gap-x-1 border-l border-neutral-300/80 dark:border-neutral-700 !pl-3">
+					<HStack className="items-center gap-x-1 border-l border-border-light/80 dark:border-border-dark !pl-3">
 						<Link to={GIT_REPO_URL} target="_blank">
 							<GitHubIcon className="!text-neutral-400 dark:!text-neutral-400 hover:!text-neutral-900 hover:dark:!text-neutral-200" />
 						</Link>

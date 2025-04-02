@@ -8,8 +8,6 @@ import { spanVariantsDictionary } from './utils';
 
 const Demo = () => (
 	<Stack className="gap-y-3">
-		<Span text="Это вариант текста по-умолчанию" />
-
 		{Object.keys(spanVariantsDictionary).map((el, index) => (
 			<Span key={index} variant={el as keyof typeof spanVariantsDictionary}>
 				Это вариант текста: {el}
@@ -20,8 +18,6 @@ const Demo = () => (
 
 Demo.html = `const Demo = () => (
 	<Stack className="gap-y-3">
-		<Span text="Это вариант текста по-умолчанию" />
-
 		{variants.map((variant, index) => (
 			<Span key={index} variant={variant}>
 				Это текст варианта: {variant}

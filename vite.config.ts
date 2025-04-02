@@ -3,12 +3,25 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(({ mode }) => {
 	if (mode === 'lib') {
 		return {
-			plugins: [react(), dts({ tsconfigPath: './tsconfig.lib.json' }), tailwindcss()],
+			plugins: [
+				react(),
+				dts({ tsconfigPath: './tsconfig.lib.json' }),
+				tailwindcss(),
+				viteStaticCopy({
+					targets: [
+						{
+							src: 'lib/theme.css',
+							dest: '',
+						},
+					],
+				}),
+			],
 			build: {
 				lib: {
 					entry: resolve(__dirname, 'lib/index.ts'),
