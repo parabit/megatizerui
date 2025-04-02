@@ -2,7 +2,7 @@
 
 @import 'tailwindcss';
 
-@import '../lib/megatizerui.css';
+@import '../lib/theme.css';
 
 @theme static {
 	--color-brand-dark: var(--color-neutral-600);

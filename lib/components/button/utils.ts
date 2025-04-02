@@ -5,8 +5,8 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	ref?: Ref<HTMLButtonElement | null>;
 	className?: string;
 	text?: string;
-	variant?: EnumButtonVariants;
-	color?: EnumButtonColors;
+	variant?: keyof typeof EnumButtonVariants;
+	color?: keyof typeof EnumButtonColors;
 	iconLeft?: ReactNode;
 	children?: ReactNode;
 }
