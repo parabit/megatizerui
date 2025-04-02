@@ -20,7 +20,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 
 	const npm = 'npm i @parabit/megatizerui';
 	const yarn = 'yarn add @parabit/megatizerui';
-	const css = `@import 'tailwindcss';\n\n@import '@parabit/megatizerui/dist/index.css';`;
+	const css = `@import 'tailwindcss';\n\n@import '@parabit/megatizerui/dist/theme.css';`;
 
 	const [copyNPM, setCopyNPM] = useState(false);
 	const [copyYarn, setCopyYarn] = useState(false);
