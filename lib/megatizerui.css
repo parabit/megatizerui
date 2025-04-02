@@ -114,4 +114,33 @@
 		@apply border border-neutral-300 dark:border-neutral-600;
 		@apply bg-white dark:bg-white;
 	}
+
+	.button {
+		@apply m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-6 py-3 text-sm font-medium focus:outline-none disabled:pointer-events-none disabled:opacity-50;
+	}
+
+	.button.primary {
+		@apply bg-reaction-500 hover:bg-reaction-600 hover:border-reaction-600;
+	}
+
+	.button.secondary {
+		@apply bg-action-500 hover:bg-action-600 hover:border-action-600;
+	}
+
+	.button.muted {
+		@apply bg-neutral-300 hover:border-neutral-400 hover:bg-neutral-400;
+		@apply dark:bg-neutral-500 dark:hover:border-neutral-900 dark:hover:bg-neutral-800;
+	}
+
+	.button.solid {
+		@apply !border-transparent text-white;
+	}
+
+	.button.ghost {
+		@apply !border-transparent bg-transparent hover:text-white;
+	}
+
+	.button.outline {
+		@apply border-neutral-300 !bg-transparent outline-none dark:border-neutral-700;
+	}
 }

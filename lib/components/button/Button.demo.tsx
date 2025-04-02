@@ -1,23 +1,28 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import React from 'react';
-import { VariantProps } from 'class-variance-authority';
 
 import { Div } from '../div';
+import { Stack } from '../stack';
 import { Button } from './Button';
-import { buttonVariants, EnumButtonVariants } from './utils';
+import { EnumButtonColors, EnumButtonVariants } from './utils';
 
 const Demo = () => (
-	<Div className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
-		{Object.keys(EnumButtonVariants).map((variant, index) => (
-			<Button
-				key={index}
-				text={variant}
-				onClick={() => alert(variant)}
-				variant={variant as VariantProps<typeof buttonVariants>['variant']}
-			/>
+	<Stack className="gap-y-6 w-full">
+		{Object.keys(EnumButtonColors).map((color, i) => (
+			<Div key={i} className="flex flex-col md:flex-row gap-x-3 gap-y-6 w-full">
+				{Object.keys(EnumButtonVariants).map((variant, j) => (
+					<Button
+						key={j}
+						text={variant}
+						onClick={() => alert(variant)}
+						color={color as EnumButtonColors}
+						variant={variant as EnumButtonVariants}
+					/>
+				))}
+			</Div>
 		))}
-	</Div>
+	</Stack>
 );
 
 Demo.html = `const Demo = () => (
