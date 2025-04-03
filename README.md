@@ -37,12 +37,13 @@ yarn add @parabit/megatizerui
 
 ## Usage
 
-Add import `@parabit/megatizerui/dist/index.css` to your root `.css` file.
+Add imports `theme` and `components` to your root `.css` file.
 
 ```css
 @import 'tailwindcss';
 
-@import '@parabit/megatizerui/dist/index.css';
+@import '@parabit/megatizerui/dist/theme.css';
+@import '@parabit/megatizerui/dist/components.css';
 ```
 
 ## P.S.

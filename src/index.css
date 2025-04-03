@@ -3,6 +3,7 @@
 @import 'tailwindcss';
 
 @import '../lib/theme.css';
+@import '../lib/components.css';
 
 @theme static {
 	--color-brand-dark: var(--color-neutral-600);

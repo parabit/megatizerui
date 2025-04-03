@@ -1,0 +1,52 @@
+@layer components {
+	.card {
+		@apply flex flex-col rounded-xl p-4;
+		@apply bg-card-bg-light dark:bg-card-bg-dark;
+		@apply border-border-light dark:border-border-dark border;
+	}
+
+	.divider {
+		@apply border-border-light dark:border-border-dark border-t;
+	}
+
+	.switch {
+		@apply relative z-100 flex h-6 w-12 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-200;
+		@apply bg-neutral-300 dark:bg-neutral-600;
+	}
+
+	.switch-toggler {
+		@apply z-1 flex h-6 w-6 rounded-full transition-all duration-200;
+		@apply shadow-lg shadow-black/50;
+		@apply border border-neutral-300 dark:border-neutral-600;
+		@apply bg-white dark:bg-white;
+	}
+
+	.button {
+		@apply m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-6 py-3 text-sm font-medium focus:outline-none disabled:pointer-events-none disabled:opacity-50;
+	}
+
+	.button.primary {
+		@apply bg-reaction-500 hover:bg-reaction-600 hover:border-reaction-600;
+	}
+
+	.button.secondary {
+		@apply bg-action-500 hover:bg-action-600 hover:border-action-600;
+	}
+
+	.button.muted {
+		@apply bg-neutral-300 hover:border-neutral-400 hover:bg-neutral-400;
+		@apply dark:bg-neutral-500 dark:hover:border-neutral-900 dark:hover:bg-neutral-800;
+	}
+
+	.button.solid {
+		@apply !border-transparent text-white;
+	}
+
+	.button.ghost {
+		@apply !border-transparent bg-transparent hover:text-white;
+	}
+
+	.button.outline {
+		@apply border-neutral-300 !bg-transparent outline-none dark:border-neutral-700;
+	}
+}
