@@ -1,5 +1,7 @@
 /// <reference types="vite/client" />
 
+declare const APP_VERSION: string;
+
 type TypeDocsProps = {
 	name: string;
 	type?: string | string[];

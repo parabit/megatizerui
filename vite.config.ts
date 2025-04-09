@@ -45,6 +45,9 @@ export default defineConfig(({ mode }) => {
 			port: 3000,
 		},
 		plugins: [react(), tailwindcss(), tsconfigPaths()],
+		define: {
+			APP_VERSION: JSON.stringify(process.env.npm_package_version),
+		},
 		base: '/megatizerui',
 		build: {
 			outDir: 'dist-docs',
