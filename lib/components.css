@@ -14,11 +14,27 @@
 		@apply bg-neutral-300 dark:bg-neutral-600;
 	}
 
+	.switch.checked {
+		@apply bg-switch-checked;
+	}
+
+	.switch-icon-checked {
+		@apply absolute left-2;
+	}
+
+	.switch-icon-unchecked {
+		@apply absolute right-2;
+	}
+
 	.switch-toggler {
 		@apply z-1 flex h-6 w-6 rounded-full transition-all duration-200;
 		@apply shadow-lg shadow-black/50;
 		@apply border border-neutral-300 dark:border-neutral-600;
 		@apply bg-white dark:bg-white;
+	}
+
+	.switch-toggler.checked {
+		@apply !border-switch-checked !ml-6;
 	}
 
 	.button {

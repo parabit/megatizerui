@@ -14,12 +14,14 @@ interface ISwitch {
 
 export const Switch = (props: ISwitch) => (
 	<Div
-		className={cn('switch', { '!bg-switch-checked': props.value }, props.className)}
+		className={cn('switch', { checked: props.value }, props.className)}
 		onClick={() => props.onChange(!props.value)}
 	>
-		{props?.iconChecked ? <Div className="absolute left-2">{props?.iconChecked}</Div> : null}
-		{props?.iconUnChecked ? <Div className="absolute right-2">{props?.iconUnChecked}</Div> : null}
+		{props?.iconChecked ? <Div className="switch-icon-checked">{props?.iconChecked}</Div> : null}
+		{props?.iconUnChecked ? (
+			<Div className="switch-icon-unchecked">{props?.iconUnChecked}</Div>
+		) : null}
 
-		<Span className={cn('switch-toggler', { '!ml-6 !border-switch-checked': props.value })} />
+		<Span className={cn('switch-toggler', { checked: props.value })} />
 	</Div>
 );
