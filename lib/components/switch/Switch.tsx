@@ -2,12 +2,12 @@ import { ReactNode } from 'react';
 
 import { cn } from '../../utils';
 import { Div } from '../div';
-import { Span } from '../span';
 
 interface ISwitch {
 	value: boolean;
 	onChange: (value: boolean) => void;
 	className?: string;
+	iconToggler?: ReactNode;
 	iconChecked?: ReactNode;
 	iconUnChecked?: ReactNode;
 }
@@ -22,6 +22,6 @@ export const Switch = (props: ISwitch) => (
 			<Div className="switch-icon-unchecked">{props?.iconUnChecked}</Div>
 		) : null}
 
-		<Span className={cn('switch-toggler', { checked: props.value })} />
+		<Div className={cn('switch-toggler', { checked: props.value })}>{props.iconToggler}</Div>
 	</Div>
 );

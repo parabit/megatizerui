@@ -19,15 +19,15 @@
 	}
 
 	.switch-icon-checked {
-		@apply absolute left-2;
+		@apply absolute left-1 flex items-center justify-center;
 	}
 
 	.switch-icon-unchecked {
-		@apply absolute right-2;
+		@apply absolute right-1 flex items-center justify-center;
 	}
 
 	.switch-toggler {
-		@apply z-1 flex h-6 w-6 rounded-full transition-all duration-200;
+		@apply z-1 flex h-6 w-6 items-center justify-center rounded-full transition-all duration-200;
 		@apply shadow-lg shadow-black/50;
 		@apply border border-neutral-300 dark:border-neutral-600;
 		@apply bg-white dark:bg-white;

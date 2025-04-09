@@ -22,6 +22,11 @@ const props = [
 		description: 'Набор стилей Tailwind CSS v.4',
 	},
 	{
+		name: 'iconToggler',
+		type: 'ReactNode',
+		description: 'Элемент отображемый внутри компонента-переключателя.',
+	},
+	{
 		name: 'iconChecked',
 		type: 'ReactNode',
 		description: 'Элемент отображемый внутри компонента (слева) при активном состоянии.',
