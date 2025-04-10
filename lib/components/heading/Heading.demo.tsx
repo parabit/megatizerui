@@ -4,12 +4,12 @@ import React from 'react';
 
 import { Stack } from '../stack';
 import { Heading } from './Heading';
-import { headingLevels } from './utils';
+import { headingLevels, IHeading } from './utils';
 
 const Demo = () => (
 	<Stack className="gap-y-1">
 		{headingLevels.map((el, index) => (
-			<Heading key={index} level={el as unknown as typeof headingLevels}>
+			<Heading key={index} level={el as IHeading['level']}>
 				Это заголовок {el} уровня
 			</Heading>
 		))}
@@ -19,7 +19,7 @@ const Demo = () => (
 Demo.html = `const Demo = () => (
 	<Stack className="gap-y-1">
 		{headingLevels.map((el, index) => (
-			<Heading key={index} level={el}>
+			<Heading key={index} level={el as IHeading['level']}>
 				Это заголовок {el} уровня
 			</Heading>
 		))}
