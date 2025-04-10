@@ -6,12 +6,17 @@ import LayoutBrand from '../components/LayoutBrand';
 import LayoutButtons from '../components/LayoutButtons';
 
 export const LayoutHomeScreen = () => {
-	const [version, setVersion] = useState(undefined);
+	const [npm, setNPM] = useState('-.-.-');
+	const [gitHub, setGitHub] = useState('-.-.-');
 
 	useEffect(() => {
 		fetch('https://registry.npmjs.org/@parabit/megatizerui/latest')
 			.then((res) => res.json())
-			.then((res) => setVersion(res?.version));
+			.then((res) => setNPM(res?.version));
+
+		fetch('https://raw.githubusercontent.com/parabit/megatizerui/HEAD/package.json')
+			.then((res) => res.json())
+			.then((res) => setGitHub(res?.version));
 	}, []);
 
 	return (
@@ -27,7 +32,11 @@ export const LayoutHomeScreen = () => {
 				</Span>
 				<Span className="text-sm text-muted-light dark:text-muted-dark">|</Span>
 				<Span className="text-sm text-muted-light dark:text-muted-dark">
-					NPM version: {version}
+					GitHub version: {gitHub}
+				</Span>
+				<Span className="text-sm text-muted-light dark:text-muted-dark">|</Span>
+				<Span className="text-sm text-muted-light dark:text-muted-dark">
+					NPM version: {npm}
 				</Span>
 			</HStack>
 		</Stack>
