@@ -17,7 +17,7 @@ interface IDocsColorPaletteScreen {
 	};
 }
 
-const numbers = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950'];
+const numbers = ['25', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900'];
 
 const DocsColorPaletteScreen = (props: IDocsColorPaletteScreen) => (
 	<Stack className="w-full overflow-hidden p-4 sm:pl-12 sm:pt-8 pb-24 md:pr-24">

@@ -28,7 +28,7 @@ const props = [
 	},
 	{
 		name: 'level',
-		type: Object.keys(headingLevels),
+		type: headingLevels,
 		description: '`string`',
 		required: true,
 	},

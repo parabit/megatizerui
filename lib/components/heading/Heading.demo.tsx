@@ -8,8 +8,8 @@ import { headingLevels } from './utils';
 
 const Demo = () => (
 	<Stack className="gap-y-1">
-		{Object.keys(headingLevels).map((el, index) => (
-			<Heading key={index} level={el as keyof typeof headingLevels}>
+		{headingLevels.map((el, index) => (
+			<Heading key={index} level={el as unknown as typeof headingLevels}>
 				Это заголовок {el} уровня
 			</Heading>
 		))}
@@ -18,8 +18,8 @@ const Demo = () => (
 
 Demo.html = `const Demo = () => (
 	<Stack className="gap-y-1">
-		{Object.keys(headingLevels).map((el, index) => (
-			<Heading key={index} level={el as keyof typeof headingLevels}>
+		{headingLevels.map((el, index) => (
+			<Heading key={index} level={el}>
 				Это заголовок {el} уровня
 			</Heading>
 		))}

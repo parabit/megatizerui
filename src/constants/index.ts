@@ -2,25 +2,26 @@ export const GIT_REPO_URL = 'https://github.com/parabit/megatizerui';
 export const NPM_PCKG_URL = 'https://www.npmjs.com/package/@parabit/megatizerui';
 
 export const COLOR_PALETTE = [
-	{
-		variant: 'neutral',
-		colors: [
-			'bg-neutral-50',
-			'bg-neutral-100',
-			'bg-neutral-200',
-			'bg-neutral-300',
-			'bg-neutral-400',
-			'bg-neutral-500',
-			'bg-neutral-600',
-			'bg-neutral-700',
-			'bg-neutral-800',
-			'bg-neutral-900',
-			'bg-neutral-950',
-		],
-	},
+	// {
+	// 	variant: 'neutral',
+	// 	colors: [
+	// 		'bg-neutral-25',
+	// 		'bg-neutral-50',
+	// 		'bg-neutral-100',
+	// 		'bg-neutral-200',
+	// 		'bg-neutral-300',
+	// 		'bg-neutral-400',
+	// 		'bg-neutral-500',
+	// 		'bg-neutral-600',
+	// 		'bg-neutral-700',
+	// 		'bg-neutral-800',
+	// 		'bg-neutral-900',
+	// 	],
+	// },
 	{
 		variant: 'reaction',
 		colors: [
+			'bg-reaction-25',
 			'bg-reaction-50',
 			'bg-reaction-100',
 			'bg-reaction-200',
@@ -31,12 +32,12 @@ export const COLOR_PALETTE = [
 			'bg-reaction-700',
 			'bg-reaction-800',
 			'bg-reaction-900',
-			'bg-reaction-950',
 		],
 	},
 	{
 		variant: 'action',
 		colors: [
+			'bg-action-25',
 			'bg-action-50',
 			'bg-action-100',
 			'bg-action-200',
@@ -47,12 +48,12 @@ export const COLOR_PALETTE = [
 			'bg-action-700',
 			'bg-action-800',
 			'bg-action-900',
-			'bg-action-950',
 		],
 	},
 	{
 		variant: 'success',
 		colors: [
+			'bg-success-25',
 			'bg-success-50',
 			'bg-success-100',
 			'bg-success-200',
@@ -63,12 +64,12 @@ export const COLOR_PALETTE = [
 			'bg-success-700',
 			'bg-success-800',
 			'bg-success-900',
-			'bg-success-950',
 		],
 	},
 	{
 		variant: 'warning',
 		colors: [
+			'bg-warning-25',
 			'bg-warning-50',
 			'bg-warning-100',
 			'bg-warning-200',
@@ -79,12 +80,12 @@ export const COLOR_PALETTE = [
 			'bg-warning-700',
 			'bg-warning-800',
 			'bg-warning-900',
-			'bg-warning-950',
 		],
 	},
 	{
 		variant: 'negative',
 		colors: [
+			'bg-negative-25',
 			'bg-negative-50',
 			'bg-negative-100',
 			'bg-negative-200',
@@ -95,12 +96,12 @@ export const COLOR_PALETTE = [
 			'bg-negative-700',
 			'bg-negative-800',
 			'bg-negative-900',
-			'bg-negative-950',
 		],
 	},
 	{
 		variant: 'info',
 		colors: [
+			'bg-info-25',
 			'bg-info-50',
 			'bg-info-100',
 			'bg-info-200',
@@ -111,12 +112,12 @@ export const COLOR_PALETTE = [
 			'bg-info-700',
 			'bg-info-800',
 			'bg-info-900',
-			'bg-info-950',
 		],
 	},
 	{
 		variant: 'category',
 		colors: [
+			'bg-category-25',
 			'bg-category-50',
 			'bg-category-100',
 			'bg-category-200',
@@ -127,7 +128,6 @@ export const COLOR_PALETTE = [
 			'bg-category-700',
 			'bg-category-800',
 			'bg-category-900',
-			'bg-category-950',
 		],
 	},
 ];
