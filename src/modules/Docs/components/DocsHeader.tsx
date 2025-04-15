@@ -9,7 +9,7 @@ const DocsHeader = ({ title, description }: { title: string; description: string
 				{title}
 			</Heading>
 		</HStack>
-		<Div className="text-muted">
+		<Div className="text-muted-light dark:text-muted-dark">
 			<Markdown>{description}</Markdown>
 		</Div>
 		<Divider className="mt-3" />

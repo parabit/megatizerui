@@ -1,5 +1,5 @@
 import { Demo } from './Span.demo';
-import { spanVariantsDictionary } from './utils';
+import { EnumSpanVariants } from './utils';
 
 const title = 'Span';
 const url = title.toLocaleLowerCase();
@@ -28,8 +28,9 @@ const props = [
 	},
 	{
 		name: 'variant',
-		type: Object.keys(spanVariantsDictionary),
+		type: Object.keys(EnumSpanVariants),
 		description: '`string`',
+		default: '`default`',
 	},
 ];
 

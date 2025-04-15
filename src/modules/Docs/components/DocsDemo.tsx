@@ -70,7 +70,7 @@ const Header = (props: { title: string; description?: string }) => (
 		</Heading>
 
 		{props.description ? (
-			<Div className="leading-8 text-muted">
+			<Div className="leading-8 text-muted-light dark:text-muted-dark">
 				<Markdown>{props.description}</Markdown>
 			</Div>
 		) : null}

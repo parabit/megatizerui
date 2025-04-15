@@ -1,27 +1,26 @@
 import { HTMLAttributes, ReactNode, Ref } from 'react';
-import { cva, VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 
-export const spanVariantsDictionary = {
-	default: 'text-text-light dark:text-text-dark',
-	muted: 'text-muted-light dark:text-muted-dark',
-	primary: 'text-reaction-500',
-	secondary: 'text-action-500',
-	error: 'text-error',
-	success: 'text-success',
-};
+export enum EnumSpanVariants {
+	default = 'span-default',
+	muted = 'span-muted',
+	primary = 'span-primary',
+	secondary = 'span-secondary',
+	error = 'span-error',
+	success = 'span-success',
+}
 
-export interface ISpan
-	extends HTMLAttributes<HTMLHeadingElement>,
-		VariantProps<typeof spanVariants> {
+export interface ISpan extends HTMLAttributes<HTMLHeadingElement> {
 	ref?: Ref<HTMLSpanElement>;
 	text?: string | number;
 	className?: string;
 	children?: ReactNode;
+	variant?: keyof typeof EnumSpanVariants;
 }
 
 export const spanVariants = cva('m-0 p-0', {
 	variants: {
-		variant: spanVariantsDictionary,
+		variant: EnumSpanVariants,
 		defaultVariants: {
 			variant: 'default',
 		},

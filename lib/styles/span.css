@@ -1,0 +1,25 @@
+@layer components {
+	.span-default {
+		@apply text-light dark:text-dark;
+	}
+
+	.span-muted {
+		@apply text-muted-light dark:text-muted-dark;
+	}
+
+	.span-primary {
+		@apply text-reaction-500;
+	}
+
+	.span-secondary {
+		@apply text-action-500;
+	}
+
+	.span-error {
+		@apply text-error;
+	}
+
+	.span-success {
+		@apply text-success;
+	}
+}

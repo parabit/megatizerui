@@ -53,7 +53,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 			<Stack className="mt-6">
 				<Heading level="4" className="font-semibold mb-2" text="Быстрая установка" />
 
-				<Div className="leading-8 text-muted">
+				<Div className="leading-8 text-muted-light dark:text-muted-dark">
 					<Markdown>
 						Это руководство поможет вам начать работу с библиотекой, включая инструкцию по
 						запуску и интеграции в ваш проект
@@ -64,7 +64,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 			<Stack className="mt-8">
 				<Heading level="4" className="font-semibold mb-2" text="Первый шаг" />
 
-				<Div className="leading-8 text-muted">
+				<Div className="leading-8 text-muted-light dark:text-muted-dark">
 					<Markdown>Установите `megatizerui` через `npm` или `yarn`</Markdown>
 				</Div>
 
@@ -77,7 +77,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 					<Tabs.PanelList index={index}>
 						<Tabs.Panel>
 							<Card className="relative w-full items-start justify-start !p-6">
-								<Span className="text-muted">{npm}</Span>
+								<Span className="text-muted-light dark:text-muted-dark">{npm}</Span>
 
 								<Button
 									variant="outline"
@@ -97,7 +97,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 						</Tabs.Panel>
 						<Tabs.Panel>
 							<Card className="relative w-full items-start justify-start !p-6 text-muted">
-								<Span className="text-muted">{yarn}</Span>
+								<Span className="text-muted-light dark:text-muted-dark">{yarn}</Span>
 
 								<Button
 									variant="outline"
@@ -122,7 +122,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 			<Stack className="mt-8">
 				<Heading level="4" className="font-semibold mb-2" text="Второй шаг" />
 
-				<Div className="leading-8 text-muted">
+				<Div className="leading-8 text-muted-light dark:text-muted-dark">
 					<Markdown>Импортируйте стили `megatizerui` в ваш главный `.css` файл</Markdown>
 				</Div>
 
@@ -149,7 +149,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 			<Stack className="mt-8">
 				<Heading level="4" className="font-semibold mb-2" text="Готово!" />
 
-				<Div className="leading-8 text-muted">
+				<Div className="leading-8 text-muted-light dark:text-muted-dark">
 					<Markdown>Желаем приятной работы вместе с `megatizerui`</Markdown>
 				</Div>
 			</Stack>

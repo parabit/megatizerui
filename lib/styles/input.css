@@ -9,7 +9,7 @@
 	}
 
 	.input.invalid {
-		@apply !border-red-700 focus:!border-red-500 dark:!border-red-700;
+		@apply !border-error focus:!border-error dark:!border-error;
 	}
 
 	.input-eye-button {

@@ -39,7 +39,8 @@ type TypePropsTD = {
 };
 
 const PropsTD = ({ value, className, type }: TypePropsTD) => {
-	const style = 'code-primary px-3 py-1.5 text-sm font-normal max-w-xs !text-wrap leading-7';
+	const style =
+		'code-primary px-3 py-1.5 text-sm font-normal max-w-xs !text-wrap leading-7 text-light dark:text-dark';
 
 	if (Array.isArray(value)) {
 		return (
@@ -83,7 +84,7 @@ const PropsHead = () => (
 					key={i}
 					scope="col"
 					className={cn(
-						'px-4 py-2 text-start font-bold text-gray-500 capitalize dark:text-neutral-500',
+						'px-4 py-2 text-start font-semibold text-muted-light capitalize dark:text-muted-dark',
 						styleBorder,
 					)}
 				>

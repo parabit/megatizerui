@@ -4,12 +4,12 @@ import React from 'react';
 
 import { Stack } from '../stack';
 import { Span } from './Span';
-import { spanVariantsDictionary } from './utils';
+import { EnumSpanVariants, ISpan } from './utils';
 
 const Demo = () => (
 	<Stack className="gap-y-3">
-		{Object.keys(spanVariantsDictionary).map((el, index) => (
-			<Span key={index} variant={el as keyof typeof spanVariantsDictionary}>
+		{Object.keys(EnumSpanVariants).map((el, index) => (
+			<Span key={index} variant={el as ISpan['variant']}>
 				Это вариант текста: {el}
 			</Span>
 		))}
@@ -18,9 +18,9 @@ const Demo = () => (
 
 Demo.html = `const Demo = () => (
 	<Stack className="gap-y-3">
-		{variants.map((variant, index) => (
-			<Span key={index} variant={variant}>
-				Это текст варианта: {variant}
+		{Object.keys(EnumSpanVariants).map((el, index) => (
+			<Span key={index} variant={el as ISpan['variant']}>
+				Это вариант текста: {el}
 			</Span>
 		))}
 	</Stack>
