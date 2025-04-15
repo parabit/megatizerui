@@ -1,0 +1,29 @@
+@layer components {
+	.switch {
+		@apply relative z-100 flex h-6 w-12 cursor-pointer items-center overflow-hidden rounded-full transition-all duration-200;
+		@apply bg-neutral-300 dark:bg-neutral-600;
+	}
+
+	.switch.checked {
+		@apply bg-switch-checked;
+	}
+
+	.switch-icon-checked {
+		@apply absolute left-1 flex items-center justify-center;
+	}
+
+	.switch-icon-unchecked {
+		@apply absolute right-1 flex items-center justify-center;
+	}
+
+	.switch-toggler {
+		@apply z-1 flex h-6 w-6 items-center justify-center rounded-full transition-all duration-200;
+		@apply shadow-lg shadow-black/50;
+		@apply border border-neutral-300 dark:border-neutral-600;
+		@apply bg-white dark:bg-white;
+	}
+
+	.switch-toggler.checked {
+		@apply !border-switch-checked !ml-6;
+	}
+}
