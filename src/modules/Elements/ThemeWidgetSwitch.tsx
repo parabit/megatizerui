@@ -10,8 +10,8 @@ export const ThemeWidgetSwitch = () => {
 		<Switch
 			value={theme === 'dark'}
 			onChange={onToggleTheme}
-			iconChecked={<MoonIcon className="w-3" />}
-			iconUnChecked={<SunIcon className="color-white w-3 text-white" />}
+			iconChecked={<MoonIcon className="w-3 text-white" />}
+			iconUnChecked={<SunIcon className="w-3 text-neutral-500" />}
 		/>
 	);
 };

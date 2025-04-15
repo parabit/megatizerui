@@ -24,7 +24,7 @@ const props = [
 		name: 'variant',
 		type: Object.keys(EnumBadgeVariants),
 		description: '`string`',
-		default: 'muted',
+		default: '`muted`',
 	},
 ];
 

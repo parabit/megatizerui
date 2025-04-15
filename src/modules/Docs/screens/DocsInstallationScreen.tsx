@@ -77,7 +77,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 					<Tabs.PanelList index={index}>
 						<Tabs.Panel>
 							<Card className="relative w-full items-start justify-start !p-6">
-								<Span className="text-muted-light dark:text-muted-dark">{npm}</Span>
+								<Span variant="muted">{npm}</Span>
 
 								<Button
 									variant="outline"
@@ -97,7 +97,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 						</Tabs.Panel>
 						<Tabs.Panel>
 							<Card className="relative w-full items-start justify-start !p-6 text-muted">
-								<Span className="text-muted-light dark:text-muted-dark">{yarn}</Span>
+								<Span variant="muted">{yarn}</Span>
 
 								<Button
 									variant="outline"

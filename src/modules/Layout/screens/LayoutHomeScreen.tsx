@@ -27,15 +27,16 @@ export const LayoutHomeScreen = () => {
 			</Stack>
 
 			<HStack className="items-center gap-x-3 justify-center">
-				<Span className="text-sm text-muted-light dark:text-muted-dark">
+				<Span className="text-sm" variant="muted">
 					Docs version: {APP_VERSION}
+					{import.meta.env.DEV ? ' (dev)' : ''}
 				</Span>
-				<Span className="text-sm text-muted-light dark:text-muted-dark">|</Span>
-				<Span className="text-sm text-muted-light dark:text-muted-dark">
+				<Span className="text-sm" variant="muted" text="|" />
+				<Span className="text-sm" variant="muted">
 					GitHub version: {gitHub}
 				</Span>
-				<Span className="text-sm text-muted-light dark:text-muted-dark">|</Span>
-				<Span className="text-sm text-muted-light dark:text-muted-dark">
+				<Span className="text-sm" variant="muted" text="|" />
+				<Span className="text-sm" variant="muted">
 					NPM version: {npm}
 				</Span>
 			</HStack>

@@ -21,7 +21,7 @@ const Demo = () => {
 			<Stack className="relative rounded-xl overflow-hidden">
 				<Card className="gap-y-3">
 					<Heading level="2" text="Заголовок" />
-					<Span text="Пример текста" className="text-muted" />
+					<Span text="Пример текста" variant="muted" />
 					<Divider />
 					<Button text="Кнопка" />
 				</Card>
@@ -42,12 +42,12 @@ Demo.html = `const Demo = () => {
 			<Stack className="relative rounded-xl overflow-hidden">
 				<Card className="gap-y-3">
 					<Heading level="2" text="Заголовок" />
-					<Span text="Пример текста" className="text-muted" />
+					<Span text="Пример текста" variant="muted" />
 					<Divider />
 					<Button text="Кнопка" />
 				</Card>
 
-				{isOpen ? <Loader /> : null}
+				{isOpen ? <Loader className="backdrop-blur-[3px]" /> : null}
 			</Stack>
 		</Stack>
 	);

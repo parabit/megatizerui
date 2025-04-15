@@ -11,7 +11,7 @@ const Demo = () => {
 
 	return (
 		<Stack className="gap-y-3 [&>td]:p-4">
-			<table className="table-auto [&_td]:!p-2">
+			<table className="table-auto [&_td]:!p-2 text-light dark:text-dark">
 				<tbody>
 					<tr>
 						<td>Height:</td>
