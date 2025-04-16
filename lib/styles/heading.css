@@ -11,37 +11,26 @@
 	h1 {
 		font-size: 24px;
 		font-weight: 600;
-		line-height: 32px;
-		letter-spacing: 0.96px;
-	}
-	h2 {
-		font-size: 24px;
-		font-weight: 600;
-		line-height: 32px;
-		letter-spacing: 0.96px;
-	}
-
-	h3 {
-		font-size: 24px;
-		font-weight: 600;
 		line-height: 30px;
 		letter-spacing: 0.96px;
 	}
 
-	h4 {
+	h2 {
 		font-size: 17px;
 		font-weight: 600;
 		line-height: 28px;
 		letter-spacing: 0.68px;
 	}
 
-	h5 {
+	h3 {
 		font-size: 16px;
 		font-weight: 600;
 		line-height: 24px;
 		letter-spacing: -0.3px;
 	}
 
+	h4,
+	h5,
 	h6 {
 		font-size: 14px;
 		font-weight: 600;

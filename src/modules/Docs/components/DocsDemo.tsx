@@ -65,7 +65,7 @@ export default DocsDemo;
 
 const Header = (props: { title: string; description?: string }) => (
 	<Stack>
-		<Heading level="4" className="font-semibold mb-2">
+		<Heading level="1" className="font-semibold mb-2">
 			{props.title}
 		</Heading>
 

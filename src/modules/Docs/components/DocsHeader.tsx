@@ -5,7 +5,7 @@ import { Div, Divider, Heading, HStack, Stack } from '@lib';
 const DocsHeader = ({ title, description }: { title: string; description: string }) => (
 	<Stack>
 		<HStack className="items-end justify-between mb-2">
-			<Heading level="2" className="font-bold">
+			<Heading level="1" className="font-bold">
 				{title}
 			</Heading>
 		</HStack>

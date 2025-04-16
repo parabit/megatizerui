@@ -1,4 +1,5 @@
 import { useDisclose } from '../../hooks';
+import { cn } from '../../utils';
 import { Input } from './Input';
 import { IInputPassword } from './utils';
 
@@ -10,8 +11,14 @@ export const InputPassword = (props: IInputPassword) => {
 			placeholder="Пароль"
 			autoComplete="current-password"
 			type={isOpen ? 'text' : 'password'}
+			variant={props.variant}
 			rightIcon={
-				<button type="button" onClick={onToggle} className="input-eye-button">
+				<button
+					type="button"
+					onClick={onToggle}
+					disabled={props.disabled}
+					className={cn('input-eye-button', props.isInvalid ? 'error' : props.variant)}
+				>
 					{isOpen ? <EyeIcon /> : <EyeSlashIcon />}
 				</button>
 			}

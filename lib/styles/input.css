@@ -1,6 +1,7 @@
 @layer components {
+	/* Default style */
 	.input {
-		@apply block w-full rounded-lg border px-4 py-3 text-sm;
+		@apply block w-full rounded-lg border-[2px] px-4 py-3 text-sm;
 		@apply text-light dark:text-dark;
 		@apply placeholder:text-neutral-500;
 		@apply bg-neutral-100 dark:bg-neutral-900;
@@ -8,12 +9,49 @@
 		@apply focus:border-neutral-400;
 	}
 
-	.input.invalid {
-		@apply !border-error focus:!border-error dark:!border-error;
+	/* Variants */
+	.input.error {
+		@apply !bg-negative-400/10 !border-negative-400 focus:!border-negative-400 dark:!border-negative-400;
 	}
 
+	.input.error::placeholder {
+		@apply text-negative-400;
+	}
+
+	.input.secondary {
+		@apply !bg-action-500/10 !border-action-500 focus:!border-action-500;
+	}
+
+	.input.primary {
+		@apply !bg-reaction-500/10 !border-reaction-500 focus:!border-reaction-500;
+	}
+
+	.input:disabled {
+		@apply text-light/60 dark:text-dark/60;
+		@apply placeholder:text-neutral-500/60;
+		@apply bg-neutral-300 dark:bg-neutral-800;
+		@apply border-neutral-400 dark:border-neutral-500;
+	}
+
+	/* Input-password */
 	.input-eye-button {
 		@apply absolute inset-y-0 end-0 z-20 flex cursor-pointer items-center rounded-e-md px-3 text-gray-400 focus:outline-none dark:text-neutral-600;
+	}
+
+	.input-eye-button:disabled {
+		@apply cursor-default;
+	}
+
+	.input-eye-button.primary svg {
+		@apply stroke-reaction-500;
+	}
+
+	.input-eye-button.secondary svg {
+		@apply stroke-action-500;
+	}
+
+	.input-eye-button.error svg {
+		@apply stroke-negative-400;
 	}
 
 	.input-eye-button svg,
@@ -21,6 +59,7 @@
 		@apply w-4;
 	}
 
+	/* FIle-input */
 	.file-input {
 		@apply flex flex-row items-center gap-x-3 rounded-lg border px-4 py-3 text-sm hover:cursor-pointer;
 		@apply border-neutral-300 dark:border-neutral-700;

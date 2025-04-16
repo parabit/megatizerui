@@ -11,7 +11,7 @@ const DocsProps = (props: { props: TypeDocsArrayProps }) => {
 
 	return (
 		<Stack className="mt-6">
-			<Heading level="4" className="font-bold">
+			<Heading level="1" className="font-bold">
 				Props
 			</Heading>
 

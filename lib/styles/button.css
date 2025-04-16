@@ -33,7 +33,7 @@
 
 	.button.primary.ghost,
 	.button.primary.outline {
-		@apply hover:bg-reaction-600/30 text-brand-pink;
+		@apply hover:bg-reaction-600/30 text-reaction-500;
 	}
 
 	.button.secondary:not(.ghost):not(.outline) {
@@ -42,7 +42,7 @@
 
 	.button.secondary.ghost,
 	.button.secondary.outline {
-		@apply hover:bg-action-600/30 text-brand-blue;
+		@apply hover:bg-action-600/30 text-action-500;
 	}
 
 	.button.muted:not(.ghost):not(.outline) {

@@ -8,7 +8,7 @@ interface IDocsSource {
 
 const DocsSource = (props: IDocsSource) => (
 	<Stack className="mt-6">
-		<Heading level="4" className="font-semibold" text="Source" />
+		<Heading level="1" className="font-semibold" text="Source" />
 
 		<HStack className="mt-2 gap-x-1.5">
 			{props.gitSource ? (
