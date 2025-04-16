@@ -1,5 +1,5 @@
 import { Demo } from './Button.demo';
-import { EnumButtonColors, EnumButtonVariants } from './utils';
+import { EnumButtonColors, EnumButtonSizes, EnumButtonVariants } from './utils';
 
 const title = 'Button';
 const url = title.toLocaleLowerCase();
@@ -30,13 +30,19 @@ const props = [
 		name: 'variant',
 		type: Object.keys(EnumButtonVariants),
 		description: '`string`',
-		default: 'solid',
+		default: '`solid`',
 	},
 	{
 		name: 'color',
 		type: Object.keys(EnumButtonColors),
 		description: '`string`',
-		default: 'primary',
+		default: '`primary`',
+	},
+	{
+		name: 'size',
+		type: Object.keys(EnumButtonSizes),
+		description: '`string`',
+		default: '`md`',
 	},
 	{
 		name: 'onClick',

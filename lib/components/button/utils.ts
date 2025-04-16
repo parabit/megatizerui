@@ -7,13 +7,14 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	text?: string;
 	variant?: keyof typeof EnumButtonVariants;
 	color?: keyof typeof EnumButtonColors;
+	size?: keyof typeof EnumButtonSizes;
 	iconLeft?: ReactNode;
+	loading?: boolean;
 	children?: ReactNode;
 }
 
 export enum EnumButtonVariants {
 	ghost = 'ghost',
-	outline = 'outline',
 	solid = 'solid',
 }
 
@@ -23,13 +24,20 @@ export enum EnumButtonColors {
 	muted = 'muted',
 }
 
+export enum EnumButtonSizes {
+	md = 'md',
+	lg = 'lg',
+}
+
 export const buttonVariants = cva('button', {
 	variants: {
 		variant: EnumButtonVariants,
 		color: EnumButtonColors,
+		size: EnumButtonSizes,
 	},
 	defaultVariants: {
 		variant: 'solid',
 		color: 'primary',
+		size: 'md',
 	},
 });
