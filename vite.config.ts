@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
 				viteStaticCopy({
 					targets: [
 						{
-							src: ['lib/theme.css', 'lib/components.css'],
+							src: ['lib/theme.css', 'lib/components.css', 'lib/styles'],
 							dest: '',
 						},
 					],
