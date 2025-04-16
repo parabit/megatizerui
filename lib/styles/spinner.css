@@ -1,0 +1,33 @@
+@layer components {
+	.spinner {
+		@apply animate-spin;
+	}
+
+	.spinner.default {
+		@apply fill-[currentColor];
+	}
+
+	.spinner.white {
+		@apply fill-white;
+	}
+
+	.spinner.primary {
+		@apply fill-reaction-500;
+	}
+
+	.spinner.secondary {
+		@apply fill-action-500;
+	}
+
+	.spinner.muted {
+		@apply fill-muted-light dark:fill-muted-dark;
+	}
+
+	.spinner.md {
+		@apply w-10;
+	}
+
+	.spinner.sm {
+		@apply w-6;
+	}
+}

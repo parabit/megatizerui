@@ -1,6 +1,7 @@
 @layer components {
 	.card {
 		@apply flex flex-col rounded-xl p-4;
+		@apply text-light dark:text-dark;
 		@apply bg-card-bg-light dark:bg-card-bg-dark;
 		@apply border-border-light dark:border-border-dark border;
 	}

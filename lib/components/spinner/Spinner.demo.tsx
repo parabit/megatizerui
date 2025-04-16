@@ -3,20 +3,38 @@
 import React from 'react';
 
 import { HStack } from '../hstack';
+import { Stack } from '../stack';
 import { Spinner } from './Spinner';
+import { EnumSpinnerVariants, ISpinner } from './utils';
 
 const Demo = () => (
-	<HStack className="gap-x-3">
-		<Spinner variant="muted" />
-		<Spinner variant="primary" />
-	</HStack>
+	<Stack className="gap-y-3">
+		<HStack className="items-center gap-x-3">
+			{Object.keys(EnumSpinnerVariants).map((el, index) => (
+				<Spinner key={index} variant={el as ISpinner['variant']} size="md" />
+			))}
+		</HStack>
+		<HStack className="items-center gap-x-3">
+			{Object.keys(EnumSpinnerVariants).map((el, index) => (
+				<Spinner key={index} variant={el as ISpinner['variant']} size="sm" />
+			))}
+		</HStack>
+	</Stack>
 );
 
 Demo.html = `const Demo = () => (
-	<HStack className="gap-x-3">
-		<Spinner variant="muted" />
-		<Spinner variant="primary" />
-	</HStack>
+	<Stack className="gap-y-3">
+		<HStack className="items-center gap-x-3">
+			{Object.keys(EnumSpinnerVariants).map((el, index) => (
+				<Spinner key={index} variant={el as ISpinner['variant']} size="md" />
+			))}
+		</HStack>
+		<HStack className="items-center gap-x-3">
+			{Object.keys(EnumSpinnerVariants).map((el, index) => (
+				<Spinner key={index} variant={el as ISpinner['variant']} size="sm" />
+			))}
+		</HStack>
+	</Stack>
 );`;
 
 export { Demo };

@@ -1,5 +1,5 @@
 import { Demo } from './Spinner.demo';
-import { spinnerVariantsDictionary } from './utils';
+import { EnumSpinnerSizes, EnumSpinnerVariants } from './utils';
 
 const title = 'Spinner';
 const url = title.toLocaleLowerCase();
@@ -12,9 +12,15 @@ const props = [
 	},
 	{
 		name: 'variant',
-		type: Object.keys(spinnerVariantsDictionary),
+		type: Object.keys(EnumSpinnerVariants),
 		description: '`string`',
-		default: 'muted',
+		default: '`default`',
+	},
+	{
+		name: 'size',
+		type: Object.keys(EnumSpinnerSizes),
+		description: '`string`',
+		default: '`md`',
 	},
 ];
 
