@@ -1,0 +1,25 @@
+@layer components {
+	.tab {
+		@apply !m-0 h-[32px] w-full cursor-pointer rounded-lg !px-6 !py-1 text-nowrap;
+	}
+
+	.tab:not(.active) {
+		@apply !text-neutral-400 dark:!text-neutral-500;
+		@apply !bg-neutral-200 dark:!bg-neutral-800;
+		@apply hover:!text-neutral-500 dark:hover:!text-neutral-400;
+	}
+
+	.tab.active {
+		@apply !text-neutral-600 dark:!text-neutral-200;
+		@apply !bg-card-bg-light dark:!bg-neutral-600;
+		@apply hover:!text-neutral-900 dark:hover:!text-neutral-400;
+	}
+
+	.tab-list {
+		@apply w-fit gap-x-1 rounded-xl bg-neutral-200 p-0.5 dark:bg-neutral-800;
+	}
+
+	.tabs {
+		@apply w-auto gap-y-3;
+	}
+}
