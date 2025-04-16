@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import React from 'react';
+
 import { Stack } from '../stack';
 import { FIleInput } from './FIleInput';
 import { Input } from './Input';

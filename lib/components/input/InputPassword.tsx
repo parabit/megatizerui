@@ -27,7 +27,6 @@ const EyeIcon = () => (
 		viewBox="0 0 24 24"
 		strokeWidth="1.5"
 		stroke="currentColor"
-		className="w-4 text-gray-600 dark:text-neutral-400"
 	>
 		<path
 			strokeLinecap="round"
@@ -45,7 +44,6 @@ const EyeSlashIcon = () => (
 		viewBox="0 0 24 24"
 		strokeWidth="1.5"
 		stroke="currentColor"
-		className="w-4 text-gray-600 dark:text-neutral-400"
 	>
 		<path
 			strokeLinecap="round"

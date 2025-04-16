@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
-import { Button } from '../button';
 import { Div } from '../div';
+import { Span } from '../span';
 import { Input } from './Input';
 import { IFileInput } from './utils';
 
@@ -14,14 +14,10 @@ export const FIleInput = ({ ref, text, children, ...props }: IFileInput) => {
 	return (
 		<Div>
 			{children || (
-				<Button
-					type="button"
-					variant="outline"
-					color="muted"
-					onClick={handleSelectFile}
-					iconLeft={<ArrowUpTrayIcon />}
-					text={text || 'Загрузить изображение'}
-				/>
+				<button type="button" onClick={handleSelectFile} className="file-input">
+					<ArrowUpTrayIcon />
+					<Span text={text || 'Загрузить изображение'} />
+				</button>
 			)}
 			<Input ref={ref || innerRef} type="file" className="hidden" {...props} />
 		</Div>
@@ -35,7 +31,6 @@ const ArrowUpTrayIcon = () => (
 		viewBox="0 0 24 24"
 		strokeWidth={1.5}
 		stroke="currentColor"
-		className="w-4 text-gray-600 dark:text-neutral-400"
 	>
 		<path
 			strokeLinecap="round"

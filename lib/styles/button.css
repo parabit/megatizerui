@@ -15,35 +15,44 @@
 
 	/* Variants */
 	.button.solid {
-		@apply !border-transparent !text-white disabled:!bg-[#778191] disabled:!text-gray-400;
+		@apply !border-transparent !text-white disabled:!bg-[#778191] disabled:!text-gray-400 dark:disabled:!bg-[#778191]/30;
 	}
 
 	.button.ghost {
-		@apply !border-transparent not-hover:!bg-transparent disabled:!bg-[#778191] disabled:!text-gray-400;
+		@apply !border-transparent not-hover:!bg-transparent disabled:!bg-[#778191] disabled:!text-gray-400 dark:disabled:!bg-[#778191]/30;
+	}
+
+	.button.outline {
+		@apply outline-none not-hover:!bg-transparent disabled:!border-none disabled:!bg-[#778191] disabled:!text-gray-400 dark:disabled:!bg-[#778191]/30;
 	}
 
 	/* Colors */
-	.button.primary:not(.ghost) {
+	.button.primary:not(.ghost):not(.outline) {
 		@apply bg-reaction-500 hover:bg-reaction-600 hover:border-reaction-600;
 	}
 
-	.button.primary.ghost {
+	.button.primary.ghost,
+	.button.primary.outline {
 		@apply hover:bg-reaction-600/30 text-brand-pink;
 	}
 
-	.button.secondary:not(.ghost) {
+	.button.secondary:not(.ghost):not(.outline) {
 		@apply bg-action-500 hover:bg-action-600 hover:border-action-600;
 	}
 
-	.button.secondary.ghost {
+	.button.secondary.ghost,
+	.button.secondary.outline {
 		@apply hover:bg-action-600/30 text-brand-blue;
 	}
 
-	.button.muted:not(.ghost) {
-		@apply bg-gray-300 hover:bg-gray-400;
+	.button.muted:not(.ghost):not(.outline) {
+		@apply bg-gray-300 hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-600;
 	}
 
-	.button.muted.ghost {
-		@apply bg-transparent text-gray-500 hover:bg-gray-300;
+	.button.muted.ghost,
+	.button.muted.outline {
+		@apply text-gray-500 dark:hover:text-gray-700;
+		@apply bg-transparent hover:bg-gray-300 dark:hover:bg-gray-500;
+		@apply border-gray-400 dark:border-gray-600;
 	}
 }

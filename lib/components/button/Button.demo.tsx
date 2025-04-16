@@ -8,7 +8,8 @@ import { Button } from './Button';
 
 const Demo = () => (
 	<Div className="flex flex-col md:flex-row w-full gap-12 items-center justify-between flex-wrap">
-		<Div className="grid grid-cols-[20%_auto] gap-3 items-center md:min-w-[45%]">
+		{/* solid, md, primary */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
 			<Div>&nbsp;</Div>
 			<Span className="font-semobild text-center" text="solid, md, primary" />
 			<Span text="normal" className="mr-6 text-right" />
@@ -19,7 +20,8 @@ const Demo = () => (
 			<Button size="md" text="ДАЛЕЕ" disabled />
 		</Div>
 
-		<Div className="grid grid-cols-[20%_auto] gap-3 items-center md:min-w-[45%]">
+		{/* solid, md, secondary */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
 			<Div>&nbsp;</Div>
 			<Span className="font-semobild text-center" text="solid, md, secondary" />
 			<Span text="normal" className="mr-6 text-right" />
@@ -30,7 +32,8 @@ const Demo = () => (
 			<Button size="md" text="ДАЛЕЕ" disabled color="secondary" />
 		</Div>
 
-		<Div className="grid grid-cols-[20%_auto] gap-3 items-center md:min-w-[45%]">
+		{/* solid, md, muted */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
 			<Div>&nbsp;</Div>
 			<Span className="font-semobild text-center" text="solid, md, muted" />
 			<Span text="normal" className="mr-6 text-right" />
@@ -41,7 +44,8 @@ const Demo = () => (
 			<Button size="md" text="ДАЛЕЕ" disabled color="muted" />
 		</Div>
 
-		<Div className="grid grid-cols-[20%_auto] gap-3 items-center md:min-w-[45%]">
+		{/* ghost, md, muted */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
 			<Div>&nbsp;</Div>
 			<Span className="font-semobild text-center" text="ghost, md, muted" />
 			<Span text="normal" />
@@ -52,18 +56,20 @@ const Demo = () => (
 			<Button size="md" text="ДАЛЕЕ" disabled variant="ghost" color="muted" />
 		</Div>
 
-		<Div className="grid grid-cols-[20%_auto] gap-3 items-center md:min-w-[45%]">
+		{/* ghost, md, primary */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
 			<Div>&nbsp;</Div>
 			<Span className="font-semobild text-center" text="ghost, md, primary" />
 			<Span text="normal" />
-			<Button size="md" text="ДАЛЕЕ" variant="ghost" color="primary" />
+			<Button size="md" text="ДАЛЕЕ" variant="ghost" />
 			<Span text="loading" />
-			<Button size="md" text="ДАЛЕЕ" loading variant="ghost" color="primary" />
+			<Button size="md" text="ДАЛЕЕ" loading variant="ghost" />
 			<Span text="disabled" />
-			<Button size="md" text="ДАЛЕЕ" disabled variant="ghost" color="primary" />
+			<Button size="md" text="ДАЛЕЕ" disabled variant="ghost" />
 		</Div>
 
-		<Div className="grid grid-cols-[20%_auto] gap-3 items-center md:min-w-[45%]">
+		{/* ghost, md, secondary */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
 			<Div>&nbsp;</Div>
 			<Span className="font-semobild text-center" text="ghost, md, secondary" />
 			<Span text="normal" />
@@ -72,6 +78,42 @@ const Demo = () => (
 			<Button size="md" text="ДАЛЕЕ" loading variant="ghost" color="secondary" />
 			<Span text="disabled" />
 			<Button size="md" text="ДАЛЕЕ" disabled variant="ghost" color="secondary" />
+		</Div>
+
+		{/* outline, md, primary" */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
+			<Div>&nbsp;</Div>
+			<Span className="font-semobild text-center" text="outline, md, primary" />
+			<Span text="normal" />
+			<Button size="md" text="ДАЛЕЕ" variant="outline" />
+			<Span text="loading" />
+			<Button size="md" text="ДАЛЕЕ" loading variant="outline" />
+			<Span text="disabled" />
+			<Button size="md" text="ДАЛЕЕ" disabled variant="outline" />
+		</Div>
+
+		{/* outline, md, secondary */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
+			<Div>&nbsp;</Div>
+			<Span className="font-semobild text-center" text="outline, md, secondary" />
+			<Span text="normal" />
+			<Button size="md" text="ДАЛЕЕ" variant="outline" color="secondary" />
+			<Span text="loading" />
+			<Button size="md" text="ДАЛЕЕ" loading variant="outline" color="secondary" />
+			<Span text="disabled" />
+			<Button size="md" text="ДАЛЕЕ" disabled variant="outline" color="secondary" />
+		</Div>
+
+		{/* outline, md, muted */}
+		<Div className="grid grid-cols-[20%_auto] gap-3 items-center w-full md:max-w-[45%]">
+			<Div>&nbsp;</Div>
+			<Span className="font-semobild text-center" text="outline, md, muted" />
+			<Span text="normal" />
+			<Button size="md" text="ДАЛЕЕ" variant="outline" color="muted" />
+			<Span text="loading" />
+			<Button size="md" text="ДАЛЕЕ" loading variant="outline" color="muted" />
+			<Span text="disabled" />
+			<Button size="md" text="ДАЛЕЕ" disabled variant="outline" color="muted" />
 		</Div>
 	</Div>
 );

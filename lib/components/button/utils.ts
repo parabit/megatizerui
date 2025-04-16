@@ -16,6 +16,7 @@ export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 export enum EnumButtonVariants {
 	ghost = 'ghost',
 	solid = 'solid',
+	outline = 'outline',
 }
 
 export enum EnumButtonColors {
