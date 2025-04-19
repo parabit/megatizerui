@@ -52,7 +52,7 @@ const propsFIleInput = [
 export const InputsPage = {
 	url,
 	title,
-	description: 'Компонент, создаваемый на основе тега `<ipnut />` для отображения поля ввода',
+	description: 'Компонент, создаваемый на основе тега `<input />` для отображения поля ввода',
 	demos: [
 		{
 			title: 'Input',
