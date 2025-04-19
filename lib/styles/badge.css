@@ -1,0 +1,52 @@
+@layer components {
+	/* Base style */
+	.badge {
+		@apply flex min-h-[26px] items-center justify-center rounded-sm px-2 pt-0 pb-0.5 text-[13px] leading-[18px] outline-none;
+	}
+
+	/* Solid */
+	.badge.solid.muted {
+		@apply bg-neutral-600/20 text-neutral-500 dark:bg-neutral-300/30 dark:text-neutral-200;
+	}
+	.badge.solid.success {
+		@apply bg-success-600/30 text-success-600 dark:bg-success-600/30 dark:text-success-400;
+	}
+	.badge.solid.warning {
+		@apply bg-warning-600/30 text-warning-600 dark:bg-warning-600/60 dark:text-warning-300;
+	}
+	.badge.solid.primary {
+		@apply bg-reaction-500/30 text-reaction-500 dark:bg-reaction-500/80 dark:text-white/80;
+	}
+	.badge.solid.secondary {
+		@apply bg-action-500/30 text-action-600 dark:bg-action-500/80 dark:text-white/80;
+	}
+	.badge.solid.info {
+		@apply bg-info-600/30 text-info-500 dark:bg-info-600/60 dark:text-info-200;
+	}
+	.badge.solid.error {
+		@apply bg-negative-600/30 text-negative-600 dark:bg-negative-600/60 dark:text-negative-200;
+	}
+
+	/* Outline */
+	.badge.outline.muted {
+		@apply border border-neutral-500 text-neutral-500;
+	}
+	.badge.outline.success {
+		@apply border-success-500 text-success-500 border;
+	}
+	.badge.outline.warning {
+		@apply border-warning-500 text-warning-500 border;
+	}
+	.badge.outline.primary {
+		@apply border-reaction-500 text-reaction-500 border;
+	}
+	.badge.outline.secondary {
+		@apply border-action-500 text-action-500 border;
+	}
+	.badge.outline.info {
+		@apply border-info-500 text-info-500 border;
+	}
+	.badge.outline.error {
+		@apply border-negative-500 text-negative-500 border;
+	}
+}

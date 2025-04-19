@@ -1,5 +1,5 @@
 import { Demo } from './Badge.demo';
-import { EnumBadgeVariants } from './utils';
+import { badgeColor, badgeVariant } from './utils';
 
 const title = 'Badge';
 const url = title.toLocaleLowerCase();
@@ -8,7 +8,7 @@ const props = [
 	{
 		name: 'children',
 		type: 'ReactNode',
-		description: 'Элемент отображемый внутри кнопки',
+		description: 'Элемент отображемый внутри компонента',
 	},
 	{
 		name: 'className',
@@ -18,33 +18,37 @@ const props = [
 	{
 		name: 'text',
 		type: 'string',
-		description: 'Текст отображемый на компоненте',
+		description: 'Текст отображемый внутри компонента',
 	},
 	{
 		name: 'variant',
-		type: Object.keys(EnumBadgeVariants),
+		type: Object.keys(badgeVariant),
 		description: '`string`',
-		default: '`muted`',
+		default: '`solid`',
+	},
+	{
+		name: 'color',
+		type: Object.keys(badgeColor),
+		description: '`string`',
+		default: '`primary`',
 	},
 ];
 
 export const BadgePage = {
 	url,
 	title,
-	description: 'Компонент, для отображения статуса элемента',
+	description: 'Компонент, для отображения статуса компонента',
 	props,
 	demos: [
 		{
-			title: 'Variants',
+			title: 'Variant & Color',
 			description:
-				'Используйте свойство `variant` для изменения оформления компонента: ' +
-				Object.keys(EnumBadgeVariants)
-					.map((el) => '`' + el + '`')
-					.join(', '),
+				'Используйте свойство `variant` и `color` для изменения оформления компонента',
 			jsx: Demo,
 			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
 	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
+	gitStyles: `https://github.com/parabit/megatizerui/blob/main/lib/styles/${url}.css`,
 };
