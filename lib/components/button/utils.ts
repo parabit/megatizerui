@@ -1,44 +1,45 @@
 import { ButtonHTMLAttributes, ReactNode, Ref } from 'react';
 import { cva } from 'class-variance-authority';
 
-export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-	ref?: Ref<HTMLButtonElement | null>;
-	className?: string;
-	text?: string;
-	variant?: keyof typeof EnumButtonVariants;
-	color?: keyof typeof EnumButtonColors;
-	size?: keyof typeof EnumButtonSizes;
-	iconLeft?: ReactNode;
-	loading?: boolean;
-	children?: ReactNode;
-}
+export const buttonVariant = {
+	solid: 'solid',
+	outline: 'outline',
+	ghost: 'ghost',
+} as const;
 
-export enum EnumButtonVariants {
-	ghost = 'ghost',
-	solid = 'solid',
-	outline = 'outline',
-}
+export const buttonColor = {
+	primary: 'primary',
+	secondary: 'secondary',
+	muted: 'muted',
+} as const;
 
-export enum EnumButtonColors {
-	primary = 'primary',
-	secondary = 'secondary',
-	muted = 'muted',
-}
-
-export enum EnumButtonSizes {
-	md = 'md',
-	lg = 'lg',
-}
+export const buttonSize = {
+	sm: 'sm',
+	md: 'md',
+	lg: 'lg',
+} as const;
 
 export const buttonVariants = cva('button', {
 	variants: {
-		variant: EnumButtonVariants,
-		color: EnumButtonColors,
-		size: EnumButtonSizes,
+		variant: buttonVariant,
+		color: buttonColor,
+		size: buttonSize,
 	},
 	defaultVariants: {
 		variant: 'solid',
 		color: 'primary',
-		size: 'md',
+		size: 'sm',
 	},
 });
+
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+	ref?: Ref<HTMLButtonElement | null>;
+	className?: string;
+	text?: string;
+	variant?: keyof typeof buttonVariant;
+	color?: keyof typeof buttonColor;
+	size?: keyof typeof buttonSize;
+	iconLeft?: ReactNode;
+	loading?: boolean;
+	children?: ReactNode;
+}

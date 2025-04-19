@@ -5,6 +5,10 @@
 	}
 
 	/* Size */
+	.button.sm {
+		@apply h-[44px];
+	}
+
 	.button.md {
 		@apply h-[52px];
 	}

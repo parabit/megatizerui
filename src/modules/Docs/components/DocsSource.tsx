@@ -4,6 +4,7 @@ import { Link } from '@modules/Elements';
 interface IDocsSource {
 	gitSource?: string;
 	gitDemo?: string;
+	gitStyles?: string;
 }
 
 const DocsSource = (props: IDocsSource) => (
@@ -21,6 +22,14 @@ const DocsSource = (props: IDocsSource) => (
 					<Span>•</Span>
 					<Link to={props.gitDemo} target="_blank" className="text-lg">
 						Demo
+					</Link>
+				</HStack>
+			) : null}
+			{props.gitStyles ? (
+				<HStack className="gap-x-1.5">
+					<Span>•</Span>
+					<Link to={props.gitStyles} target="_blank" className="text-lg">
+						Styles
 					</Link>
 				</HStack>
 			) : null}

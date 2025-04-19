@@ -1,5 +1,5 @@
-import { Demo } from './Button.demo';
-import { EnumButtonColors, EnumButtonSizes, EnumButtonVariants } from './utils';
+import { DemoLoadingAndDisabled, DemoSize, DemoVariantsAndColors } from './Button.demo';
+import { buttonColor, buttonSize, buttonVariant } from './utils';
 
 const title = 'Button';
 const url = title.toLocaleLowerCase();
@@ -28,26 +28,21 @@ const props = [
 	},
 	{
 		name: 'variant',
-		type: Object.keys(EnumButtonVariants),
+		type: Object.keys(buttonVariant),
 		description: '`string`',
 		default: '`solid`',
 	},
 	{
 		name: 'color',
-		type: Object.keys(EnumButtonColors),
+		type: Object.keys(buttonColor),
 		description: '`string`',
 		default: '`primary`',
 	},
 	{
 		name: 'size',
-		type: Object.keys(EnumButtonSizes),
+		type: Object.keys(buttonSize),
 		description: '`string`',
-		default: '`md`',
-	},
-	{
-		name: 'onClick',
-		type: 'MouseEvent<HTMLButtonElement>',
-		description: 'Событие, возникающе после нажатия на компонент',
+		default: '`sm`',
 	},
 ];
 
@@ -58,12 +53,26 @@ export const ButtonPage = {
 	props,
 	demos: [
 		{
-			title: 'Example',
+			title: 'Variant & Color',
 			description: 'Используйте свойство `variant` и `color` для изменения оформления кнопки',
-			jsx: Demo,
-			html: Demo.html,
+			jsx: DemoVariantsAndColors,
+			html: DemoVariantsAndColors.html,
+		},
+		{
+			title: 'Size',
+			description: 'Используйте свойство `size` для изменения размера кнопки',
+			jsx: DemoSize,
+			html: DemoSize.html,
+		},
+
+		{
+			title: 'Loading & Disabled',
+			description: 'Используйте свойство `loading` и `disabled` для изменения статуса кнопки',
+			jsx: DemoLoadingAndDisabled,
+			html: DemoLoadingAndDisabled.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
 	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
+	gitStyles: `https://github.com/parabit/megatizerui/blob/main/lib/styles/${url}.css`,
 };
