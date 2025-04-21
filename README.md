@@ -48,4 +48,4 @@ Add imports `theme` and `components` to your root `.css` file.
 
 ## P.S.
 
-With love on Frontend from the [`Parabit`](https://github.com/parabit) company
+With ❤️ on Frontend from the [`Parabit`](https://github.com/parabit) company
