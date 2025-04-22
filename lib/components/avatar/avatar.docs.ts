@@ -1,5 +1,5 @@
 import { Demo } from './Avatar.demo';
-import { EnumAvatarSizes } from './utils';
+import { avatarSize } from './utils';
 
 const title = 'Avatar';
 const url = title.toLocaleLowerCase();
@@ -12,7 +12,7 @@ const props = [
 	},
 	{
 		name: 'size',
-		type: Object.keys(EnumAvatarSizes),
+		type: Object.keys(avatarSize),
 		description: '`string`',
 		default: 'md',
 	},
@@ -32,15 +32,12 @@ export const AvatarPage = {
 	demos: [
 		{
 			title: 'Sizes',
-			description:
-				'Используйте свойство `size` для изменения размера компонента: ' +
-				Object.keys(EnumAvatarSizes)
-					.map((el) => '`' + el + '`')
-					.join(', '),
+			description: 'Используйте свойство `size` для изменения размера компонента',
 			jsx: Demo,
 			html: Demo.html,
 		},
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.tsx`,
 	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/${url}/${title}.demo.tsx`,
+	gitStyles: `https://github.com/parabit/megatizerui/blob/main/lib/styles/${url}.css`,
 };

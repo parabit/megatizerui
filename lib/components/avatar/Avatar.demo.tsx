@@ -1,22 +1,21 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 import React from 'react';
-import { VariantProps } from 'class-variance-authority';
 
 import { Div } from '../div';
 import { Avatar } from './Avatar';
 // @ts-ignore
 import avatarExample from './avatar_example.jpg';
-import { avatarVariants, EnumAvatarSizes } from './utils';
+import { avatarSize } from './utils';
 
-const Demo = () => (
+export const Demo = () => (
 	<Div className="flex flex-row flex-wrap gap-x-3 gap-y-6 w-full">
-		{Object.keys(EnumAvatarSizes).map((size, index) => (
+		{Object.keys(avatarSize).map((size, index) => (
 			<Avatar
 				key={index}
-				src={avatarExample}
 				online={true}
-				size={size as VariantProps<typeof avatarVariants>['size']}
+				src={avatarExample}
+				size={size as keyof typeof avatarSize}
 			/>
 		))}
 	</Div>
@@ -24,15 +23,13 @@ const Demo = () => (
 
 Demo.html = `const Demo = () => (
 	<Div className="flex flex-row flex-wrap gap-x-3 gap-y-6 w-full">
-		{Object.keys(EnumAvatarSizes).map((size, index) => (
+		{Object.keys(avatarSize).map((size, index) => (
 			<Avatar
 				key={index}
-				src={avatarExample}
 				online={true}
-				size={size as VariantProps<typeof avatarVariants>['size']}
+				src={avatarExample}
+				size={size as keyof typeof avatarSize}
 			/>
 		))}
 	</Div>
 );`;
-
-export { Demo };

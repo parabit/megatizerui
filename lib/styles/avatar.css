@@ -1,0 +1,49 @@
+@layer components {
+	.avatar {
+		@apply rounded-full;
+	}
+
+	.avatar.xs {
+		@apply size-8;
+	}
+
+	.avatar.sm {
+		@apply size-9.5;
+	}
+
+	.avatar.md {
+		@apply size-11;
+	}
+
+	.avatar.lg {
+		@apply size-15.5;
+	}
+
+	.avatar.xl {
+		@apply size-20;
+	}
+
+	.avatar-badge {
+		@apply absolute rounded-full bg-green-600;
+	}
+
+	.avatar-badge.xs {
+		@apply right-0.25 bottom-0.25 h-2 w-2;
+	}
+
+	.avatar-badge.sm {
+		@apply right-0.25 bottom-0.25 h-2.5 w-2.5;
+	}
+
+	.avatar-badge.md {
+		@apply right-0.25 bottom-0.25 h-3.5 w-3.5;
+	}
+
+	.avatar-badge.lg {
+		@apply right-0.5 bottom-0.5 h-4.5 w-4.5;
+	}
+
+	.avatar-badge.xl {
+		@apply right-0.5 bottom-0.5 h-5 w-5;
+	}
+}

@@ -1,12 +1,12 @@
 @layer components {
 	/* Default style */
 	.input {
-		@apply block w-full rounded-lg border-[2px] px-4 py-3 text-sm;
+		@apply block w-full rounded-lg border px-4 py-3 text-sm;
 		@apply text-light dark:text-dark;
 		@apply placeholder:text-neutral-500;
 		@apply bg-neutral-100 dark:bg-neutral-900;
 		@apply border-neutral-300 dark:border-neutral-700;
-		@apply focus:border-neutral-400;
+		@apply outline-none focus:border-neutral-400 focus:outline-none;
 	}
 
 	/* Variants */
