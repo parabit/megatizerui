@@ -21,10 +21,7 @@ const numbers = ['25', '50', '100', '200', '300', '400', '500', '600', '700', '8
 
 const DocsColorPaletteScreen = (props: IDocsColorPaletteScreen) => (
 	<Stack className="w-full overflow-hidden p-4 sm:pl-12 sm:pt-8 pb-24 md:pr-24">
-		<DocsHeader
-			title="Color Palette"
-			description="Цветовая палитра `megatizerui` для вашего проекта"
-		/>
+		<DocsHeader title="Color Palette" description="Цветовая палитра `megatizerui`" />
 
 		<Div className="grid grid-cols-[auto_minmax(0,_1fr)] items-center gap-4 mt-6">
 			<Header />
