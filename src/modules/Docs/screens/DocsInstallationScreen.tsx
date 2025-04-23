@@ -80,6 +80,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 								<Span variant="muted">{npm}</Span>
 
 								<Button
+									color="muted"
 									variant="outline"
 									onClick={handlecopyNPM}
 									className="text-sm absolute top-3 right-3 !px-3"
@@ -100,6 +101,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 								<Span variant="muted">{yarn}</Span>
 
 								<Button
+									color="muted"
 									variant="outline"
 									onClick={handlecopyYarn}
 									className="text-sm absolute top-3 right-3 !px-3"
@@ -130,6 +132,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 					<CodeBlock value={css} language="css" />
 
 					<Button
+						color="muted"
 						variant="outline"
 						onClick={handlecopyCSS}
 						className="text-sm absolute top-3 right-3 !px-3"
@@ -140,7 +143,7 @@ const DocsInstallationScreen = (props: IDocsInstallationScreen) => {
 								<CheckIcon className="w-5 text-green-600" />
 							</HStack>
 						) : (
-							<Span text="Копировать" />
+							<Span text="Копировать" className="!text-sm" />
 						)}
 					</Button>
 				</Card>
