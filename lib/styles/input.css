@@ -1,5 +1,13 @@
 @layer components {
 	/* Default style */
+	.input-wrap {
+		@apply relative w-full justify-end;
+	}
+
+	.input-icon-right {
+		@apply absolute !mr-2;
+	}
+
 	.input {
 		@apply block w-full rounded-lg border px-4 py-3 text-sm;
 		@apply text-light dark:text-dark;

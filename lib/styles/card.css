@@ -5,4 +5,12 @@
 		@apply bg-card-bg-light dark:bg-card-bg-dark;
 		@apply border-border-light dark:border-border-dark border;
 	}
+
+	.card.secondary {
+		@apply !border-action-500 !bg-[#E2E8F0] dark:!bg-[#0D1117];
+	}
+
+	.card.primary {
+		@apply !border-reaction-500 !bg-[#E2E8F0] dark:!bg-[#140a0f];
+	}
 }

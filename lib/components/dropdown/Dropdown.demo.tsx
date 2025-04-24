@@ -9,7 +9,6 @@ import { Dropdown } from './Dropdown';
 const options = [
 	{
 		value: 'Первый пункт',
-		active: true,
 	},
 	{
 		value: 'Второй пункт',

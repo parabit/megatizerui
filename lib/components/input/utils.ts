@@ -1,23 +1,24 @@
 import { InputHTMLAttributes, ReactNode, Ref, RefObject } from 'react';
 
-export enum EnumInputVariants {
-	primary = 'primary',
-	secondary = 'secondary',
-}
+export const inputVariant = {
+	primary: 'primary',
+	secondary: 'secondary',
+} as const;
 
 export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: Ref<HTMLInputElement | null>;
 	className?: string;
 	isInvalid?: boolean;
 	rightIcon?: ReactNode;
-	variant?: keyof typeof EnumInputVariants;
+	rightElement?: ReactNode;
+	variant?: keyof typeof inputVariant;
 }
 
 export interface IInputPassword extends InputHTMLAttributes<HTMLInputElement> {
 	ref?: Ref<HTMLInputElement | null>;
 	isInvalid?: boolean;
 	className?: string;
-	variant?: keyof typeof EnumInputVariants;
+	variant?: keyof typeof inputVariant;
 }
 
 export interface IFileInput extends InputHTMLAttributes<HTMLInputElement> {

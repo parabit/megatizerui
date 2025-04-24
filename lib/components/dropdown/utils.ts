@@ -1,28 +1,35 @@
 import { ReactNode, Ref } from 'react';
 
+import { inputVariant } from '../input';
+
+export const dropdownVariant = inputVariant;
+
 export type TypeDropdownOption = {
 	value: string;
+	valueSelected?: string;
 	onClose?: () => void;
-	onClick?: () => void;
+	onClick?: (value: string) => void;
 	divider?: boolean;
 	icon?: ReactNode;
-	active?: boolean;
 	className?: string;
 };
 
 export type TypeDropdownOptions = Array<TypeDropdownOption>;
 
+export const dropdownPlacement = {
+	'bottom-right': 'bottom-right',
+	'bottom-left': 'bottom-left',
+} as const;
+
 export interface IDropdown {
 	ref?: Ref<HTMLDivElement | null>;
 	isOpen: boolean;
 	onClose: () => void;
+	onChange?: (value: string) => void;
 	options?: TypeDropdownOptions;
 	className?: string;
-	placement?: 'bottom left' | 'bottom right';
+	placement?: keyof typeof dropdownPlacement;
+	duration?: number;
+	variant?: keyof typeof dropdownVariant;
 	children?: ReactNode;
 }
-
-export const stylePlacement = {
-	'bottom right': 'right-0',
-	'bottom left': 'left-0',
-};

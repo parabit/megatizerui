@@ -5,12 +5,22 @@ import { cn } from '../../utils';
 import { Card } from '../card';
 import DropdownOption from './DropdownOption';
 import DropdownWrap from './DropdownWrap';
-import { IDropdown, stylePlacement } from './utils';
-
-const DURATION = 100; // ms
+import { dropdownPlacement, IDropdown } from './utils';
 
 export const Dropdown = (props: IDropdown) => {
-	const { ref, isOpen, onClose, options, className, placement = 'bottom left', children } = props;
+	const {
+		ref,
+		isOpen,
+		onClose,
+		onChange,
+		options,
+		className,
+		placement = 'bottom-left',
+		variant,
+		children,
+	} = props;
+
+	const DURATION = props.duration || 100; // ms
 
 	const {
 		isOpen: isOpenComponent,
@@ -37,20 +47,23 @@ export const Dropdown = (props: IDropdown) => {
 			ref={ref}
 			{...(isOpenComponent ? { 'data-active': true } : null)}
 			className={cn(
-				isOpen ? 'flex' : 'hidden',
-				'absolute z-100 flex-col space-y-0.5',
-				`transition-all transition-discrete duration-${DURATION}`,
-				'opacity-0 data-active:opacity-100',
-				'top-full mt-2 min-h-10 overflow-hidden',
-				'min-w-full rounded-xl shadow-xl dark:shadow-neutral-900',
-				options ? '!p-1' : '!p-1',
-				stylePlacement[placement],
+				'dropdown',
+				isOpen ? 'open' : '',
+				`duration-${DURATION}`,
+				dropdownPlacement[placement],
+				variant,
 				className,
 			)}
 		>
 			{options
 				? options.map((option, index) => (
-						<DropdownOption key={index} {...option} onClose={handleClose} />
+						<DropdownOption
+							key={index}
+							{...option}
+							onClick={onChange}
+							className={variant}
+							onClose={handleClose}
+						/>
 					))
 				: children
 					? children

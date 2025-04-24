@@ -23,7 +23,7 @@ export const ErrorScreen = ({ title, text, icon, to }: TypeErrorScreen) => {
 
 	return (
 		<Stack className="bg-bg-dark container mx-auto flex h-screen items-center justify-center">
-			<ExclamationTriangleIcon className="w-32" />
+			<ExclamationTriangleIcon className="w-32 text-light dark:text-dark" />
 			<Heading level="3" className="block text-center text-5xl font-bold text-white">
 				{title || 'Произошла ошибка'}
 			</Heading>

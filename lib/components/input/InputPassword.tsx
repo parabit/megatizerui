@@ -12,7 +12,7 @@ export const InputPassword = (props: IInputPassword) => {
 			autoComplete="current-password"
 			type={isOpen ? 'text' : 'password'}
 			variant={props.variant}
-			rightIcon={
+			rightElement={
 				<button
 					type="button"
 					onClick={onToggle}

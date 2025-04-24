@@ -1,7 +1,7 @@
-import { DemoFirst, DemoSecond } from './Dropdown.demo';
-import { dropdownPlacement, dropdownVariant } from './utils';
+import { DemoFirst, DemoSecond } from './Select.demo';
+import { selectVariant } from './utils';
 
-const title = 'Dropdown';
+const title = 'Select';
 const url = title.toLocaleLowerCase();
 
 const props = [
@@ -12,20 +12,16 @@ const props = [
 			'Изменяемый объект, ссылку на который React сохраняет между повторными рендерингами',
 	},
 	{
-		name: 'children',
-		type: 'ReactNode',
-		description: 'Элемент отображемый внутри кнопки',
-	},
-	{
-		name: 'className',
-		type: 'string',
-		description: 'Набор стилей Tailwind CSS v.4',
-	},
-	{
 		name: 'isOpen',
 		type: 'boolean',
 		description: 'Статус состояния компонента (открыто или нет)',
 		default: '`false`',
+		required: true,
+	},
+	{
+		name: 'onOpen',
+		type: '() => void',
+		description: 'Обратный вызов при открытии компонента',
 		required: true,
 	},
 	{
@@ -35,29 +31,33 @@ const props = [
 		required: true,
 	},
 	{
+		name: 'value',
+		type: 'string',
+		description: 'Значение отображаемой на компоненте',
+	},
+	{
 		name: 'options',
-		type: 'TypeDropdownOption[]',
+		type: 'TypeSelectOption[]',
 		description: 'Массив дочерних элементов-кнопок',
 	},
 	{
-		name: 'placement',
-		type: Object.keys(dropdownPlacement),
-		description: '`string`',
-		default: '`bottom-left`',
+		name: 'onChange',
+		type: '(value: string) => void',
+		description: 'Обратный вызов при нажатии на элемент в выпадающем списке',
 	},
 	{
 		name: 'variant',
-		type: Object.keys(dropdownVariant),
+		type: Object.keys(selectVariant),
 		description: '`string`',
 	},
 	{
-		name: 'duration',
-		type: 'Продолжительность анимации компонента `ms`',
-		description: '`number`',
+		name: 'children',
+		type: 'ReactNode',
+		description: 'Элемент отображемый внутри кнопки',
 	},
 ];
 
-export const DropdownPage = {
+export const SelectPage = {
 	url,
 	title,
 	description: 'Компонент для отображения выпадающего списка',
@@ -65,14 +65,13 @@ export const DropdownPage = {
 	demos: [
 		{
 			title: 'Example #1',
-			description: 'Пример использования при помощи свойства `options` и хука `useOutsideClick`',
+			description: 'Пример использования компонента вместе с `options`',
 			jsx: DemoFirst,
 			html: DemoFirst.html,
 		},
 		{
 			title: 'Example #2',
-			description:
-				'Пример использования при помощи передачи компонентов `Dropdown.Option` и хука `useOutsideClick`',
+			description: 'Пример использования компонента вместе с `children`',
 			jsx: DemoSecond,
 			html: DemoSecond.html,
 		},

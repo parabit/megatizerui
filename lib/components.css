@@ -3,8 +3,10 @@
 @import './styles/button.css';
 @import './styles/card.css';
 @import './styles/divider.css';
+@import './styles/dropdown.css';
 @import './styles/heading.css';
 @import './styles/input.css';
+@import './styles/select.css';
 @import './styles/span.css';
 @import './styles/spinner.css';
 @import './styles/switch.css';

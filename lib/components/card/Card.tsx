@@ -1,8 +1,9 @@
 import { cn } from '../../utils';
-import { Div, IDiv } from '../div';
+import { Div } from '../div';
+import { ICard } from './utils';
 
-export const Card = ({ className, children, ...props }: IDiv) => (
-	<Div className={cn('card', className)} {...props}>
+export const Card = ({ className, variant, children, ...props }: ICard) => (
+	<Div className={cn('card', variant, className)} {...props}>
 		{children}
 	</Div>
 );

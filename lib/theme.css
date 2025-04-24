@@ -126,3 +126,7 @@
 
 	--color-switch-checked: var(--color-action-500);
 }
+
+body.dialog-open {
+	overflow: hidden;
+}

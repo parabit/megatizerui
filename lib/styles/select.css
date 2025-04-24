@@ -1,0 +1,23 @@
+@layer components {
+	.select-input input {
+		@apply cursor-pointer;
+	}
+
+	.select-dialog {
+		@apply fixed top-0 left-0 z-[9999] m-0 h-[100%] max-h-[100vh] w-[100vw] max-w-[100vw] flex-col items-center justify-center gap-y-1 p-6;
+		background-color: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(2px);
+	}
+
+	.select-dialog .card {
+		@apply w-full;
+	}
+
+	.select-dialog:not(.open) {
+		@apply hidden;
+	}
+
+	.select-dialog.open {
+		@apply flex;
+	}
+}

@@ -5,25 +5,19 @@ import { Span } from '../span';
 import { TypeDropdownOption } from './utils';
 
 const DropdownOption = (props: TypeDropdownOption) => {
-	const { value, onClick = () => {}, onClose = () => {}, icon, active, className } = props;
+	const { value, valueSelected, onClick = () => {}, onClose = () => {}, icon, className } = props;
+
+	const active = valueSelected ? valueSelected === value : false;
 
 	const handleClick = () => {
-		onClick();
-		onClose();
+		if (onClick) onClick(value);
+		if (onClose) onClose();
 	};
 
 	return (
 		<a
 			onClick={handleClick}
-			className={cn(
-				'flex cursor-pointer items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm',
-				'hover:bg-gray-100 dark:hover:bg-neutral-700 dark:hover:text-neutral-300',
-				'focus:bg-gray-100 focus:outline-none dark:focus:bg-neutral-700',
-				active
-					? 'text-primary-light dark:text-primary-dark'
-					: 'text-gray-800 dark:text-neutral-400',
-				className,
-			)}
+			className={cn(active ? 'dropdown-option active' : 'dropdown-option', className)}
 			onMouseDown={(e: MouseEvent<HTMLElement>) => e.preventDefault()}
 		>
 			{icon ? icon : null}

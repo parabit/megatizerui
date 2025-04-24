@@ -1,4 +1,5 @@
 import { DemoFIleInput, DemoInput, DemoInputPassword } from './Inputs.demo';
+import { inputVariant } from './utils';
 
 const title = 'Inputs';
 const url = title.toLocaleLowerCase();
@@ -25,6 +26,16 @@ const propsInput = [
 		name: 'rightIcon',
 		type: 'ReactNode',
 		description: 'Элемент отображемый внутри компонента справа',
+	},
+	{
+		name: 'rightElement',
+		type: 'ReactNode',
+		description: 'Элемент отображемый внутри компонента справа',
+	},
+	{
+		name: 'variant',
+		type: Object.keys(inputVariant),
+		description: '`string`',
 	},
 ];
 
@@ -78,4 +89,5 @@ export const InputsPage = {
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/input/Input.tsx`,
 	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/input/Inputs.demo.tsx`,
+	gitStyles: `https://github.com/parabit/megatizerui/blob/main/lib/styles/${url}.css`,
 };
