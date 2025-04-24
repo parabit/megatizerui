@@ -16,27 +16,27 @@ const Demo = () => {
 					<tr>
 						<td>Height:</td>
 						<td>
-							<Badge text={height} variant="primary" />
+							<Badge text={height} color="primary" />
 						</td>
 					</tr>
 					<tr>
 						<td>Width:</td>
 						<td>
-							<Badge text={width} variant="primary" />
+							<Badge text={width} color="primary" />
 						</td>
 					</tr>
 
 					<tr>
 						<td>Size:</td>
 						<td>
-							<Badge text={size} variant="primary" />
+							<Badge text={size} color="primary" />
 						</td>
 					</tr>
 
 					<tr>
 						<td>isMobile:</td>
 						<td>
-							<Badge text={isMobile.toString()} variant="primary" />
+							<Badge text={isMobile.toString()} color="primary" />
 						</td>
 					</tr>
 				</tbody>

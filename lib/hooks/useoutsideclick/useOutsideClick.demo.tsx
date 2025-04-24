@@ -10,18 +10,14 @@ import { Span } from '../../components/span';
 import { Stack } from '../../components/stack/Stack';
 import { useOutsideClick } from './useOutsideClick';
 
-const Demo = () => {
+export const Demo = () => {
 	const { ref, isOpen, onOpen } = useOutsideClick();
 
 	return (
 		<Stack className="gap-y-6">
 			<HStack className="gap-x-3 items-center">
 				<Span>Click inside:</Span>
-				{isOpen ? (
-					<Badge text="true" variant="success" />
-				) : (
-					<Badge text="false" variant="error" />
-				)}
+				{isOpen ? <Badge text="true" color="success" /> : <Badge text="false" color="error" />}
 			</HStack>
 
 			<Pressable onClick={onOpen}>
@@ -40,11 +36,7 @@ Demo.html = `const Demo = () => {
 		<Stack className="gap-y-6">
 			<HStack className="gap-x-3 items-center">
 				<Span>Click inside:</Span>
-				{isOpen ? (
-					<Badge text="true" variant="success" />
-				) : (
-					<Badge text="false" variant="error" />
-				)}
+				{isOpen ? <Badge text="true" color="success" /> : <Badge text="false" color="error" />}
 			</HStack>
 
 			<Pressable onClick={onOpen}>
@@ -54,7 +46,4 @@ Demo.html = `const Demo = () => {
 			</Pressable>
 		</Stack>
 	);
-};
-`;
-
-export { Demo };
+};`;

@@ -9,18 +9,14 @@ import { Span } from '../../components/span';
 import { Stack } from '../../components/stack/Stack';
 import { useDisclose } from './useDisclose';
 
-const Demo = () => {
+export const Demo = () => {
 	const { isOpen, onClose, onOpen, onToggle } = useDisclose();
 
 	return (
 		<Stack className="gap-y-6">
 			<HStack className="gap-x-3 items-center">
 				<Span>Status:</Span>
-				{isOpen ? (
-					<Badge text="true" variant="success" />
-				) : (
-					<Badge text="false" variant="error" />
-				)}
+				{isOpen ? <Badge text="true" color="success" /> : <Badge text="false" color="error" />}
 			</HStack>
 
 			<HStack className="gap-x-3 gap-y-6 flex-wrap">
@@ -39,11 +35,7 @@ Demo.html = `const Demo = () => {
 		<Stack className="gap-y-6">
 			<HStack className="gap-x-3 items-center">
 				<Span>Status:</Span>
-				{isOpen ? (
-					<Badge text="true" variant="success" />
-				) : (
-					<Badge text="false" variant="error" />
-				)}
+				{isOpen ? <Badge text="true" color="success" /> : <Badge text="false" color="error" />}
 			</HStack>
 
 			<HStack className="gap-x-3 gap-y-6 flex-wrap">
@@ -54,5 +46,3 @@ Demo.html = `const Demo = () => {
 		</Stack>
 	);
 };`;
-
-export { Demo };
