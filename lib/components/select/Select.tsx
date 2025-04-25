@@ -10,7 +10,19 @@ import { Span } from '../span';
 import { ISelect } from './utils';
 
 export const Select = (props: ISelect) => {
-	const { ref, isOpen, onOpen, onClose, value, options, variant, onChange, children } = props;
+	const {
+		ref,
+		isOpen,
+		onOpen,
+		onClose,
+		value,
+		options,
+		variant,
+		onChange,
+		className,
+		children,
+		...rest
+	} = props;
 
 	const {
 		ref: innerRef,
@@ -20,15 +32,18 @@ export const Select = (props: ISelect) => {
 	} = useOutsideClick();
 	const { isMobile } = useWindowDimensions();
 
+	const refValue = ref || innerRef;
+	const isOpenValue = isOpen || innerIsOpen;
+
 	useEffect(() => {
 		if (isMobile) {
-			if (isOpen || innerIsOpen) {
+			if (isOpenValue) {
 				document.body.classList.add('dialog-open');
 			} else {
 				document.body.classList.remove('dialog-open');
 			}
 		}
-	}, [isOpen, innerIsOpen, isMobile]);
+	}, [isMobile, isOpenValue]);
 
 	const handleOpen = () => {
 		if (onOpen) return onOpen();
@@ -41,19 +56,26 @@ export const Select = (props: ISelect) => {
 	};
 
 	return (
-		<Dropdown.Wrap ref={ref || innerRef}>
-			<Pressable className={cn('select-input', isOpen ? 'open' : '')} onClick={handleOpen}>
+		<Dropdown.Wrap ref={refValue} className={className}>
+			<Pressable
+				onClick={handleOpen}
+				className={cn('select-input', isOpenValue ? 'open' : '', className)}
+			>
 				<Input
 					readOnly
 					value={value}
 					variant={variant}
 					className="flex flex-row items-center"
 					rightIcon={<Span text="▼" variant={variant} />}
+					{...rest}
 				/>
 			</Pressable>
 
 			{isMobile ? (
-				<dialog onClick={handleClose} className={cn('select-dialog', isOpen ? 'open' : '')}>
+				<dialog
+					onClick={handleClose}
+					className={cn('select-dialog', isOpenValue ? 'open' : '')}
+				>
 					<Card variant={variant}>
 						{options
 							? options.map((option, index) => (
@@ -72,9 +94,8 @@ export const Select = (props: ISelect) => {
 				</dialog>
 			) : (
 				<Dropdown
+					isOpen={isOpenValue}
 					onClose={handleClose}
-					className="!mt-[-1px]"
-					isOpen={isOpen || innerIsOpen}
 					{...{ options, onChange, variant, children }}
 				/>
 			)}

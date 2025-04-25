@@ -16,19 +16,16 @@ const props = [
 		type: 'boolean',
 		description: 'Статус состояния компонента (открыто или нет)',
 		default: '`false`',
-		required: true,
 	},
 	{
 		name: 'onOpen',
 		type: '() => void',
 		description: 'Обратный вызов при открытии компонента',
-		required: true,
 	},
 	{
 		name: 'onClose',
 		type: '() => void',
 		description: 'Обратный вызов при закрытии компонента',
-		required: true,
 	},
 	{
 		name: 'value',
@@ -49,6 +46,11 @@ const props = [
 		name: 'variant',
 		type: Object.keys(selectVariant),
 		description: '`string`',
+	},
+	{
+		name: 'className',
+		type: 'string',
+		description: 'Набор стилей Tailwind CSS v.4',
 	},
 	{
 		name: 'children',

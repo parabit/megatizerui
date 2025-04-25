@@ -54,7 +54,12 @@ const DocsASide = () => {
 						<Span className="py-1 text-sm font-bold">{cat.title}</Span>
 
 						{cat.pages.map((page, j) => (
-							<Link key={j} to={`/${page.url}`} className=" py-1 min-h-8 group">
+							<Link
+								key={j}
+								to={`/${page.url}`}
+								className="py-1 min-h-8 group"
+								onClick={handleClose}
+							>
 								<Span
 									variant="muted"
 									className={cn(

@@ -23,11 +23,11 @@
 	}
 
 	.dropdown.secondary {
-		@apply !border-action-500 !bg-[#E2E8F0] dark:!bg-[#0D1117];
+		@apply !border-action-500 !bg-[#d5e0ee] dark:!bg-[#0D1117];
 	}
 
 	.dropdown.primary {
-		@apply !border-reaction-500 !bg-[#E2E8F0] dark:!bg-[#140a0f];
+		@apply !border-reaction-500 !bg-[#f0dcf0] dark:!bg-[#140a0f];
 	}
 
 	.dropdown.bottom-left {
