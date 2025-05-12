@@ -25,7 +25,6 @@ export interface IDropdown {
 	ref?: Ref<HTMLDivElement | null>;
 	isOpen: boolean;
 	onClose: () => void;
-	onChange?: (value: string) => void;
 	options?: TypeDropdownOptions;
 	className?: string;
 	placement?: keyof typeof dropdownPlacement;

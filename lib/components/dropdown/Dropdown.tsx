@@ -12,7 +12,6 @@ export const Dropdown = (props: IDropdown) => {
 		ref,
 		isOpen,
 		onClose,
-		onChange,
 		options,
 		className,
 		placement = 'bottom-left',
@@ -29,6 +28,7 @@ export const Dropdown = (props: IDropdown) => {
 	} = useDisclose();
 
 	const handleClose = () => {
+		console.log('handleClose');
 		onCloseComponent();
 		setTimeout(() => onClose(), DURATION);
 	};
@@ -57,13 +57,7 @@ export const Dropdown = (props: IDropdown) => {
 		>
 			{options
 				? options.map((option, index) => (
-						<DropdownOption
-							key={index}
-							{...option}
-							onClick={onChange}
-							className={variant}
-							onClose={handleClose}
-						/>
+						<DropdownOption key={index} {...option} className={variant} onClose={onClose} />
 					))
 				: children
 					? children

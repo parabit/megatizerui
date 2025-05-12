@@ -25,7 +25,7 @@ const DocsDemo = (props: TypeDocsDemo) => {
 	};
 
 	return (
-		<Stack className="mt-6">
+		<Stack className="mt-8">
 			<Header {...props} />
 
 			{(props.node || props.jsx) && props.html ? (
@@ -56,7 +56,7 @@ const DocsDemo = (props: TypeDocsDemo) => {
 				</Tabs>
 			) : null}
 
-			{props.props ? <DocsProps props={props.props} /> : null}
+			{props.props ? <DocsProps props={props.props} title={props.propsTitle} /> : null}
 		</Stack>
 	);
 };

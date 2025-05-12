@@ -27,7 +27,7 @@ const DocsScreen = (props: IDocsScreen) => (
 				))
 			: null}
 
-		{props.props ? <DocsProps props={props.props} /> : null}
+		{props.props ? <DocsProps props={props.props} title={props.propsTitle} /> : null}
 		{props.gitSource || props.gitDemo ? <DocsSource {...props} /> : null}
 		{props.prevPage || props.nextPage ? <DocsPagination {...props} /> : null}
 	</Stack>

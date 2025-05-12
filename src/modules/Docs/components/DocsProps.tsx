@@ -6,13 +6,13 @@ const styleBorder = 'border border-neutral-300 dark:border-neutral-700';
 
 const PropsComponentKeys = ['name', 'required', 'type', 'default', 'description'];
 
-const DocsProps = (props: { props: TypeDocsArrayProps }) => {
+const DocsProps = (props: { props: TypeDocsArrayProps; title?: string }) => {
 	const items = props.props.sort((a, b) => a.name.localeCompare(b.name));
 
 	return (
 		<Stack className="mt-6">
 			<Heading level="1" className="font-bold">
-				Props
+				{props.title || 'Props'}
 			</Heading>
 
 			<Div className="overflow-x-auto w-full mt-4">

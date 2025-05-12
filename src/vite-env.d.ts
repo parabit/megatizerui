@@ -19,6 +19,7 @@ type TypeDocsDemo = {
 	node?: ReactNode;
 	html?: string;
 	props?: TypeDocsArrayProps;
+	propsTitle?: string;
 };
 
 type TypeDocsArrayDemo = Array<TypeDocsDemo>;
@@ -29,6 +30,7 @@ type TypeDocsComponent = {
 	description: string;
 	demos?: TypeDocsArrayDemo;
 	props?: TypeDocsArrayProps;
+	propsTitle?: string;
 	gitSource?: string;
 	gitDemo?: string;
 };
