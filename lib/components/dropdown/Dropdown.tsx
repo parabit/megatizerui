@@ -28,7 +28,6 @@ export const Dropdown = (props: IDropdown) => {
 	} = useDisclose();
 
 	const handleClose = () => {
-		console.log('handleClose');
 		onCloseComponent();
 		setTimeout(() => onClose(), DURATION);
 	};

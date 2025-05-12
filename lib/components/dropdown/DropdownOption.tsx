@@ -10,7 +10,6 @@ const DropdownOption = (props: TypeDropdownOption) => {
 	const active = valueSelected ? valueSelected === value : false;
 
 	const handleClick = () => {
-		console.log('handleClick');
 		if (onClick) onClick(value);
 		if (onClose) onClose();
 	};
