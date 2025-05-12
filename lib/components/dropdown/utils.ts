@@ -6,7 +6,7 @@ export const dropdownVariant = inputVariant;
 
 export type TypeDropdownOption = {
 	value: string;
-	valueSelected?: string;
+	active?: boolean;
 	onClose?: () => void;
 	onClick?: (value: string) => void;
 	divider?: boolean;

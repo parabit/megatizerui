@@ -42,22 +42,31 @@
 
 	.dropdown-option {
 		@apply flex cursor-pointer items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm;
-		@apply hover:bg-gray-100 dark:hover:bg-neutral-700 dark:hover:text-neutral-300;
 	}
 
-	.dropdown-option.secondary {
-		@apply hover:bg-action-600/30 hover:dark:bg-action-900;
+	.dropdown-option:not(.primary):not(.secondary) {
+		@apply hover:bg-gray-100 dark:hover:bg-neutral-700;
 	}
 
 	.dropdown-option.primary {
-		@apply hover:bg-reaction-600/30 hover:dark:bg-reaction-900;
+		@apply hover:bg-reaction-600/30 hover:dark:bg-reaction-900/60;
 	}
 
-	.dropdown-option.active {
-		@apply text-gray-800 dark:text-neutral-400;
+	.dropdown-option.secondary {
+		@apply hover:bg-action-600/30 hover:dark:bg-action-900/60;
 	}
 
-	.dropdown-option:not(.active) {
-		@apply text-gray-800 dark:text-neutral-400;
+	/* Option text */
+
+	.dropdown-option-text:not(.active) {
+		@apply truncate text-nowrap text-gray-800 dark:text-neutral-400;
+	}
+
+	.dropdown-option-text.active:not(.primary) {
+		@apply text-action-600 dark:text-action-500 truncate text-nowrap;
+	}
+
+	.dropdown-option-text.primary.active {
+		@apply text-reaction-600 dark:text-reaction-500 truncate text-nowrap;
 	}
 }

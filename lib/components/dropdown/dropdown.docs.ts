@@ -65,9 +65,9 @@ const propsOption = [
 		required: true,
 	},
 	{
-		name: 'valueSelected',
-		type: 'string',
-		description: 'Значение активного элемента',
+		name: 'active',
+		type: 'boolean',
+		description: 'Значение активен ли элемент',
 	},
 	{
 		name: 'onClose',

@@ -5,9 +5,7 @@ import { Span } from '../span';
 import { TypeDropdownOption } from './utils';
 
 const DropdownOption = (props: TypeDropdownOption) => {
-	const { value, valueSelected, onClick = () => {}, onClose = () => {}, icon, className } = props;
-
-	const active = valueSelected ? valueSelected === value : false;
+	const { value, active, onClick = () => {}, onClose = () => {}, icon, className } = props;
 
 	const handleClick = () => {
 		if (onClick) onClick(value);
@@ -17,11 +15,14 @@ const DropdownOption = (props: TypeDropdownOption) => {
 	return (
 		<a
 			onClick={handleClick}
-			className={cn(active ? 'dropdown-option active' : 'dropdown-option', className)}
+			className={cn('dropdown-option', className)}
 			onMouseDown={(e: MouseEvent<HTMLElement>) => e.preventDefault()}
 		>
 			{icon ? icon : null}
-			<Span text={value} className="truncate text-nowrap" />
+			<Span
+				text={value}
+				className={cn('dropdown-option-text', className, active ? 'active' : '')}
+			/>
 		</a>
 	);
 };

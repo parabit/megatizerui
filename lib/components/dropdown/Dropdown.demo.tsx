@@ -16,14 +16,17 @@ const DemoFirst = () => {
 		{
 			value: 'Первый пункт',
 			onClick: () => setValue('Первый пункт'),
+			active: value === 'Первый пункт',
 		},
 		{
 			value: 'Второй пункт',
 			onClick: () => setValue('Второй пункт'),
+			active: value === 'Второй пункт',
 		},
 		{
 			value: 'Третий пункт',
 			onClick: () => setValue('Третий пункт'),
+			active: value === 'Третий пункт',
 		},
 	];
 
