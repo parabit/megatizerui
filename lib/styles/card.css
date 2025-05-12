@@ -11,6 +11,6 @@
 	}
 
 	.card.primary {
-		@apply !border-reaction-500 !bg-[#E2E8F0] dark:!bg-[#140a0f];
+		@apply !border-reaction-500 !bg-[#f1dfee] dark:!bg-[#140a0f];
 	}
 }

@@ -66,7 +66,7 @@ export const Select = (props: ISelect) => {
 					value={value}
 					variant={variant}
 					className="flex flex-row items-center"
-					rightIcon={<Span text="▼" variant={variant} />}
+					rightIcon={<Span text={isOpenValue ? '▲' : '▼'} variant={variant} />}
 					{...rest}
 				/>
 			</Pressable>
