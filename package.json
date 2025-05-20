@@ -2,7 +2,7 @@
 	"name": "@parabit/megatizerui",
 	"description": "UI Component Library for React Based on TypeScript + Tailwind CSS",
 	"license": "MIT",
-	"version": "0.0.34",
+	"version": "0.0.35",
 	"keywords": [
 		"react",
 		"components",

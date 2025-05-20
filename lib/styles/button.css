@@ -1,7 +1,7 @@
 @layer components {
 	/* Default style */
 	.button {
-		@apply m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 rounded-lg border !px-6 !py-0 text-sm font-medium focus:outline-none disabled:pointer-events-none;
+		@apply m-0 inline-flex cursor-pointer items-center justify-center gap-x-2 rounded-lg border !px-6 !py-0 text-sm font-medium transition-all focus:outline-none active:scale-98 disabled:pointer-events-none;
 	}
 
 	/* Size */
