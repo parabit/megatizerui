@@ -59,15 +59,17 @@ export const Select = (props: ISelect) => {
 		<Dropdown.Wrap ref={refValue} className={className}>
 			<Pressable
 				onClick={handleOpen}
-				className={cn('select-input', isOpenValue ? 'open' : '', className)}
+				className={cn(
+					'select-input relative flex flex-row items-center',
+					isOpenValue ? 'open' : '',
+					className,
+				)}
 			>
-				<Input
-					readOnly
-					value={value}
+				<Input readOnly value={value} variant={variant} {...rest} />
+				<Span
+					text="▼"
 					variant={variant}
-					className="flex flex-row items-center"
-					rightIcon={<Span text={isOpenValue ? '▲' : '▼'} variant={variant} />}
-					{...rest}
+					className={cn('transition-all absolute right-2', isOpenValue ? 'rotate-180' : '')}
 				/>
 			</Pressable>
 
