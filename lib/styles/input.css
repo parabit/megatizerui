@@ -19,11 +19,11 @@
 
 	/* Variants */
 	.input.error {
-		@apply !bg-negative-400/10 !border-negative-400 focus:!border-negative-400 dark:!border-negative-400;
+		@apply !bg-negative-400/10 !border-negative-500 focus:!border-negative-500 dark:!border-negative-500;
 	}
 
 	.input.error::placeholder {
-		@apply text-negative-400;
+		@apply text-negative-500;
 	}
 
 	.input.secondary {

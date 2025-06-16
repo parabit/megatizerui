@@ -113,7 +113,7 @@
 	--color-muted-dark: rgba(243, 244, 246, 0.6);
 	--color-disabled-dark: rgba(243, 244, 246, 0.35);
 
-	--color-error: var(--color-negative-600);
+	--color-error: var(--color-negative-500);
 	--color-success: var(--color-success-600);
 
 	/* Components */
