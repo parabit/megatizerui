@@ -89,5 +89,5 @@ export const InputsPage = {
 	],
 	gitSource: `https://github.com/parabit/megatizerui/blob/main/lib/components/input/Input.tsx`,
 	gitDemo: `https://github.com/parabit/megatizerui/blob/main/lib/components/input/Inputs.demo.tsx`,
-	gitStyles: `https://github.com/parabit/megatizerui/blob/main/lib/styles/${url}.css`,
+	gitStyles: `https://github.com/parabit/megatizerui/blob/main/lib/styles/input.css`,
 };

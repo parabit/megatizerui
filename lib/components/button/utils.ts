@@ -10,6 +10,7 @@ export const buttonVariant = {
 export const buttonColor = {
 	primary: 'primary',
 	secondary: 'secondary',
+	error: 'error',
 	muted: 'muted',
 } as const;
 

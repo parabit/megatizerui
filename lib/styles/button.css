@@ -59,4 +59,14 @@
 		@apply bg-transparent hover:bg-gray-300 dark:hover:bg-gray-500;
 		@apply border-gray-400 dark:border-gray-600;
 	}
+
+	.button.error:not(.ghost):not(.outline) {
+		@apply bg-negative-500 hover:bg-negative-600 hover:border-negative-600;
+		@apply dark:bg-negative-600 hover:dark:bg-negative-700 hover:dark:border-negative-700;
+	}
+
+	.button.error.ghost,
+	.button.error.outline {
+		@apply hover:bg-negative-600/30 text-negative-500;
+	}
 }
