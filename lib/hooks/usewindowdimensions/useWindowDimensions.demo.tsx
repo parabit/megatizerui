@@ -7,7 +7,7 @@ import { Stack } from '../../components/stack/Stack';
 import { useWindowDimensions } from './useWindowDimensions';
 
 const Demo = () => {
-	const { height, width, size, isMobile } = useWindowDimensions();
+	const { height, width, size, isMobile, isDesktop } = useWindowDimensions();
 
 	return (
 		<Stack className="gap-y-3 [&>td]:p-4">
@@ -39,6 +39,13 @@ const Demo = () => {
 							<Badge text={isMobile.toString()} color="primary" />
 						</td>
 					</tr>
+
+					<tr>
+						<td>isDesktop:</td>
+						<td>
+							<Badge text={isDesktop.toString()} color="primary" />
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</Stack>
@@ -46,36 +53,43 @@ const Demo = () => {
 };
 
 Demo.html = `const Demo = () => {
-	const { height, width, size, isMobile } = useWindowDimensions();
+	const { height, width, size, isMobile, isDesktop } = useWindowDimensions();
 
 	return (
 		<Stack className="gap-y-3 [&>td]:p-4">
-			<table className="table-auto [&_td]:!p-2">
+			<table className="table-auto [&_td]:!p-2 text-light dark:text-dark">
 				<tbody>
 					<tr>
 						<td>Height:</td>
 						<td>
-							<Badge text={height} variant="primary" />
+							<Badge text={height} color="primary" />
 						</td>
 					</tr>
 					<tr>
 						<td>Width:</td>
 						<td>
-							<Badge text={width} variant="primary" />
+							<Badge text={width} color="primary" />
 						</td>
 					</tr>
 
 					<tr>
 						<td>Size:</td>
 						<td>
-							<Badge text={size} variant="primary" />
+							<Badge text={size} color="primary" />
 						</td>
 					</tr>
 
 					<tr>
 						<td>isMobile:</td>
 						<td>
-							<Badge text={isMobile.toString()} variant="primary" />
+							<Badge text={isMobile.toString()} color="primary" />
+						</td>
+					</tr>
+
+					<tr>
+						<td>isDesktop:</td>
+						<td>
+							<Badge text={isDesktop.toString()} color="primary" />
 						</td>
 					</tr>
 				</tbody>

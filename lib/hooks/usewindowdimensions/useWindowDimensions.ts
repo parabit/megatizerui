@@ -1,26 +1,34 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const getDimensions = () => {
-  const { innerWidth: w, innerHeight: h } = window;
-  const size = w < 576 ? "sm" : w < 768 ? "md" : w < 992 ? "lg" : "xl";
-
-  return {
-    width: w,
-    height: h,
-    size,
-    isMobile: size === "sm",
-  };
+type TypeUseWindowsDimensionsInitalValues = {
+	sm?: number;
+	md?: number;
+	lg?: number;
 };
 
-export const useWindowDimensions = () => {
-  const [dimensions, setDimensions] = useState(getDimensions());
+const getDimensions = ({ sm = 576, md = 768, lg = 992 }: TypeUseWindowsDimensionsInitalValues) => {
+	const { innerWidth: w, innerHeight: h } = window;
+	const size = w < sm ? 'sm' : w < md ? 'md' : w < lg ? 'lg' : 'xl';
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+	return {
+		width: w,
+		height: h,
+		size,
+		isMobile: size === 'sm',
+		isDesktop: w >= lg,
+	};
+};
 
-  const handleResize = () => setDimensions(getDimensions());
+export const useWindowDimensions = (props?: TypeUseWindowsDimensionsInitalValues) => {
+	const [dimensions, setDimensions] = useState(getDimensions(props || {}));
 
-  return dimensions;
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	const handleResize = () => setDimensions(getDimensions(props || {}));
+
+	return dimensions;
 };
